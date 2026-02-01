@@ -1,0 +1,55 @@
+name: Analyze Obsidian Vault
+
+on:
+  schedule:
+    # Run daily at 8 AM UTC (9 AM Paris time in winter, 10 AM in summer)
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no Claude API call)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout analyzer
+        uses: actions/checkout@v4
+
+      - name: Checkout vault
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ secrets.VAULT_REPO }}  # e.g., "rplsmn/obsidian-vault"
+          token: ${{ secrets.VAULT_PAT }}
+          path: vault
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r tools/requirements.txt
+
+      - name: Run analyzer
+        id: analyze
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python tools/analyze_vault.py --vault ./vault --dry-run
+          else
+            python tools/analyze_vault.py --vault ./vault --notify
+          fi
+
+      - name: Summary
+        run: |
+          echo "## Vault Analysis Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Check Telegram/Discord for results, or see logs above." >> $GITHUB_STEP_SUMMARY
