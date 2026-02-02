@@ -22,6 +22,7 @@ quarto create project website .
 ```
 
 This creates:
+
 - `_quarto.yml` - Project configuration
 - `index.qmd` - Homepage
 - `about.qmd` - About page
@@ -41,6 +42,7 @@ touch contact.qmd
 ```
 
 Target structure:
+
 ```
 raphaelsimon.fr/
 ├── _quarto.yml
@@ -114,11 +116,14 @@ website:
         href: contact.qmd
     right:
       - icon: github
-        href: https://github.com/raphaelsimon
+        href: https://github.com/rplsmn
         aria-label: GitHub
       - icon: linkedin
-        href: https://linkedin.com/in/raphaelsimon
+        href: https://linkedin.com/in/raphael-simon-md
         aria-label: LinkedIn
+      - icon: bluesky
+        href: https://bsky.app/profile/raphsmn.bsky.social
+        aria-label: Bluesky
       - icon: rss
         href: blog/index.xml
         aria-label: RSS Feed
@@ -126,10 +131,10 @@ website:
   # Footer
   page-footer:
     left: |
-      © 2024 Raphaël Simon
+      © 2026 Raphaël Simon
     right:
       - icon: github
-        href: https://github.com/raphaelsimon
+        href: https://github.com/rplsmn
       - icon: envelope
         href: mailto:contact@raphaelsimon.fr
 
@@ -227,10 +232,10 @@ about:
   links:
     - icon: github
       text: GitHub
-      href: https://github.com/raphaelsimon
+      href: https://github.com/rplsmn
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/raphaelsimon
+      href: https://linkedin.com/in/raphael-simon-md
     - icon: envelope
       text: Email
       href: mailto:contact@raphaelsimon.fr
@@ -269,9 +274,10 @@ You can also reach me directly at [contact@raphaelsimon.fr](mailto:contact@rapha
 ### 3.5 Contact Form HTML (_includes/contact-form.html)
 
 First, get a Web3Forms access key:
-1. Go to https://web3forms.com
+
+1. Go to <https://web3forms.com>
 2. Click "Create Access Key"
-3. Enter your email (contact@raphaelsimon.fr)
+3. Enter your email (<contact@raphaelsimon.fr>)
 4. Check email for access key
 
 Then create the form:
@@ -345,6 +351,7 @@ I'll get back to you as soon as possible.
 ```
 
 Update the contact form redirect:
+
 ```html
 <input type="hidden" name="redirect" value="https://raphaelsimon.fr/thanks.html">
 ```
@@ -364,7 +371,7 @@ Create `blog/posts/2024-01-15-hello-world/index.qmd`:
 title: "Hello World"
 description: "Welcome to my new blog - what to expect and why I'm writing."
 author: "Raphaël Simon"
-date: "2024-01-15"
+date: "2026-02-03"
 categories: [meta, welcome]
 image: thumbnail.jpg
 draft: false
@@ -449,7 +456,7 @@ a:hover {
 quarto preview
 ```
 
-This starts a local server (typically http://localhost:4200) with hot reload.
+This starts a local server (typically <http://localhost:4200>) with hot reload.
 
 ### 6.2 Full Render
 
@@ -559,7 +566,7 @@ jobs:
 
 ### 7.5 Verify Deployment
 
-- [ ] Site accessible at https://raphaelsimon.fr
+- [ ] Site accessible at <https://raphaelsimon.fr>
 - [ ] HTTPS working (automatic with Cloudflare)
 - [ ] All pages load correctly
 - [ ] Contact form submits successfully
