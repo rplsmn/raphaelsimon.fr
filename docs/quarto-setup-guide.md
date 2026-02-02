@@ -1,17 +1,29 @@
 # Quarto Website Setup Guide for raphaelsimon.fr
 
-This guide covers setting up a personal website with Quarto, deployed to Cloudflare Pages.
+This guide covers setting up a personal website with Quarto, deployed to GitHub Pages.
+
+## Happy Path (Recommended)
+
+The simplest workflow for this site:
+
+1. **Keep `/_site/` gitignored** - don't commit rendered output
+2. **Use `quarto publish gh-pages`** - Quarto's native publishing to a `gh-pages` branch
+3. **Configure GitHub Pages** to serve from the `gh-pages` branch
+
+This keeps your main branch clean (source only) and lets Quarto handle deployment.
 
 ## Prerequisites
 
 - Git installed and configured
+- GitHub account with repository created
 - Quarto CLI installed (`quarto check` to verify)
-- Cloudflare account with domain configured
 - Web3Forms account (for contact form)
 
 ## Phase 1: Project Initialization
 
 ### 1.1 Create Quarto Website Project
+
+> **Warning**: If your repository already has files, commit them first. This command creates starter files that may conflict with existing content.
 
 ```bash
 # Navigate to repository
@@ -30,7 +42,7 @@ This creates:
 
 ### 1.2 Initial Project Structure
 
-Create the full directory structure:
+Create the full directory structure. If directories already exist, these commands are safe to re-run:
 
 ```bash
 mkdir -p blog/posts
@@ -63,6 +75,8 @@ raphaelsimon.fr/
 
 ### 1.3 Update .gitignore
 
+Merge these entries into your existing `.gitignore` (don't replace the whole file):
+
 ```gitignore
 # Quarto
 /.quarto/
@@ -85,6 +99,8 @@ Thumbs.db
 
 ### 2.1 Main Configuration (_quarto.yml)
 
+Merge carefully with any existing configuration:
+
 ```yaml
 project:
   type: website
@@ -96,11 +112,10 @@ website:
   site-url: https://raphaelsimon.fr
   favicon: images/favicon.ico
 
-  # Search functionality
+  # Search functionality (uses Quarto defaults: s, f, /)
   search:
     location: navbar
     type: overlay
-    keyboard-shortcut: ["?", "/", "k"]
 
   # Top navigation
   navbar:
@@ -280,6 +295,8 @@ First, get a Web3Forms access key:
 3. Enter your email (<contact@raphaelsimon.fr>)
 4. Check email for access key
 
+> **Tip**: Consider using a Proton alias for `contact@` so it can be rotated if scraped.
+
 Then create the form:
 
 ```html
@@ -360,18 +377,21 @@ Update the contact form redirect:
 
 ### 4.1 Create First Post
 
+Use today's date (`YYYY-MM-DD`) in both folder name and frontmatter:
+
 ```bash
-mkdir -p blog/posts/2024-01-15-hello-world
+# Replace YYYY-MM-DD with today's date
+mkdir -p blog/posts/YYYY-MM-DD-hello-world
 ```
 
-Create `blog/posts/2024-01-15-hello-world/index.qmd`:
+Create `blog/posts/YYYY-MM-DD-hello-world/index.qmd`:
 
 ```yaml
 ---
 title: "Hello World"
 description: "Welcome to my new blog - what to expect and why I'm writing."
 author: "Raphaël Simon"
-date: "2026-02-03"
+date: "YYYY-MM-DD"  # Use today's date
 categories: [meta, welcome]
 image: thumbnail.jpg
 draft: false
@@ -450,23 +470,19 @@ a:hover {
 
 ## Phase 6: Local Testing
 
-### 6.1 Preview Site
+### 6.1 Preview and Render
 
 ```bash
+# Start local preview with hot reload (typically http://localhost:4200)
 quarto preview
-```
 
-This starts a local server (typically <http://localhost:4200>) with hot reload.
-
-### 6.2 Full Render
-
-```bash
+# Full render (generates _site/ directory)
 quarto render
 ```
 
-Check `_site/` directory for generated files.
+### 6.2 Verify Checklist
 
-### 6.3 Verify Checklist
+Run through this checklist locally before deploying:
 
 - [ ] Homepage loads with navigation
 - [ ] Latest posts appear on homepage
@@ -474,20 +490,157 @@ Check `_site/` directory for generated files.
 - [ ] Blog post pages render correctly
 - [ ] About page displays profile image and links
 - [ ] Contact form appears and submits
-- [ ] Search works (Ctrl+K or /)
+- [ ] Search works (press `/` or `s`)
 - [ ] Dark/light mode toggle works
 - [ ] RSS feed validates (blog/index.xml)
 - [ ] All links work
+- [ ] Site accessible at deployed URL
+- [ ] HTTPS working
+- [ ] Contact form submits successfully
 
-## Phase 7: Cloudflare Pages Deployment
+## Phase 7: GitHub Pages Deployment (Recommended)
 
-### 7.1 Cloudflare Account Setup
+### 7.1 First-Time Setup
 
-1. Log in to Cloudflare dashboard
-2. Ensure raphaelsimon.fr domain is configured
-3. Go to **Workers & Pages** > **Pages**
+1. **Configure GitHub Pages** in your repository settings:
+   - Go to Settings > Pages
+   - Set Source to **Deploy from a branch**
+   - Set Branch to **gh-pages** and folder to **/ (root)**
 
-### 7.2 Method A: Manual Upload (Quick Start)
+2. **First publish** from your local machine:
+
+```bash
+quarto render
+quarto publish gh-pages
+```
+
+Quarto will create the `gh-pages` branch and push the rendered site.
+
+### 7.2 Subsequent Publishes
+
+```bash
+quarto publish gh-pages
+```
+
+Quarto re-renders by default. Use `--no-render` if you've already rendered:
+
+```bash
+quarto publish gh-pages --no-render
+```
+
+### 7.3 Custom Domain (Optional)
+
+If using a custom domain like `raphaelsimon.fr`:
+
+1. Add a `CNAME` file to your project root containing: `raphaelsimon.fr`
+2. Configure DNS at your registrar to point to GitHub Pages
+3. Enable HTTPS in GitHub Pages settings
+
+## Phase 8: Phone-First Publishing
+
+Goal: publish posts from your phone with minimal friction.
+
+### 8.1 Option A: GitHub Mobile App (Recommended)
+
+1. On your phone, use the **GitHub mobile app**
+2. Create a new branch
+3. Add a folder under `blog/posts/YYYY-MM-DD-post-slug/`
+4. Create `index.qmd` with frontmatter
+5. Open a pull request
+6. Merge when ready; publishing happens from your normal workflow
+
+Why this works:
+
+- No special tooling
+- Save drafts in a branch
+- Review before publishing (even if it's just you)
+
+### 8.2 Option B: Notes App to Repo
+
+If you often write in a notes app first:
+
+1. Write the content as plain Markdown
+2. Copy into `blog/posts/YYYY-MM-DD-post-slug/index.qmd` via GitHub mobile
+
+### 8.3 Lightweight Post Template
+
+Copy this template for new posts:
+
+```yaml
+---
+title: "Post title"
+description: "One sentence summary"
+date: "YYYY-MM-DD"  # today
+categories: [tag1, tag2]
+draft: true
+---
+
+Start writing here.
+```
+
+Set `draft: false` when you merge/publish.
+
+## Phase 9: Ongoing Maintenance
+
+### Adding New Blog Posts
+
+```bash
+# Create post directory (use today's date)
+mkdir -p blog/posts/YYYY-MM-DD-post-slug
+
+# Edit blog/posts/YYYY-MM-DD-post-slug/index.qmd
+
+# Preview locally
+quarto preview
+
+# Publish
+quarto publish gh-pages
+```
+
+### Updating Configuration
+
+Changes to `_quarto.yml` require re-render, which `quarto publish` does automatically.
+
+## Quick Reference
+
+| Task | Command |
+|------|---------|
+| Start preview | `quarto preview` |
+| Full render | `quarto render` |
+| Publish to GitHub Pages | `quarto publish gh-pages` |
+| Create new post | `mkdir blog/posts/YYYY-MM-DD-slug && touch blog/posts/YYYY-MM-DD-slug/index.qmd` |
+| Check installation | `quarto check` |
+| Update Quarto | `quarto update` |
+
+## Troubleshooting
+
+**Preview not updating**: Stop and restart `quarto preview`
+
+**Build fails**: Check YAML syntax in `_quarto.yml` and post frontmatter
+
+**Contact form not working**: Verify Web3Forms access key is correct
+
+**Search not finding content**: Run full `quarto render`, search index builds on render only
+
+**Dark mode not switching**: Clear browser cache, check theme configuration
+
+**RSS feed errors**: Ensure `site-url` is set in `_quarto.yml`
+
+## Resources
+
+- [Quarto Websites Documentation](https://quarto.org/docs/websites/)
+- [Quarto Blog Documentation](https://quarto.org/docs/websites/website-blog.html)
+- [Quarto Publishing to GitHub Pages](https://quarto.org/docs/publishing/github-pages.html)
+- [Web3Forms Documentation](https://docs.web3forms.com)
+- [Bootswatch Themes](https://bootswatch.com/)
+
+---
+
+## Appendix: Cloudflare Pages Deployment
+
+If you prefer Cloudflare Pages over GitHub Pages (for example, if you already have your domain on Cloudflare), here are the options.
+
+### Method A: Manual Upload (Quick Start)
 
 1. Run `quarto render` locally
 2. In Cloudflare Pages, click **Create application** > **Pages** > **Upload assets**
@@ -495,22 +648,11 @@ Check `_site/` directory for generated files.
 4. Upload contents of `_site/` directory
 5. Deploy
 
-### 7.3 Method B: Git Integration (Recommended)
+### Method B: GitHub Actions to Cloudflare
 
-#### Option 1: Pre-rendered (Simple)
+Since Cloudflare doesn't have Quarto pre-installed, use GitHub Actions:
 
-1. Commit `_site/` to repository (remove from .gitignore)
-2. Connect repository to Cloudflare Pages
-3. Configure:
-   - **Production branch**: `main`
-   - **Build command**: `exit 0`
-   - **Build output directory**: `_site`
-
-#### Option 2: Build on Cloudflare (CI-based)
-
-Cloudflare doesn't have Quarto pre-installed. Use GitHub Actions instead:
-
-**.github/workflows/deploy.yml**:
+**.github/workflows/deploy-cloudflare.yml**:
 
 ```yaml
 name: Deploy to Cloudflare Pages
@@ -547,7 +689,7 @@ jobs:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-#### Set Up Secrets
+### Set Up Cloudflare Secrets
 
 1. Create Cloudflare API token:
    - Go to Cloudflare dashboard > My Profile > API Tokens
@@ -557,85 +699,9 @@ jobs:
    - `CLOUDFLARE_API_TOKEN`
    - `CLOUDFLARE_ACCOUNT_ID`
 
-### 7.4 Custom Domain Configuration
+### Custom Domain on Cloudflare
 
 1. In Cloudflare Pages project settings, go to **Custom domains**
 2. Add `raphaelsimon.fr`
 3. Add `www.raphaelsimon.fr` (optional, for redirect)
 4. DNS records are auto-configured since domain is on Cloudflare
-
-### 7.5 Verify Deployment
-
-- [ ] Site accessible at <https://raphaelsimon.fr>
-- [ ] HTTPS working (automatic with Cloudflare)
-- [ ] All pages load correctly
-- [ ] Contact form submits successfully
-- [ ] Search index works
-
-## Phase 8: Ongoing Maintenance
-
-### Adding New Blog Posts
-
-```bash
-# Create post directory
-mkdir -p blog/posts/YYYY-MM-DD-post-slug
-
-# Create post file
-# Edit blog/posts/YYYY-MM-DD-post-slug/index.qmd
-
-# Preview
-quarto preview
-
-# Commit and push (triggers deployment)
-git add .
-git commit -m "Add post: Post Title"
-git push
-```
-
-### Updating Configuration
-
-Changes to `_quarto.yml` require full re-render:
-
-```bash
-quarto render
-```
-
-### Testing Changes
-
-Always preview before deploying:
-
-```bash
-quarto preview
-```
-
-## Quick Reference
-
-| Task | Command |
-|------|---------|
-| Start preview | `quarto preview` |
-| Full render | `quarto render` |
-| Create new post | `mkdir blog/posts/YYYY-MM-DD-slug && touch blog/posts/YYYY-MM-DD-slug/index.qmd` |
-| Check installation | `quarto check` |
-| Update Quarto | `quarto update` |
-
-## Troubleshooting
-
-**Preview not updating**: Stop and restart `quarto preview`
-
-**Build fails**: Check YAML syntax in `_quarto.yml` and post frontmatter
-
-**Contact form not working**: Verify Web3Forms access key is correct
-
-**Search not finding content**: Run full `quarto render`, search index builds on render only
-
-**Dark mode not switching**: Clear browser cache, check theme configuration
-
-**RSS feed errors**: Ensure `site-url` is set in `_quarto.yml`
-
-## Resources
-
-- [Quarto Websites Documentation](https://quarto.org/docs/websites/)
-- [Quarto Blog Documentation](https://quarto.org/docs/websites/website-blog.html)
-- [Web3Forms Documentation](https://docs.web3forms.com)
-- [Cloudflare Pages Documentation](https://developers.cloudflare.com/pages/)
-- [Bootswatch Themes](https://bootswatch.com/)
