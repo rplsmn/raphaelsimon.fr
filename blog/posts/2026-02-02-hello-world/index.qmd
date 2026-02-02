@@ -1,0 +1,25 @@
+---
+title: "Hello World"
+description: "Welcome to my new blog - what to expect and why I'm writing."
+author: "Raphaël Simon"
+date: "2026-02-02"
+categories: [meta, welcome]
+draft: false
+---
+
+Welcome to my blog! This is where I'll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections.
+
+## What to Expect
+
+Topics will vary widely - that's by design. I'm interested in:
+
+- **Medicine & Public Health**: Clinical insights, health systems, epidemiology
+- **Software Engineering**: Architecture, best practices, tools
+- **Data Science**: Analysis methods, visualization, ML applications
+- **Complex Systems**: Where these fields collide
+
+## Why Write?
+
+Writing clarifies thinking. By explaining ideas publicly, I'm forced to refine them.
+
+Stay tuned for more.

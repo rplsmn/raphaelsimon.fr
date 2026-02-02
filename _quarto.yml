@@ -1,0 +1,70 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Raphaël Simon"
+  description: "Personal website - Medicine, Public Health, Software Engineering, Data Science"
+  site-url: https://raphaelsimon.fr
+  favicon: images/favicon.jpg
+
+  # Search functionality (uses Quarto defaults: s, f, /)
+  search:
+    location: navbar
+    type: overlay
+
+  # Top navigation
+  navbar:
+    background: dark
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: About
+        href: about.qmd
+      - text: Contact
+        href: contact.qmd
+    right:
+      - icon: github
+        href: https://github.com/rplsmn
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://linkedin.com/in/raphael-simon-md
+        aria-label: LinkedIn
+      - icon: bluesky
+        href: https://bsky.app/profile/raphsmn.bsky.social
+        aria-label: Bluesky
+      - icon: rss
+        href: blog/index.xml
+        aria-label: RSS Feed
+
+  # Footer
+  page-footer:
+    left: |
+      © 2026 Raphaël Simon
+    right:
+      - icon: github
+        href: https://github.com/rplsmn
+      - icon: envelope
+        href: mailto:contact@raphaelsimon.fr
+
+  # Enable back-to-top button
+  back-to-top-navigation: true
+
+# Theme with dark mode default
+format:
+  html:
+    theme:
+      dark: darkly
+      light: flatly
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+
+# Default language
+lang: en
+
+# Analytics (optional - add when ready)
+# google-analytics: "G-XXXXXXXXXX"

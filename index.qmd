@@ -1,0 +1,24 @@
+---
+title: "Raphaël Simon"
+subtitle: "Consulting · Writing · Complex Problems"
+listing:
+  id: recent-posts
+  contents: blog/posts
+  sort: "date desc"
+  type: grid
+  max-items: 3
+  grid-columns: 3
+  categories: false
+  fields: [image, date, title, description]
+---
+
+Welcome to my personal website.
+
+I work at the intersection of medicine, public health, software engineering, and data science. I consult on complex interdisciplinary problems and write about topics that interest me.
+
+## Latest Posts
+
+::: {#recent-posts}
+:::
+
+[View all posts →](blog/index.qmd)

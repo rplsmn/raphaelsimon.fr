@@ -1,0 +1,36 @@
+---
+title: "About"
+image: images/profile.jpeg
+about:
+  template: trestles
+  image-shape: round
+  image-width: 12em
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/rplsmn
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/raphael-simon-md
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/raphsmn.bsky.social
+    - icon: envelope
+      text: Email
+      href: mailto:contact@raphaelsimon.fr
+---
+
+## Bio
+
+[Write your bio here - background, expertise, interests]
+
+## Expertise
+
+- Medicine & Public Health
+- Software Engineering
+- Data Science
+- Complex Systems
+
+## Consulting
+
+I help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn't fit neatly into traditional categories, [let's talk](contact.qmd).
