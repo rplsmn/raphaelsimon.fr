@@ -22,7 +22,11 @@ about:
 
 ## Bio
 
-[Write your bio here - background, expertise, interests]
+Physician turned engineer. I trained in medicine, missed the door to radiology, and walked through another one — into public health, clinical informatics, and eventually software. Now I build things and think about how technology shapes policy (and vice versa).
+
+I'm drawn to problems that don't fit neatly into one field. The messier the intersection, the more interesting.
+
+Based in France. Fluent in several languages, still learning others.
 
 ## Expertise
 
