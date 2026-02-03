@@ -15,15 +15,6 @@ listing:
 
 ::: {.homepage-container}
 
-::: {.homepage-search}
-```{=html}
-<div class="search-container">
-  <input type="text" id="homepage-search" class="search-input" placeholder="Search this site..." onkeydown="if(event.key==='Enter'){document.querySelector('.aa-DetachedSearchButton').click()}">
-  <button class="search-button" onclick="document.querySelector('.aa-DetachedSearchButton').click()">Search</button>
-</div>
-```
-:::
-
 :::: {.two-column-layout}
 
 ::: {.main-column}

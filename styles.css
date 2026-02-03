@@ -27,52 +27,6 @@ body {
   padding: 0 1.5rem;
 }
 
-/* Search bar */
-.homepage-search {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--bs-border-color);
-}
-
-.search-container {
-  display: flex;
-  gap: 0.5rem;
-  max-width: 600px;
-}
-
-.search-input {
-  flex: 1;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 1px solid var(--bs-border-color);
-  border-radius: 4px;
-  background-color: var(--bs-body-bg);
-  color: var(--bs-body-color);
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: var(--bs-primary);
-}
-
-.search-input::placeholder {
-  color: var(--bs-secondary-color);
-}
-
-.search-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: var(--bs-primary);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  opacity: 0.9;
-}
-
 /* Two-column layout */
 .two-column-layout {
   display: grid;
