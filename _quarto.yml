@@ -17,8 +17,6 @@ website:
   navbar:
     background: dark
     left:
-      - text: Home
-        href: index.qmd
       - text: Blog
         href: blog/index.qmd
       - text: About
