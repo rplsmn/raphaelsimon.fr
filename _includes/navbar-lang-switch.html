@@ -1,0 +1,51 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Detect current language from URL path
+  const path = window.location.pathname;
+  const langMatch = path.match(/^\/(en|fr)\//);
+  const currentLang = langMatch ? langMatch[1] : 'en';
+  
+  // Language data
+  const languages = {
+    en: {flag: '🇬🇧', label: 'English'},
+    fr: {flag: '🇫🇷', label: 'Français'}
+  };
+  
+  // Construct target URL for language switch
+  function getTargetUrl(targetLang) {
+    // Blog post: fallback to homepage
+    if (path.match(/^\/(en|fr)\/blog\/posts\//)) {
+      return '/' + targetLang + '/';
+    }
+    
+    // Static page: replace language prefix
+    const pathWithoutLang = path.replace(/^\/(en|fr)\//, '');
+    return '/' + targetLang + '/' + pathWithoutLang;
+  }
+  
+  // Build switcher HTML
+  const switcherHtml = `
+    <div class="lang-switcher">
+      <span class="current-lang">${languages[currentLang].flag}</span>
+      <button class="lang-globe" aria-label="Switch language">🌐</button>
+      <div class="lang-dropdown">
+        <a href="${currentLang === 'en' ? '#' : getTargetUrl('en')}" class="lang-option ${currentLang === 'en' ? 'current' : ''}">
+          ${languages.en.flag} ${languages.en.label}
+        </a>
+        <a href="${currentLang === 'fr' ? '#' : getTargetUrl('fr')}" class="lang-option ${currentLang === 'fr' ? 'current' : ''}">
+          ${languages.fr.flag} ${languages.fr.label}
+        </a>
+      </div>
+    </div>
+  `;
+  
+  // Insert into navbar (find the right icon list)
+  const navbar = document.querySelector('.navbar .navbar-nav');
+  if (navbar) {
+    const switcherContainer = document.createElement('li');
+    switcherContainer.className = 'nav-item';
+    switcherContainer.innerHTML = switcherHtml;
+    navbar.appendChild(switcherContainer);
+  }
+});
+</script>
