@@ -151,7 +151,7 @@ def generate_hreflang_metadata(manifest):
     return hreflang_map
 
 
-def inject_hreflang_into_posts(hreflang_map):
+def inject_hreflang_into_posts(hreflang_map, manifest):
     """
     Update blog post frontmatter with hreflang metadata.
     Uses pathlib for cross-platform compatibility.
@@ -160,7 +160,21 @@ def inject_hreflang_into_posts(hreflang_map):
     
     for slug, hreflang_data in hreflang_map.items():
         for lang_code in hreflang_data.keys():
-            post_path = project_root / lang_code / "blog" / "posts" / slug / "index.qmd"
+            # Find the actual post directory (which may have date prefix)
+            posts_dir = project_root / lang_code / "blog" / "posts"
+            post_dir = None
+            
+            # Look for directory matching slug or YYYY-MM-DD-slug pattern
+            if posts_dir.exists():
+                for d in posts_dir.iterdir():
+                    if d.is_dir() and (d.name == slug or d.name.endswith(f"-{slug}")):
+                        post_dir = d
+                        break
+            
+            if not post_dir:
+                continue
+                
+            post_path = post_dir / "index.qmd"
             if not post_path.exists():
                 continue
             
@@ -206,4 +220,4 @@ if __name__ == '__main__':
     
     # Auto-inject hreflang into blog posts
     hreflang_map = generate_hreflang_metadata(manifest)
-    inject_hreflang_into_posts(hreflang_map)
+    inject_hreflang_into_posts(hreflang_map, manifest)

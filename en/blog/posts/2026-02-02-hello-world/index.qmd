@@ -1,10 +1,15 @@
 ---
-title: "Hello World"
-description: "Welcome to my new blog - what to expect and why I'm writing."
-author: "Raphaël Simon"
-date: "2026-02-02"
-categories: [meta, welcome]
+title: Hello World
+description: Welcome to my new blog - what to expect and why I'm writing.
+author: Raphaël Simon
+date: '2026-02-02'
+categories:
+- meta
+- welcome
 draft: false
+hreflang:
+  en: /en/blog/posts/hello-world/
+  fr: /fr/blog/posts/hello-world/
 ---
 
 Welcome to my blog! This is where I'll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections.

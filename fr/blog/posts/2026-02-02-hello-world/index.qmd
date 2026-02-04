@@ -1,10 +1,15 @@
 ---
-title: "Bonjour le Monde"
-description: "Bienvenue sur mon nouveau blog - à quoi s'attendre et pourquoi j'écris."
-author: "Raphaël Simon"
-date: "2026-02-02"
-categories: [meta, bienvenue]
+title: Bonjour le Monde
+description: Bienvenue sur mon nouveau blog - à quoi s'attendre et pourquoi j'écris.
+author: Raphaël Simon
+date: '2026-02-02'
+categories:
+- meta
+- bienvenue
 draft: false
+hreflang:
+  en: /en/blog/posts/hello-world/
+  fr: /fr/blog/posts/hello-world/
 ---
 
 Bienvenue sur mon blog ! C'est ici que je partagerai mes réflexions sur la médecine, la santé publique, l'ingénierie logicielle, la science des données et les problèmes intéressants qui émergent à leurs intersections.
