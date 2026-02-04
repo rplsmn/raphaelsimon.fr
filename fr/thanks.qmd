@@ -1,6 +1,9 @@
 ---
 title: "Merci"
 search: false
+hreflang:
+  en: "/en/thanks/"
+  fr: "/fr/thanks/"
 ---
 
 Votre message a été envoyé avec succès !

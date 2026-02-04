@@ -18,6 +18,9 @@ about:
     - icon: envelope
       text: Email
       href: mailto:contact@raphaelsimon.fr
+hreflang:
+  en: "/en/about/"
+  fr: "/fr/about/"
 ---
 
 ## Bio

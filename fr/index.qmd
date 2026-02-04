@@ -11,6 +11,9 @@ listing:
   max-items: 10
   date-format: "MMM D, YYYY"
   fields: [date, title, description]
+hreflang:
+  en: "/en/"
+  fr: "/fr/"
 ---
 
 ::: {.homepage-container}
