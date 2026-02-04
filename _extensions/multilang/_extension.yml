@@ -5,5 +5,6 @@ quarto-required: ">=1.4.0"
 contributes:
   filters:
     - translation-banner.lua
+    - hreflang.lua
   shortcodes:
     - lang-switch.lua
