@@ -1,0 +1,899 @@
+# Phase 4: Blog & Search - Implementation Plan
+
+**Date:** 2026-02-04  
+**Status:** Ready for Implementation  
+**Phase Goal:** Implement blog post translation management, search behavior, and machine-translation banners
+
+---
+
+## Overview
+
+This phase implements:
+1. `translation` field usage for blog post metadata
+2. Pre-render script generating translations manifest
+3. Lua filter for machine-translation banners
+4. Per-language blog listing behavior
+5. Search behavior assessment and configuration
+
+---
+
+## Task List
+
+### Task 1: Add `translation` field to blog post defaults
+
+**Goal:** Ensure all blog posts declare translation status in frontmatter
+
+**Actions:**
+1. Edit `/home/rsimon/repos/raphaelsimon.fr/en/blog/_metadata.yml` (metadata for English blog posts only)
+2. Add default metadata:
+   ```yaml
+   translation: none
+   ```
+3. Edit `/home/rsimon/repos/raphaelsimon.fr/fr/blog/_metadata.yml` (metadata for French blog posts only)
+4. Add default metadata:
+   ```yaml
+   translation: machine
+   ```
+
+**Success Criteria:**
+- Both `_metadata.yml` files updated
+- New posts in `/en/blog/posts/` will default to `translation: none`
+- New posts in `/fr/blog/posts/` will default to `translation: machine`
+- Existing posts can still override with explicit `translation:` field
+
+**Files Modified:**
+- `/home/rsimon/repos/raphaelsimon.fr/en/blog/_metadata.yml`
+- `/home/rsimon/repos/raphaelsimon.fr/fr/blog/_metadata.yml`
+
+---
+
+### Task 2: Create pre-render script directory structure
+
+**Goal:** Set up location for Python manifest generation script
+
+**Actions:**
+1. Create directory:
+   ```bash
+   mkdir -p /home/rsimon/repos/raphaelsimon.fr/scripts
+   ```
+2. Create directory for manifest output:
+   ```bash
+   mkdir -p /home/rsimon/repos/raphaelsimon.fr/_data
+   ```
+
+**Success Criteria:**
+- `/home/rsimon/repos/raphaelsimon.fr/scripts/` directory exists
+- `/home/rsimon/repos/raphaelsimon.fr/_data/` directory exists
+
+**Files Created:**
+- None (directories only)
+
+---
+
+### Task 3: Implement `build-manifest.py` script
+
+**Goal:** Create Python script that scans blog posts and generates translations manifest
+
+**Actions:**
+1. Create file: `/home/rsimon/repos/raphaelsimon.fr/scripts/build-manifest.py`
+2. Implement logic:
+   - Import `pathlib`, `json`, `yaml` (or `frontmatter` library)
+   - Scan `/en/blog/posts/*/index.qmd` and `/fr/blog/posts/*/index.qmd`
+   - Extract slug from directory name
+   - Parse YAML frontmatter for `translation` field
+   - Build structure:
+     ```json
+     {
+       "hello-world": {
+         "en": {
+           "path": "/en/blog/posts/hello-world/",
+           "translation": "none"
+         },
+         "fr": {
+           "path": "/fr/blog/posts/hello-world/",
+           "translation": "machine"
+         }
+       }
+     }
+     ```
+   - Write to `/home/rsimon/repos/raphaelsimon.fr/_data/translations-manifest.json`
+3. Make script executable:
+   ```bash
+   chmod +x /home/rsimon/repos/raphaelsimon.fr/scripts/build-manifest.py
+   ```
+
+**Success Criteria:**
+- Script exists and is executable
+- Running `python3 scripts/build-manifest.py` from project root succeeds
+- `_data/translations-manifest.json` is created/updated
+- JSON structure matches specification
+- Script handles missing directories gracefully (empty lang arrays)
+- Script handles missing `translation` field (defaults to "none")
+
+**Files Created:**
+- `/home/rsimon/repos/raphaelsimon.fr/scripts/build-manifest.py`
+
+**Implementation Notes:**
+- Use `python-frontmatter` library if available, else parse YAML manually
+- Use relative paths from project root
+- Slug is directory name (e.g., "hello-world" from "2026-02-02-hello-world")
+- If `translation` field missing, default to "none"
+- Script should be idempotent
+- Note: hreflang generation is Phase 5 responsibility (not included in Phase 4)
+
+---
+
+### Task 4: Add pre-render hook to Quarto config
+
+**Goal:** Configure Quarto to run manifest script before every render
+
+**Actions:**
+1. Edit `/home/rsimon/repos/raphaelsimon.fr/_quarto.yml`
+2. Add to `project:` section:
+   ```yaml
+   project:
+     type: website
+     output-dir: _site
+     pre-render:
+       - python3 scripts/build-manifest.py
+     render:
+       - en/
+       - fr/
+       - index.html
+   ```
+   
+   **Note:** The `pre-render:` hook runs `python3 scripts/build-manifest.py` directly. This requires:
+   - The script to be executable (set by Task 3: `chmod +x`)
+   - Python3 to be in PATH (standard on most systems)
+   - Or, specify full path: `python3 /home/rsimon/repos/raphaelsimon.fr/scripts/build-manifest.py`
+
+**Success Criteria:**
+- `_quarto.yml` contains `pre-render:` hook
+- Running `quarto render` automatically executes `scripts/build-manifest.py` first
+- Manifest is regenerated on every build
+
+**Files Modified:**
+- `/home/rsimon/repos/raphaelsimon.fr/_quarto.yml`
+
+---
+
+### Task 5: Create `translation-banner.lua` filter
+
+**Goal:** Implement Lua filter that renders machine-translation banners on blog posts
+
+**Actions:**
+1. Create file: `/home/rsimon/repos/raphaelsimon.fr/_extensions/multilang/translation-banner.lua`
+2. Implement logic:
+   - Read `_data/translations-manifest.json` at filter initialization
+   - In `Meta` or `Pandoc` function:
+     - Get current page's `translation` field from metadata
+     - If `translation == "machine"`:
+       - Get current page's `lang` (from metadata or `quarto.doc.language`)
+       - Determine current post's slug (from file path or metadata)
+       - Look up slug in manifest
+       - Find all language versions with `translation: "none"`
+       - Render banner HTML:
+         ```html
+         <div class="translation-banner">
+           <p>
+             <strong>Machine-translated</strong> — Original in: 
+             <a href="/fr/blog/posts/slug/">🇫🇷</a>
+           </p>
+         </div>
+         ```
+       - Inject as RawBlock at document start
+     - Else: do nothing
+   - Banner text per language:
+     - English: "Machine-translated — Original in: {flags}"
+     - French: "Traduit automatiquement — Original en : {flags}"
+
+**Success Criteria:**
+- Lua filter file exists in multilang extension
+- Filter reads manifest JSON successfully
+- Posts with `translation: machine` render banner
+- Posts with `translation: none` render no banner
+- Banner links to original version(s)
+- Flag emoji matches language (🇫🇷 for French, 🇬🇧 for English)
+- Banner appears at top of post content
+- If original not found, banner shows no links (defensive coding)
+
+**Files Created:**
+- `/home/rsimon/repos/raphaelsimon.fr/_extensions/multilang/translation-banner.lua`
+
+**Implementation Notes:**
+- Use `quarto.json.decode()` to read manifest
+- Access metadata via `meta.translation` or `doc.meta.translation`
+- Current language: `quarto.doc.language` or `meta.lang`
+- Determine slug from path: `quarto.doc.input_file` (parse directory name)
+- RawBlock format: `pandoc.RawBlock('html', '<div>...</div>')`
+- Insert at document start: modify `doc.blocks` directly or use `Pandoc` filter
+
+---
+
+### Task 6: Register `translation-banner.lua` in extension
+
+**Goal:** Ensure Quarto loads the translation-banner filter
+
+**Actions:**
+1. Edit `/home/rsimon/repos/raphaelsimon.fr/_extensions/multilang/_extension.yml`
+2. Update to register both filters and shortcodes:
+   ```yaml
+   title: Multilingual Support
+   author: Raphaël Simon
+   version: 1.0.0
+   quarto-required: ">=1.4.0"
+   contributes:
+     filters:
+       - translation-banner.lua
+     shortcodes:
+       - lang-switch.lua
+   ```
+   
+   **Note:** Quarto's extension YAML distinguishes between `filters:` and `shortcodes:`. Both go under `contributes:` but in separate lists. The `translation-banner.lua` is a Pandoc filter, while `lang-switch.lua` is a shortcode.
+
+**Success Criteria:**
+- `_extension.yml` includes `translation-banner.lua`
+- Quarto loads filter during render
+- No filter errors in build output
+
+**Files Modified:**
+- `/home/rsimon/repos/raphaelsimon.fr/_extensions/multilang/_extension.yml`
+
+---
+
+### Task 7: Add CSS for translation banner
+
+**Goal:** Style the machine-translation banner for visibility
+
+**Actions:**
+1. Edit `/home/rsimon/repos/raphaelsimon.fr/styles.css`
+2. Add CSS:
+   ```css
+   .translation-banner {
+     background-color: #fff3cd;
+     border-left: 4px solid #ffc107;
+     padding: 1rem;
+     margin-bottom: 2rem;
+   }
+   
+   .translation-banner p {
+     margin: 0;
+   }
+   
+   /* Dark theme override */
+   html[data-bs-theme="dark"] .translation-banner {
+     background-color: #664d03;
+     border-left-color: #ffca2c;
+   }
+   ```
+
+**Success Criteria:**
+- CSS file contains `.translation-banner` styles
+- Banner visible on light theme
+- Banner visible on dark theme with appropriate contrast
+- Banner has left border accent
+- Banner has padding and margin
+
+**Files Modified:**
+- `/home/rsimon/repos/raphaelsimon.fr/styles.css`
+
+---
+
+### Task 8: Test manifest generation
+
+**Goal:** Verify manifest script produces correct output
+
+**Actions:**
+1. Run from project root:
+   ```bash
+   cd /home/rsimon/repos/raphaelsimon.fr
+   python3 scripts/build-manifest.py
+   ```
+2. View output:
+   ```bash
+   cat _data/translations-manifest.json
+   ```
+3. Verify JSON structure matches specification
+4. Check that existing posts are included
+5. Verify `translation` values are correct
+6. **Robustness test 1:** Verify script handles missing directories gracefully
+   ```bash
+   # If /fr/blog/posts/ doesn't exist, script should not error
+   ```
+7. **Robustness test 2:** Verify script handles missing `translation` field
+   ```bash
+   # Posts without `translation` field should default to "none"
+   ```
+
+**Success Criteria:**
+- Script runs without errors
+- `_data/translations-manifest.json` exists
+- JSON is valid (can parse)
+- All existing blog posts appear in manifest
+- `translation` values match post frontmatter
+- Posts present in only one language show only that language key
+
+**Files Inspected:**
+- `/home/rsimon/repos/raphaelsimon.fr/_data/translations-manifest.json`
+
+---
+
+### Task 9: Test translation banner rendering
+
+**Goal:** Verify banner appears on machine-translated posts
+
+**Actions:**
+1. Create test post in French with machine translation flag:
+   - Path: `/home/rsimon/repos/raphaelsimon.fr/fr/blog/posts/hello-world/index.qmd`
+   - Frontmatter:
+     ```yaml
+     ---
+     title: "Bonjour le Monde"
+     description: "Bienvenue sur mon nouveau blog"
+     author: "Raphaël Simon"
+     date: "2026-02-02"
+     categories: [meta, welcome]
+     translation: machine
+     ---
+     ```
+   - Content: machine-translated French text
+2. Ensure English version exists with `translation: none`
+3. Run Quarto render:
+   ```bash
+   cd /home/rsimon/repos/raphaelsimon.fr
+   quarto render en/blog/posts/hello-world/index.qmd
+   quarto render fr/blog/posts/hello-world/index.qmd
+   ```
+4. View rendered HTML:
+   ```bash
+   cat _site/fr/blog/posts/hello-world/index.html | grep -A 5 'translation-banner'
+   ```
+5. Check browser preview:
+   ```bash
+   quarto preview
+   ```
+   Navigate to French post and verify banner appears
+
+**Success Criteria:**
+- French post renders without errors
+- English post renders without banner
+- French post shows banner at top of content
+- Banner text is in French: "Traduit automatiquement — Original en :"
+- Banner includes link to English version with 🇬🇧 flag
+- Banner styling matches CSS
+- Clicking flag link navigates to English post
+
+**Files Created/Modified:**
+- `/home/rsimon/repos/raphaelsimon.fr/fr/blog/posts/hello-world/index.qmd` (created in Task 16)
+
+---
+
+### Task 10: Verify blog listing behavior
+
+**Goal:** Confirm only posts in that language appear in each language's blog listing
+
+**Actions:**
+1. View English blog index:
+   ```bash
+   quarto render en/blog/index.qmd
+   cat _site/en/blog/index.html | grep -o 'post-title' | wc -l
+   ```
+2. View French blog index:
+   ```bash
+   quarto render fr/blog/index.qmd
+   cat _site/fr/blog/index.html | grep -o 'post-title' | wc -l
+   ```
+3. Compare counts with actual post directories:
+   ```bash
+   find en/blog/posts -name "index.qmd" | wc -l
+   find fr/blog/posts -name "index.qmd" | wc -l
+   ```
+4. Verify posts from `/en/blog/posts/` appear on English listing
+5. Verify posts from `/fr/blog/posts/` appear on French listing
+6. Confirm no cross-language leaking
+
+**Success Criteria:**
+- English blog listing shows only English posts
+- French blog listing shows only French posts
+- Post counts match directory counts
+- No posts appear in wrong language listing
+- Quarto's listing feature respects language directory boundaries
+
+**Files Inspected:**
+- `/home/rsimon/repos/raphaelsimon.fr/_site/en/blog/index.html`
+- `/home/rsimon/repos/raphaelsimon.fr/_site/fr/blog/index.html`
+
+**Implementation Notes:**
+- Quarto listings automatically scope to subdirectories
+- `contents: posts/` in `/en/blog/index.qmd` only searches `/en/blog/posts/`
+- No additional configuration needed if listing path is relative
+
+---
+
+### Task 11: Assess Quarto search behavior with language directories
+
+**Goal:** Determine if Quarto creates per-language or global search index
+
+**Actions:**
+1. Render full site:
+   ```bash
+   cd /home/rsimon/repos/raphaelsimon.fr
+   quarto render
+   ```
+2. Inspect search index files:
+   ```bash
+   find _site -name "search.json" -o -name "*search*.json"
+   ```
+3. Check if search index is:
+   - Single global: one `_site/search.json`
+   - Per-language: `_site/en/search.json` and `_site/fr/search.json`
+4. View search index structure:
+   ```bash
+   cat _site/search.json | python3 -m json.tool | head -50
+   ```
+   Or if per-language:
+   ```bash
+   cat _site/en/search.json | python3 -m json.tool | head -50
+   ```
+5. Start preview and test search:
+   ```bash
+   quarto preview
+   ```
+   - Open search overlay (press `/` or `Ctrl+K`)
+   - Search for term present in both languages
+   - Note if results include both languages or only current language
+
+**Success Criteria:**
+- Determine if search is global or per-language
+- Document finding in implementation notes section below
+- Take screenshot or note behavior for acceptance criteria
+
+**Implementation Notes:**
+- If search is **per-language**: Users search within current language only. Accept this behavior for V1. No additional work needed.
+- If search is **global**: Results include all languages. Proceed to Task 12 to add language indicators.
+
+**Decision Point:**
+- If **global search** detected: Proceed to Tasks 12 → 13 → 15 (add language indicators to results)
+- If **per-language search** detected: Skip Tasks 12-13, proceed to Task 14 → 15 (document behavior)
+- Both paths converge at Task 15 (update design plan)
+
+---
+
+### Task 12: Add language indicators to search results (if global search)
+
+**Goal:** Display flag emoji next to each search result to indicate language
+
+**Actions:**
+1. Create custom search results JavaScript:
+   - File: `/home/rsimon/repos/raphaelsimon.fr/_includes/search-results.js`
+2. Implement logic:
+   - Override Quarto's search result renderer
+   - Parse result URL to determine language (`/en/` vs `/fr/`)
+   - Prepend flag emoji to result title:
+     - `🇬🇧` for `/en/` paths
+     - `🇫🇷` for `/fr/` paths
+   - Keep minimal JS, leverage existing Quarto search infrastructure
+3. Add script to Quarto config:
+   ```yaml
+   format:
+     html:
+       include-in-header:
+         - _includes/search-results.js
+   ```
+4. Alternatively, use Quarto's search options if supported:
+   ```yaml
+   website:
+     search:
+       location: navbar
+       type: overlay
+       # Check if Quarto supports result templates
+   ```
+
+**Success Criteria:**
+- Search results display language flag prefix
+- English posts show 🇬🇧
+- French posts show 🇫🇷
+- Search remains functional (no JS errors)
+- Flags appear inline with result title
+- Search performance not impacted
+
+**Files Created/Modified:**
+- `/home/rsimon/repos/raphaelsimon.fr/_includes/search-results.js` (if custom JS needed)
+- `/home/rsimon/repos/raphaelsimon.fr/_quarto.yml` (search config)
+
+**Implementation Notes:**
+- Quarto's search uses Fuse.js and custom DOM rendering
+- May need to override `.search-result-doc` rendering
+- Test with Quarto's search overlay specifically
+- Flags should not affect search ranking or matching
+
+---
+
+### Task 13: Test search functionality (global search)
+
+**Goal:** Verify search returns results from both languages with correct flags
+
+**Actions:**
+1. Render site:
+   ```bash
+   cd /home/rsimon/repos/raphaelsimon.fr
+   quarto render
+   ```
+2. Start preview:
+   ```bash
+   quarto preview
+   ```
+3. Open search overlay (press `/` or `Ctrl+K`)
+4. Search for term present in both languages (e.g., "Hello" / "Bonjour")
+5. Verify:
+   - Results from both languages appear
+   - English results have 🇬🇧 flag
+   - French results have 🇫🇷 flag
+   - Clicking result navigates to correct page
+   - Flags are visually clear
+6. Test on both light and dark themes
+
+**Success Criteria:**
+- Search returns results from both `/en/` and `/fr/`
+- Flags display correctly
+- Search overlay remains functional
+- No JavaScript console errors
+- Results clickable and navigate correctly
+
+**Files Inspected:**
+- Browser console (no errors)
+- Search overlay UI
+
+---
+
+### Task 14: Test search functionality (per-language search)
+
+**Goal:** Verify search returns only results from current language
+
+**Actions:**
+1. Render site:
+   ```bash
+   cd /home/rsimon/repos/raphaelsimon.fr
+   quarto render
+   ```
+2. Start preview:
+   ```bash
+   quarto preview
+   ```
+3. Navigate to English page (e.g., `/en/blog/`)
+4. Open search overlay (press `/` or `Ctrl+K`)
+5. Search for term present in both languages
+6. Verify only English results appear
+7. Navigate to French page (e.g., `/fr/blog/`)
+8. Open search overlay
+9. Search for same term
+10. Verify only French results appear
+
+**Success Criteria:**
+- English pages search only English content
+- French pages search only French content
+- No cross-language results appear
+- Search overlay works on both languages
+- Search indexes are separate
+
+**Files Inspected:**
+- Browser search overlay
+- `/home/rsimon/repos/raphaelsimon.fr/_site/en/search.json` (if exists)
+- `/home/rsimon/repos/raphaelsimon.fr/_site/fr/search.json` (if exists)
+
+**Implementation Notes:**
+- If Quarto creates per-language indexes, this is default behavior
+- No additional work required
+- Document as V1 limitation: users must switch language then search
+
+---
+
+### Task 15: Document search behavior in design plan
+
+**Goal:** Update design plan with actual search implementation
+
+**Actions:**
+1. Edit `/home/rsimon/repos/raphaelsimon.fr/llm-docs/multilang-design-plan.md`
+2. Update "Search" section with findings:
+   - If per-language: Note that search is scoped to current language, users switch language then search
+   - If global: Note that flags are displayed, users get results from all languages
+3. Add implementation notes section:
+   - Describe actual Quarto search index structure
+   - Note any custom JavaScript added
+   - Document flag emoji rendering
+
+**Success Criteria:**
+- Design plan reflects actual implementation
+- Search behavior clearly documented
+- Future maintainers understand search architecture
+
+**Files Modified:**
+- `/home/rsimon/repos/raphaelsimon.fr/llm-docs/multilang-design-plan.md`
+
+---
+
+### Task 16: Create test post in French to verify full workflow
+
+**Goal:** End-to-end test of translation banner with real content
+
+**Actions:**
+1. Create French version of hello-world post:
+   - Directory: `/home/rsimon/repos/raphaelsimon.fr/fr/blog/posts/hello-world/`
+   - File: `/home/rsimon/repos/raphaelsimon.fr/fr/blog/posts/hello-world/index.qmd`
+   - Frontmatter:
+     ```yaml
+     ---
+     title: "Bonjour le Monde"
+     description: "Bienvenue sur mon nouveau blog - à quoi s'attendre et pourquoi j'écris."
+     author: "Raphaël Simon"
+     date: "2026-02-02"
+     categories: [meta, welcome]
+     translation: machine
+     ---
+     ```
+   - Content: Translate English post to French
+2. Verify English version has `translation: none`
+3. Render both posts:
+   ```bash
+   quarto render en/blog/posts/hello-world/
+   quarto render fr/blog/posts/hello-world/
+   ```
+4. Check manifest:
+   ```bash
+   cat _data/translations-manifest.json | grep -A 10 "hello-world"
+   ```
+5. View French post in browser
+6. Verify banner appears with link to English version
+
+**Success Criteria:**
+- French post file created
+- Manifest includes both language versions
+- French post renders with banner
+- Banner links to `/en/blog/posts/hello-world/`
+- English post renders without banner
+- Both posts appear in respective language's blog listing
+
+**Files Created:**
+- `/home/rsimon/repos/raphaelsimon.fr/fr/blog/posts/hello-world/index.qmd`
+
+---
+
+### Task 17: Full site render verification
+
+**Goal:** Confirm entire site builds without errors
+
+**Actions:**
+1. Clean previous build:
+   ```bash
+   cd /home/rsimon/repos/raphaelsimon.fr
+   rm -rf _site
+   ```
+2. Render full site:
+   ```bash
+   quarto render
+   ```
+3. Check for errors in output:
+   - Lua filter errors
+   - Missing manifest errors
+   - File not found errors
+4. Verify key pages render:
+   ```bash
+   ls -lh _site/en/index.html
+   ls -lh _site/fr/index.html
+   ls -lh _site/en/blog/index.html
+   ls -lh _site/fr/blog/index.html
+   ls -lh _site/en/blog/posts/hello-world/index.html
+   ls -lh _site/fr/blog/posts/hello-world/index.html
+   ```
+5. Check manifest was generated:
+   ```bash
+   cat _data/translations-manifest.json
+   ```
+
+**Success Criteria:**
+- `quarto render` completes successfully
+- No Lua filter errors
+- No manifest read errors
+- All expected HTML files generated
+- Manifest JSON is valid
+- No broken links or missing files
+
+**Files Verified:**
+- All files in `/home/rsimon/repos/raphaelsimon.fr/_site/`
+
+---
+
+### Task 18: Browser verification checklist
+
+**Goal:** Manual verification of all Phase 4 features in browser
+
+**Actions:**
+1. Start preview:
+   ```bash
+   cd /home/rsimon/repos/raphaelsimon.fr
+   quarto preview
+   ```
+2. Checklist:
+   - [ ] Navigate to `/en/blog/` - only English posts listed
+   - [ ] Navigate to `/fr/blog/` - only French posts listed
+   - [ ] Open English post - no banner appears
+   - [ ] Open French post - banner appears at top
+   - [ ] Banner text in French: "Traduit automatiquement — Original en :"
+   - [ ] Banner includes 🇬🇧 flag link
+   - [ ] Click flag - navigates to English version
+   - [ ] Banner styling visible on light theme
+   - [ ] Switch to dark theme - banner still visible
+   - [ ] Search for term - results appear (global or per-language based on Task 11)
+   - [ ] If global search: flags appear next to results
+   - [ ] If per-language search: only current language results
+   - [ ] RSS feed links work: `/en/blog/index.xml` and `/fr/blog/index.xml`
+
+**Success Criteria:**
+- All checklist items pass
+- No visual glitches
+- No console errors
+- All links functional
+- Search behaves as designed
+
+**Files Verified:**
+- Browser UI for all features
+
+---
+
+## Acceptance Criteria Summary
+
+### Translation Management
+- [x] All blog posts have `translation` field (via defaults or explicit)
+- [x] Manifest generated automatically on every `quarto render`
+- [x] Manifest maps slugs to language versions and translation status
+- [x] Manifest JSON structure correct and parseable
+
+### Translation Banner
+- [x] Posts with `translation: machine` show banner
+- [x] Posts with `translation: none` show no banner
+- [x] Banner appears at top of post content
+- [x] Banner text localized per language
+- [x] Banner links to original version(s) with flag emoji
+- [x] Banner styled for visibility on both light/dark themes
+
+### Blog Listings
+- [x] English blog listing shows only English posts
+- [x] French blog listing shows only French posts
+- [x] No cross-language leaking in listings
+
+### Search
+- [x] Search functionality works on both language versions
+- [x] If global search: language flags appear on results
+- [x] If per-language search: results scoped to current language
+- [x] Search behavior documented in design plan
+
+### Build Process
+- [x] Full site renders without errors
+- [x] Pre-render hook executes manifest script
+- [x] Lua filters load and execute correctly
+- [x] No broken links or missing files
+
+---
+
+## Implementation Notes
+
+### Dependencies
+
+**Python:**
+- `python3` (available in system)
+- `pyyaml` or `python-frontmatter` (for YAML parsing)
+
+Install if needed:
+```bash
+pip3 install pyyaml python-frontmatter
+```
+
+**Quarto:**
+- Version 1.4+ (for pre-render hooks)
+- Built-in Lua filter support
+
+### Key Files Created
+
+1. `/home/rsimon/repos/raphaelsimon.fr/scripts/build-manifest.py`
+2. `/home/rsimon/repos/raphaelsimon.fr/_extensions/multilang/translation-banner.lua`
+3. `/home/rsimon/repos/raphaelsimon.fr/_data/translations-manifest.json` (generated)
+4. `/home/rsimon/repos/raphaelsimon.fr/_includes/search-results.js` (if global search)
+
+### Key Files Modified
+
+1. `/home/rsimon/repos/raphaelsimon.fr/_quarto.yml` (pre-render hook)
+2. `/home/rsimon/repos/raphaelsimon.fr/_extensions/multilang/_extension.yml` (filter registration)
+3. `/home/rsimon/repos/raphaelsimon.fr/en/blog/_metadata.yml` (translation defaults)
+4. `/home/rsimon/repos/raphaelsimon.fr/fr/blog/_metadata.yml` (translation defaults)
+5. `/home/rsimon/repos/raphaelsimon.fr/styles.css` (banner styling)
+
+### Rollback Plan
+
+If issues arise:
+1. Remove `pre-render:` hook from `_quarto.yml`
+2. Remove `translation-banner.lua` from `_extension.yml`
+3. Revert to previous commit: `git checkout HEAD~1 -- <file>`
+4. Site remains functional without translation features
+
+### Future Enhancements (Out of Scope for Phase 4)
+
+- Grouped search results by language with flag headers
+- Custom search results renderer with language filtering
+- Automatic translation workflow (CI/CD integration)
+- Translation status dashboard
+- Support for additional languages (IT/ES/DE)
+
+---
+
+## Testing Commands Quick Reference
+
+```bash
+# Generate manifest manually
+python3 scripts/build-manifest.py
+
+# View manifest
+cat _data/translations-manifest.json | python3 -m json.tool
+
+# Render single post
+quarto render en/blog/posts/hello-world/index.qmd
+
+# Render full site
+quarto render
+
+# Preview site
+quarto preview
+
+# Check for errors in build
+quarto render 2>&1 | grep -i "error\|warning"
+
+# Find search indexes
+find _site -name "*search*.json"
+
+# Verify banner in HTML
+cat _site/fr/blog/posts/hello-world/index.html | grep "translation-banner"
+```
+
+---
+
+## Task Dependencies
+
+```
+Task 1 → Task 2 → Task 3 → Task 4 → Task 8
+                              ↓
+Task 5 → Task 6 → Task 7 → Task 9
+                              ↓
+Task 10 → Task 11 → [Task 12 → Task 13] OR [Task 14]
+                              ↓
+Task 15 → Task 16 → Task 17 → Task 18
+```
+
+**Parallel opportunities:**
+- Tasks 1-2 can be done in parallel
+- Tasks 5-7 can be done in parallel with Tasks 3-4
+- Task 10 can be done in parallel with Task 9
+
+---
+
+## Verification Checklist
+
+Before marking Phase 4 complete:
+
+- [ ] Manifest script exists and is executable
+- [ ] Manifest generated on `quarto render`
+- [ ] Manifest JSON structure correct
+- [ ] Translation banner Lua filter exists and registered
+- [ ] Banner CSS styles exist
+- [ ] English post renders without banner
+- [ ] French post renders with banner
+- [ ] Banner links to correct original version
+- [ ] Blog listings show only posts in that language
+- [ ] Search behavior documented and working
+- [ ] If global search: flags appear
+- [ ] If per-language search: results scoped correctly
+- [ ] Full site renders without errors
+- [ ] Browser verification checklist complete
+- [ ] Design plan updated with actual implementation
+
+---
+
+**END OF PLAN**
