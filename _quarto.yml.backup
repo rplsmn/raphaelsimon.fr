@@ -1,10 +1,6 @@
 project:
   type: website
   output-dir: _site
-  render:
-    - en/
-    - fr/
-    - index.html
 
 website:
   title: "Raphaël Simon"
@@ -22,11 +18,11 @@ website:
     background: dark
     left:
       - text: Blog
-        href: en/blog/index.qmd
+        href: blog/index.qmd
       - text: About
-        href: en/about.qmd
+        href: about.qmd
       - text: Contact
-        href: en/contact.qmd
+        href: contact.qmd
     right:
       - icon: github
         href: https://github.com/rplsmn
@@ -38,7 +34,7 @@ website:
         href: https://bsky.app/profile/raphsmn.bsky.social
         aria-label: Bluesky
       - icon: rss
-        href: en/blog/index.xml
+        href: blog/index.xml
         aria-label: RSS Feed
 
   # Footer
@@ -64,6 +60,9 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
+
+# Default language
+lang: en
 
 # Analytics (optional - add when ready)
 # google-analytics: "G-XXXXXXXXXX"
