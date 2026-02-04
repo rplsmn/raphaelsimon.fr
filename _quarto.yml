@@ -67,6 +67,7 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
+    include-after-body: _includes/lang-switcher-script.html
 
 # Analytics (optional - add when ready)
 # google-analytics: "G-XXXXXXXXXX"
