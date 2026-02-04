@@ -1,12 +1,12 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Detect current language from URL path
-  const path = window.location.pathname;
-  const langMatch = path.match(/^\/(en|fr)\//);
-  const currentLang = langMatch ? langMatch[1] : 'en';
+  var path = window.location.pathname;
+  var langMatch = path.match(/^\/(en|fr)\//);
+  var currentLang = langMatch ? langMatch[1] : 'en';
   
   // Language data
-  const languages = {
+  var languages = {
     en: {flag: '🇬🇧', label: 'English'},
     fr: {flag: '🇫🇷', label: 'Français'}
   };
@@ -19,32 +19,50 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Static page: replace language prefix
-    const pathWithoutLang = path.replace(/^\/(en|fr)\//, '');
+    var pathWithoutLang = path.replace(/^\/(en|fr)\//, '');
     return '/' + targetLang + '/' + pathWithoutLang;
   }
   
-  // Build switcher HTML
-  const switcherHtml = `
-    <div class="lang-switcher">
-      <span class="current-lang">${languages[currentLang].flag}</span>
-      <button class="lang-globe" aria-label="Switch language">🌐</button>
-      <div class="lang-dropdown">
-        <a href="${currentLang === 'en' ? '#' : getTargetUrl('en')}" class="lang-option ${currentLang === 'en' ? 'current' : ''}">
-          ${languages.en.flag} ${languages.en.label}
-        </a>
-        <a href="${currentLang === 'fr' ? '#' : getTargetUrl('fr')}" class="lang-option ${currentLang === 'fr' ? 'current' : ''}">
-          ${languages.fr.flag} ${languages.fr.label}
-        </a>
-      </div>
-    </div>
-  `;
+  // Build switcher HTML (avoiding template literals for compatibility)
+  var switcherDiv = document.createElement('div');
+  switcherDiv.className = 'lang-switcher';
+  
+  var currentFlag = document.createElement('span');
+  currentFlag.className = 'current-lang';
+  currentFlag.textContent = languages[currentLang].flag;
+  switcherDiv.appendChild(currentFlag);
+  
+  var globeBtn = document.createElement('button');
+  globeBtn.className = 'lang-globe';
+  globeBtn.setAttribute('aria-label', 'Switch language');
+  globeBtn.textContent = '🌐';
+  switcherDiv.appendChild(globeBtn);
+  
+  var dropdown = document.createElement('div');
+  dropdown.className = 'lang-dropdown';
+  
+  // Add English option
+  var enLink = document.createElement('a');
+  enLink.href = currentLang === 'en' ? '#' : getTargetUrl('en');
+  enLink.className = 'lang-option' + (currentLang === 'en' ? ' current' : '');
+  enLink.textContent = languages.en.flag + ' ' + languages.en.label;
+  dropdown.appendChild(enLink);
+  
+  // Add French option
+  var frLink = document.createElement('a');
+  frLink.href = currentLang === 'fr' ? '#' : getTargetUrl('fr');
+  frLink.className = 'lang-option' + (currentLang === 'fr' ? ' current' : '');
+  frLink.textContent = languages.fr.flag + ' ' + languages.fr.label;
+  dropdown.appendChild(frLink);
+  
+  switcherDiv.appendChild(dropdown);
   
   // Insert into navbar (find the right icon list)
-  const navbar = document.querySelector('.navbar .navbar-nav');
+  var navbar = document.querySelector('.navbar .navbar-nav');
   if (navbar) {
-    const switcherContainer = document.createElement('li');
+    var switcherContainer = document.createElement('li');
     switcherContainer.className = 'nav-item';
-    switcherContainer.innerHTML = switcherHtml;
+    switcherContainer.appendChild(switcherDiv);
     navbar.appendChild(switcherContainer);
   }
 });
