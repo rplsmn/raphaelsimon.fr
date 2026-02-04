@@ -162,11 +162,11 @@ translation: none    # none | machine
 
 ## Search
 
-**V1 (ship first):**
-- Quarto may create separate search indexes per language directory — accept this limitation
-- If search is per-language by default, ship it as-is (user switches language, then searches)
-- If global search works, add flag prefix inline with each result: 🇫🇷 or 🇬🇧
-- Uses Quarto's built-in overlay search
+**V1 Implementation (Phase 4):**
+- Quarto creates a **single global search index** (`_site/search.json`) including all languages
+- Search results include both English and French content
+- Language flags (🇫🇷 🇬🇧) added inline to each result for clarity
+- Uses Quarto's built-in overlay search with custom CSS for flag display
 
 ```
 ┌─────────────────────────────────────┐
@@ -178,9 +178,16 @@ translation: none    # none | machine
 └─────────────────────────────────────┘
 ```
 
+**Implementation Details:**
+- Search index: `_site/search.json` (global, all languages)
+- Language detection: Parse URL path (`/en/` vs `/fr/`)
+- Flag rendering: CSS `:before` pseudo-element based on `href` attribute
+- No JavaScript modifications required
+
 **V2 (nice-to-have, later):**
 - Results grouped by language with flag headers
-- Requires custom search results renderer
+- Search filtering by language
+- Requires custom search results renderer with JavaScript
 
 ---
 

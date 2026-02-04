@@ -243,3 +243,35 @@ html[data-bs-theme="dark"] .translation-banner {
   background-color: #664d03;
   border-left-color: #ffca2c;
 }
+
+/* Search Result Language Flags */
+/* Add flag emoji before search results based on URL path */
+.aa-Item[href^="en/"]::before,
+.aa-Item[href^="./en/"]::before {
+  content: "🇬🇧 ";
+  margin-right: 0.25rem;
+}
+
+.aa-Item[href^="fr/"]::before,
+.aa-Item[href^="./fr/"]::before {
+  content: "🇫🇷 ";
+  margin-right: 0.25rem;
+}
+
+.aa-Item[href^="it/"]::before,
+.aa-Item[href^="./it/"]::before {
+  content: "🇮🇹 ";
+  margin-right: 0.25rem;
+}
+
+.aa-Item[href^="es/"]::before,
+.aa-Item[href^="./es/"]::before {
+  content: "🇪🇸 ";
+  margin-right: 0.25rem;
+}
+
+.aa-Item[href^="de/"]::before,
+.aa-Item[href^="./de/"]::before {
+  content: "🇩🇪 ";
+  margin-right: 0.25rem;
+}
