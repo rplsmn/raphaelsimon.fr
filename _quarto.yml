@@ -67,6 +67,8 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
+    filters:
+      - _extensions/multilang/translation-banner.lua
     include-after-body:
       - _includes/navbar-lang-switch.html
       - _includes/lang-switcher-script.html

@@ -24,7 +24,14 @@ local function load_manifest()
     return manifest
   end
   
-  local manifest_path = "_data/translations-manifest.json"
+  -- Get project root directory
+  local project_dir = quarto.project.directory
+  if not project_dir then
+    -- Fallback: try current directory
+    project_dir = "."
+  end
+  
+  local manifest_path = project_dir .. "/_data/translations-manifest.json"
   local file = io.open(manifest_path, "r")
   
   if not file then
@@ -44,10 +51,16 @@ local function get_slug_from_path(filepath)
     return nil
   end
   
-  -- Match /posts/SLUG/ pattern or /posts/YYYY-MM-DD-SLUG/ pattern
-  local slug = filepath:match("/posts/[^/]+%-[^/]+%-[^/]+%-([^/]+)/")
+  -- Match /posts/DIRNAME/ pattern where DIRNAME might be YYYY-MM-DD-slug or just slug
+  local dirname = filepath:match("/posts/([^/]+)/")
+  if not dirname then
+    return nil
+  end
+  
+  -- Remove date prefix if present (YYYY-MM-DD-)
+  local slug = dirname:match("^%d%d%d%d%-%d%d%-%d%d%-(.+)$")
   if not slug then
-    slug = filepath:match("/posts/([^/]+)/")
+    slug = dirname
   end
   
   return slug
