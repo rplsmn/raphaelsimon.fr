@@ -1,24 +1,44 @@
 ---
 title: "Raphaël Simon"
-subtitle: "Consulting · Writing · Complex Problems"
+pagetitle: "Raphaël Simon"
+page-layout: custom
+toc: false
 listing:
   id: recent-posts
   contents: blog/posts
   sort: "date desc"
-  type: grid
-  max-items: 3
-  grid-columns: 3
-  categories: false
-  fields: [image, date, title, description]
+  type: default
+  max-items: 10
+  date-format: "MMM D, YYYY"
+  fields: [date, title, description]
 ---
 
-Welcome to my personal website.
+::: {.homepage-container}
 
-I work at the intersection of medicine, public health, software engineering, and data science. I consult on complex interdisciplinary problems and write about topics that interest me.
+:::: {.two-column-layout}
 
-## Latest Posts
+::: {.main-column}
+## Recent
 
 ::: {#recent-posts}
 :::
 
 [View all posts →](blog/index.qmd)
+:::
+
+::: {.sidebar-column}
+## Highlights
+
+### Featured Posts
+- [Hello World](blog/posts/2026-02-02-hello-world/index.qmd)
+
+### Things I Built
+- [AutoPMSI](https://autopmsi.raphaelsimon.fr) - PMSI automation tool
+
+### Worth Reading
+- [Simon Willison's Weblog](https://simonwillison.net/)
+:::
+
+::::
+
+:::
