@@ -45,7 +45,31 @@ website:
         href: en/blog/index.xml
         aria-label: RSS Feed
       - text: |
-          {{< lang-switch >}}
+          <div class="lang-switcher">
+            <span class="current-lang" id="navbar-flag"></span>
+            <button class="lang-globe" aria-label="Switch language">🌐</button>
+            <div class="lang-dropdown">
+              <a href="/en/" class="lang-option" data-lang="en">🇬🇧 English</a>
+              <a href="/fr/" class="lang-option" data-lang="fr">🇫🇷 Français</a>
+            </div>
+          </div>
+          <script>
+          (function() {
+            var currentLang = window.location.pathname.startsWith('/fr') ? 'fr' : 'en';
+            var flag = document.getElementById('navbar-flag');
+            if (flag) flag.textContent = currentLang === 'en' ? '🇬🇧' : '🇫🇷';
+            document.querySelectorAll('.navbar .lang-option').forEach(function(opt) {
+              var lang = opt.getAttribute('data-lang');
+              if (lang === currentLang) {
+                opt.href = '#';
+                opt.classList.add('current');
+              } else {
+                var path = window.location.pathname.replace(/^\/(en|fr)/, '');
+                opt.href = path.match(/^\/blog\/posts\//) ? '/' + lang + '/' : '/' + lang + path;
+              }
+            });
+          })();
+          </script>
 
   # Footer
   page-footer:
