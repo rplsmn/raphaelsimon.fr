@@ -13,6 +13,7 @@ Thumbs.db
 
 # Secrets (if any local testing)
 .env
+.claude/settings.local.json
 
 # Drafts
 temp-unversioned/

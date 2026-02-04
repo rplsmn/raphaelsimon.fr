@@ -15,14 +15,5 @@
         ]
       }
     ]
-  },
-  "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": [
-        "@anthropic-ai/mcp-server-playwright",
-        "--headless"
-      ]
-    }
   }
 }
