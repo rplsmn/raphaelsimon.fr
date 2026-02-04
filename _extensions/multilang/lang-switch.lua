@@ -37,11 +37,17 @@ function Shortcode(args, kwargs, meta)
     else
       -- Static page: replace language prefix
       local path_without_lang = current_path:gsub("^" .. current_lang .. "/", "")
+      
+      -- Remove .qmd extension
+      path_without_lang = path_without_lang:gsub("%.qmd$", "")
+      
+      -- Build target path
       local target_path = "/" .. target_lang .. "/" .. path_without_lang
       
-      -- Convert .qmd to .html and adjust path
-      target_path = target_path:gsub("%.qmd$", ".html")
-      target_path = target_path:gsub("index%.html$", "")
+      -- Add trailing slash for non-index pages
+      if path_without_lang ~= "index" and path_without_lang ~= "" then
+        target_path = target_path .. "/"
+      end
       
       return target_path
     end
