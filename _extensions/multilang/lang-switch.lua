@@ -29,8 +29,8 @@ function Shortcode(args, kwargs, meta)
   -- Function to construct target URL
   local function get_target_url(target_lang)
     -- For static pages: assume symmetric structure
-    -- /en/about.qmd → /fr/about/
-    -- /en/contact.qmd → /fr/contact/
+    -- /en/about.qmd → /fr/about.html
+    -- /en/contact.qmd → /fr/contact.html
     -- /en/index.qmd → /fr/
     
     if current_path:match("^" .. current_lang .. "/blog/posts/") then
@@ -49,8 +49,8 @@ function Shortcode(args, kwargs, meta)
         return "/" .. target_lang .. "/"
       end
       
-      -- Build target path with trailing slash
-      return "/" .. target_lang .. "/" .. path_without_lang .. "/"
+      -- Build target path with .html extension
+      return "/" .. target_lang .. "/" .. path_without_lang .. ".html"
     end
   end
   
