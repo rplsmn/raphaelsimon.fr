@@ -1,0 +1,10 @@
+---
+title: "Merci"
+search: false
+---
+
+Votre message a été envoyé avec succès !
+
+Je vous répondrai dès que possible.
+
+[← Retour à l'accueil](index.qmd)

@@ -1,0 +1,44 @@
+---
+title: "Raphaël Simon"
+pagetitle: "Raphaël Simon"
+page-layout: custom
+toc: false
+listing:
+  id: recent-posts
+  contents: blog/posts
+  sort: "date desc"
+  type: default
+  max-items: 10
+  date-format: "MMM D, YYYY"
+  fields: [date, title, description]
+---
+
+::: {.homepage-container}
+
+:::: {.two-column-layout}
+
+::: {.main-column}
+## Récents
+
+::: {#recent-posts}
+:::
+
+[Voir tous les articles →](blog/index.qmd)
+:::
+
+::: {.sidebar-column}
+## Sélection
+
+### Articles en vedette
+- [Hello World](blog/posts/2026-02-02-hello-world/index.qmd)
+
+### Projets
+- [AutoPMSI](https://autopmsi.raphaelsimon.fr) - Outil d'automatisation PMSI
+
+### À lire
+- [Simon Willison's Weblog](https://simonwillison.net/)
+:::
+
+::::
+
+:::

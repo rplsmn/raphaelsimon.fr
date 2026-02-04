@@ -1,0 +1,9 @@
+---
+title: "Contact"
+include-after-body:
+  - ../_includes/contact-form-fr.html
+---
+
+Vous avez une question, une idée de projet, ou vous voulez simplement échanger ? Remplissez le formulaire ci-dessous et je vous répondrai.
+
+Vous pouvez aussi me joindre directement à [contact@raphaelsimon.fr](mailto:contact@raphaelsimon.fr).

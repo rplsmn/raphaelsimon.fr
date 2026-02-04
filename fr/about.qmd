@@ -1,0 +1,40 @@
+---
+title: "À propos"
+image: images/profile.jpeg
+about:
+  template: trestles
+  image-shape: round
+  image-width: 12em
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/rplsmn
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/raphael-simon-md
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/raphsmn.bsky.social
+    - icon: envelope
+      text: Email
+      href: mailto:contact@raphaelsimon.fr
+---
+
+## Biographie
+
+Médecin devenu ingénieur. J'ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l'informatique médicale, et finalement le logiciel. Aujourd'hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).
+
+Je suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l'intersection est floue, plus c'est intéressant.
+
+Basé en France. Plusieurs langues parlées couramment, d'autres en cours d'apprentissage.
+
+## Expertise
+
+- Médecine et Santé Publique
+- Ingénierie Logicielle
+- Science des Données
+- Systèmes Complexes
+
+## Conseil
+
+J'aide les organisations à résoudre des problèmes interdisciplinaires complexes et de niche. Si vous avez un projet difficile qui ne rentre pas dans les catégories traditionnelles, [discutons-en](contact.qmd).
