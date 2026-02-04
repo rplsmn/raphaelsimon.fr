@@ -132,7 +132,78 @@ def build_manifest():
     print(f"  English: {len(en_posts)} posts")
     print(f"  French: {len(fr_posts)} posts")
     print(f"  Written to: {output_file}")
+    
+    return manifest
+
+
+def generate_hreflang_metadata(manifest):
+    """
+    Generate hreflang frontmatter for blog posts based on manifest.
+    Returns dict: {slug: {en: path, fr: path, ...}}
+    """
+    hreflang_map = {}
+    
+    for slug, data in manifest.items():
+        hreflang_map[slug] = {}
+        for lang_code in data.keys():
+            hreflang_map[slug][lang_code] = f"/{lang_code}/blog/posts/{slug}/"
+    
+    return hreflang_map
+
+
+def inject_hreflang_into_posts(hreflang_map):
+    """
+    Update blog post frontmatter with hreflang metadata.
+    Uses pathlib for cross-platform compatibility.
+    """
+    project_root = Path(__file__).parent.parent
+    
+    for slug, hreflang_data in hreflang_map.items():
+        for lang_code in hreflang_data.keys():
+            post_path = project_root / lang_code / "blog" / "posts" / slug / "index.qmd"
+            if not post_path.exists():
+                continue
+            
+            try:
+                # Read current content
+                content = post_path.read_text(encoding='utf-8')
+                
+                # Parse frontmatter
+                if not content.startswith('---'):
+                    continue
+                
+                parts = content.split('---', 2)
+                if len(parts) < 3:
+                    continue
+                
+                frontmatter_text = parts[1]
+                body = parts[2]
+                
+                # Parse YAML frontmatter
+                if yaml:
+                    metadata = yaml.safe_load(frontmatter_text) or {}
+                else:
+                    # Skip if no YAML parser available
+                    print(f"Warning: Cannot inject hreflang into {post_path} - YAML parser not available")
+                    continue
+                
+                # Inject hreflang
+                metadata['hreflang'] = hreflang_data
+                
+                # Rebuild frontmatter
+                new_frontmatter = yaml.dump(metadata, default_flow_style=False, allow_unicode=True, sort_keys=False)
+                new_content = f"---\n{new_frontmatter}---{body}"
+                
+                # Write back
+                post_path.write_text(new_content, encoding='utf-8')
+                
+            except Exception as e:
+                print(f"Warning: Error processing {post_path}: {e}")
 
 
 if __name__ == '__main__':
-    build_manifest()
+    manifest = build_manifest()
+    
+    # Auto-inject hreflang into blog posts
+    hreflang_map = generate_hreflang_metadata(manifest)
+    inject_hreflang_into_posts(hreflang_map)
