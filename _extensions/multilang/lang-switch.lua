@@ -6,9 +6,12 @@ function Shortcode(args, kwargs, meta)
   end
   
   -- Get current page path (relative to site root)
+  -- Use QUARTO_PROJECT_INPUT_FILES environment variable or input_file
   local current_path = ""
   if quarto.doc.input_file then
     current_path = quarto.doc.input_file
+    -- Strip absolute path prefix to get relative path
+    current_path = current_path:gsub("^.*/raphaelsimon%.fr/", "")
   end
   
   -- Validate current_path structure
@@ -41,15 +44,13 @@ function Shortcode(args, kwargs, meta)
       -- Remove .qmd extension
       path_without_lang = path_without_lang:gsub("%.qmd$", "")
       
-      -- Build target path
-      local target_path = "/" .. target_lang .. "/" .. path_without_lang
-      
-      -- Add trailing slash for non-index pages
-      if path_without_lang ~= "index" and path_without_lang ~= "" then
-        target_path = target_path .. "/"
+      -- Handle index page
+      if path_without_lang == "index" or path_without_lang == "" then
+        return "/" .. target_lang .. "/"
       end
       
-      return target_path
+      -- Build target path with trailing slash
+      return "/" .. target_lang .. "/" .. path_without_lang .. "/"
     end
   end
   
