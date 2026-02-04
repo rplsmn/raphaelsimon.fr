@@ -29,13 +29,19 @@ function Meta(meta)
     table.insert(hreflang_tags, default_tag)
   end
   
-  -- Inject into header-includes
+  -- Add tags as raw HTML blocks in header-includes
   if #hreflang_tags > 0 then
-    local html = table.concat(hreflang_tags, "\n")
-    if meta['header-includes'] then
-      table.insert(meta['header-includes'], pandoc.RawBlock('html', html))
+    local blocks = {}
+    for _, tag in ipairs(hreflang_tags) do
+      table.insert(blocks, pandoc.RawBlock('html', tag))
+    end
+    
+    if meta['header-includes'] and meta['header-includes'].t == 'MetaList' then
+      for _, block in ipairs(blocks) do
+        table.insert(meta['header-includes'], block)
+      end
     else
-      meta['header-includes'] = pandoc.MetaList{pandoc.RawBlock('html', html)}
+      meta['header-includes'] = pandoc.MetaList(blocks)
     end
   end
   

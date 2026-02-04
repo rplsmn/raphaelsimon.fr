@@ -69,6 +69,7 @@ format:
     code-overflow: wrap
     filters:
       - _extensions/multilang/translation-banner.lua
+      - _extensions/multilang/hreflang.lua
     include-after-body:
       - _includes/navbar-lang-switch.html
       - _includes/lang-switcher-script.html
