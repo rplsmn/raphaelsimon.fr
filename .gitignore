@@ -15,6 +15,6 @@ Thumbs.db
 .env
 
 # Drafts
-.drafts/
+temp-unversioned/
 
 **/*.quarto_ipynb
