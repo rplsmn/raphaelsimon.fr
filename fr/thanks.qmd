@@ -1,10 +1,10 @@
 ---
-title: "Thank You"
+title: "Merci"
 search: false
 ---
 
-Your message has been sent successfully!
+Votre message a été envoyé avec succès !
 
-I'll get back to you as soon as possible.
+Je vous répondrai dès que possible.
 
-[← Back to Home](index.qmd)
+[← Retour à l'accueil](index.qmd)

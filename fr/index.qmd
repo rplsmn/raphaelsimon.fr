@@ -18,24 +18,24 @@ listing:
 :::: {.two-column-layout}
 
 ::: {.main-column}
-## Recent
+## Récents
 
 ::: {#recent-posts}
 :::
 
-[View all posts →](blog/index.qmd)
+[Voir tous les articles →](blog/index.qmd)
 :::
 
 ::: {.sidebar-column}
-## Highlights
+## Sélection
 
-### Featured Posts
+### Articles en vedette
 - [Hello World](blog/posts/2026-02-02-hello-world/index.qmd)
 
-### Things I Built
-- [AutoPMSI](https://autopmsi.raphaelsimon.fr) - PMSI automation tool
+### Projets
+- [AutoPMSI](https://autopmsi.raphaelsimon.fr) - Outil d'automatisation PMSI
 
-### Worth Reading
+### À lire
 - [Simon Willison's Weblog](https://simonwillison.net/)
 :::
 

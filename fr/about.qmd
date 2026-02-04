@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "À propos"
 image: images/profile.jpeg
 about:
   template: trestles
@@ -20,21 +20,21 @@ about:
       href: mailto:contact@raphaelsimon.fr
 ---
 
-## Bio
+## Biographie
 
-Physician turned engineer. I trained in medicine, missed the door to radiology, and walked through another one — into public health, clinical informatics, and eventually software. Now I build things and think about how technology shapes policy (and vice versa).
+Médecin devenu ingénieur. J'ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l'informatique médicale, et finalement le logiciel. Aujourd'hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).
 
-I'm drawn to problems that don't fit neatly into one field. The messier the intersection, the more interesting.
+Je suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l'intersection est floue, plus c'est intéressant.
 
-Based in France. Fluent in several languages, still learning others.
+Basé en France. Plusieurs langues parlées couramment, d'autres en cours d'apprentissage.
 
 ## Expertise
 
-- Medicine & Public Health
-- Software Engineering
-- Data Science
-- Complex Systems
+- Médecine et Santé Publique
+- Ingénierie Logicielle
+- Science des Données
+- Systèmes Complexes
 
-## Consulting
+## Conseil
 
-I help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn't fit neatly into traditional categories, [let's talk](contact.qmd).
+J'aide les organisations à résoudre des problèmes interdisciplinaires complexes et de niche. Si vous avez un projet difficile qui ne rentre pas dans les catégories traditionnelles, [discutons-en](contact.qmd).

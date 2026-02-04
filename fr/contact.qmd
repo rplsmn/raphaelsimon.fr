@@ -1,9 +1,9 @@
 ---
 title: "Contact"
 include-after-body:
-  - ../_includes/contact-form.html
+  - ../_includes/contact-form-fr.html
 ---
 
-Have a question, project idea, or just want to connect? Fill out the form below and I'll get back to you.
+Vous avez une question, une idée de projet, ou vous voulez simplement échanger ? Remplissez le formulaire ci-dessous et je vous répondrai.
 
-You can also reach me directly at [contact@raphaelsimon.fr](mailto:contact@raphaelsimon.fr).
+Vous pouvez aussi me joindre directement à [contact@raphaelsimon.fr](mailto:contact@raphaelsimon.fr).
