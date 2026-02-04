@@ -1,0 +1,254 @@
+[
+  {
+    "objectID": "blog/posts/2026-02-02-hello-world/index.html",
+    "href": "blog/posts/2026-02-02-hello-world/index.html",
+    "title": "Hello World",
+    "section": "",
+    "text": "Welcome to my blog! This is where I’ll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections."
+  },
+  {
+    "objectID": "blog/posts/2026-02-02-hello-world/index.html#what-to-expect",
+    "href": "blog/posts/2026-02-02-hello-world/index.html#what-to-expect",
+    "title": "Hello World",
+    "section": "What to Expect",
+    "text": "What to Expect\nTopics will vary widely - that’s by design. I’m interested in:\n\nMedicine & Public Health: Clinical insights, health systems, epidemiology\nSoftware Engineering: Architecture, best practices, tools\nData Science: Analysis methods, visualization, ML applications\nComplex Systems: Where these fields collide"
+  },
+  {
+    "objectID": "blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "href": "blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "title": "Hello World",
+    "section": "Why Write?",
+    "text": "Why Write?\nWriting clarifies thinking. By explaining ideas publicly, I’m forced to refine them.\nStay tuned for more."
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html",
+    "href": "docs/quarto-setup-guide.html",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "This guide covers setting up a personal website with Quarto, deployed to GitHub Pages.\n\n\nThe simplest workflow for this site:\n\nKeep /_site/ gitignored - don’t commit rendered output\nUse quarto publish gh-pages - Quarto’s native publishing to a gh-pages branch\nConfigure GitHub Pages to serve from the gh-pages branch\n\nThis keeps your main branch clean (source only) and lets Quarto handle deployment.\n\n\n\n\nGit installed and configured\nGitHub account with repository created\nQuarto CLI installed (quarto check to verify)\nWeb3Forms account (for contact form)\n\n\n\n\n\n\n\nWarning: If your repository already has files, commit them first. This command creates starter files that may conflict with existing content.\n\n# Navigate to repository\ncd /home/raph/Documents/sandbox/raphaelsimon.fr\n\n# Initialize Quarto website (creates starter files)\nquarto create project website .\nThis creates:\n\n_quarto.yml - Project configuration\nindex.qmd - Homepage\nabout.qmd - About page\nstyles.css - Custom styles\n\n\n\n\nCreate the full directory structure. If directories already exist, these commands are safe to re-run:\nmkdir -p blog/posts\nmkdir -p images\nmkdir -p _includes\ntouch blog/index.qmd\ntouch blog/_metadata.yml\ntouch contact.qmd\nTarget structure:\nraphaelsimon.fr/\n├── _quarto.yml\n├── index.qmd\n├── about.qmd\n├── contact.qmd\n├── styles.css\n├── blog/\n│   ├── index.qmd\n│   ├── _metadata.yml\n│   └── posts/\n├── images/\n│   └── (profile.jpg, favicon.ico)\n├── _includes/\n│   └── contact-form.html\n└── _site/              (generated, gitignored)\n\n\n\nMerge these entries into your existing .gitignore (don’t replace the whole file):\n# Quarto\n/.quarto/\n/_site/\n/_freeze/\n\n# OS\n.DS_Store\nThumbs.db\n\n# Editor\n*.swp\n*~\n\n# Secrets (if any local testing)\n.env\n\n\n\n\n\n\nMerge carefully with any existing configuration:\nproject:\n  type: website\n  output-dir: _site\n\nwebsite:\n  title: \"Raphaël Simon\"\n  description: \"Personal website - Medicine, Public Health, Software Engineering, Data Science\"\n  site-url: https://raphaelsimon.fr\n  favicon: images/favicon.ico\n\n  # Search functionality (uses Quarto defaults: s, f, /)\n  search:\n    location: navbar\n    type: overlay\n\n  # Top navigation\n  navbar:\n    background: dark\n    left:\n      - text: Home\n        href: index.qmd\n      - text: Blog\n        href: blog/index.qmd\n      - text: About\n        href: about.qmd\n      - text: Contact\n        href: contact.qmd\n    right:\n      - icon: github\n        href: https://github.com/rplsmn\n        aria-label: GitHub\n      - icon: linkedin\n        href: https://linkedin.com/in/raphael-simon-md\n        aria-label: LinkedIn\n      - icon: bluesky\n        href: https://bsky.app/profile/raphsmn.bsky.social\n        aria-label: Bluesky\n      - icon: rss\n        href: blog/index.xml\n        aria-label: RSS Feed\n\n  # Footer\n  page-footer:\n    left: |\n      © 2026 Raphaël Simon\n    right:\n      - icon: github\n        href: https://github.com/rplsmn\n      - icon: envelope\n        href: mailto:contact@raphaelsimon.fr\n\n  # Enable back-to-top button\n  back-to-top-navigation: true\n\n# Theme with dark mode default\nformat:\n  html:\n    theme:\n      dark: darkly\n      light: flatly\n    css: styles.css\n    toc: true\n    code-copy: true\n    code-overflow: wrap\n\n# Default language\nlang: en\n\n# Analytics (optional - add when ready)\n# google-analytics: \"G-XXXXXXXXXX\"\n\n\n\n# Shared options for all blog posts\nfreeze: true\nauthor: \"Raphaël Simon\"\n\n# Default post format\nformat:\n  html:\n    code-fold: true\n    code-tools: true\n\n\n\n\n\n\n---\ntitle: \"Raphaël Simon\"\nsubtitle: \"Consulting · Writing · Complex Problems\"\nlisting:\n  id: recent-posts\n  contents: blog/posts\n  sort: \"date desc\"\n  type: grid\n  max-items: 3\n  grid-columns: 3\n  categories: false\n  fields: [image, date, title, description]\n---\n\nWelcome to my personal website.\n\nI work at the intersection of medicine, public health, software engineering, and data science. I consult on complex interdisciplinary problems and write about topics that interest me.\n\n## Latest Posts\n\n::: {#recent-posts}\n:::\n\n[View all posts →](blog/index.qmd)\n\n\n\n---\ntitle: \"Blog\"\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  feed: true\n  page-size: 10\n---\n\n\n\n---\ntitle: \"About\"\nimage: images/profile.jpg\nabout:\n  template: trestles\n  image-shape: round\n  image-width: 12em\n  links:\n    - icon: github\n      text: GitHub\n      href: https://github.com/rplsmn\n    - icon: linkedin\n      text: LinkedIn\n      href: https://linkedin.com/in/raphael-simon-md\n    - icon: envelope\n      text: Email\n      href: mailto:contact@raphaelsimon.fr\n---\n\n## Bio\n\n[Write your bio here - background, expertise, interests]\n\n## Expertise\n\n- Medicine & Public Health\n- Software Engineering\n- Data Science\n- Complex Systems\n\n## Consulting\n\nI help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn't fit neatly into traditional categories, [let's talk](contact.qmd).\n\n\n\n---\ntitle: \"Contact\"\ninclude-after-body:\n  - _includes/contact-form.html\n---\n\nHave a question, project idea, or just want to connect? Fill out the form below and I'll get back to you.\n\nYou can also reach me directly at [contact@raphaelsimon.fr](mailto:contact@raphaelsimon.fr).\n\n\n\nFirst, get a Web3Forms access key:\n\nGo to https://web3forms.com\nClick “Create Access Key”\nEnter your email (contact@raphaelsimon.fr)\nCheck email for access key\n\n\nTip: Consider using a Proton alias for contact@ so it can be rotated if scraped.\n\nThen create the form:\n&lt;form action=\"https://api.web3forms.com/submit\" method=\"POST\" class=\"contact-form mt-4\"&gt;\n  &lt;!-- Replace YOUR_ACCESS_KEY with actual key from Web3Forms --&gt;\n  &lt;input type=\"hidden\" name=\"access_key\" value=\"YOUR_ACCESS_KEY\"&gt;\n  &lt;input type=\"hidden\" name=\"subject\" value=\"New message from raphaelsimon.fr\"&gt;\n  &lt;input type=\"hidden\" name=\"from_name\" value=\"raphaelsimon.fr Contact Form\"&gt;\n  &lt;input type=\"checkbox\" name=\"botcheck\" style=\"display: none;\"&gt;\n\n  &lt;div class=\"mb-3\"&gt;\n    &lt;label for=\"name\" class=\"form-label\"&gt;Name *&lt;/label&gt;\n    &lt;input type=\"text\" name=\"name\" id=\"name\" class=\"form-control\" placeholder=\"Your name\" required&gt;\n  &lt;/div&gt;\n\n  &lt;div class=\"mb-3\"&gt;\n    &lt;label for=\"email\" class=\"form-label\"&gt;Email *&lt;/label&gt;\n    &lt;input type=\"email\" name=\"email\" id=\"email\" class=\"form-control\" placeholder=\"your@email.com\" required&gt;\n  &lt;/div&gt;\n\n  &lt;div class=\"mb-3\"&gt;\n    &lt;label for=\"subject\" class=\"form-label\"&gt;Subject&lt;/label&gt;\n    &lt;input type=\"text\" name=\"form_subject\" id=\"subject\" class=\"form-control\" placeholder=\"What's this about?\"&gt;\n  &lt;/div&gt;\n\n  &lt;div class=\"mb-3\"&gt;\n    &lt;label for=\"message\" class=\"form-label\"&gt;Message *&lt;/label&gt;\n    &lt;textarea name=\"message\" id=\"message\" class=\"form-control\" rows=\"6\" placeholder=\"Your message...\" required&gt;&lt;/textarea&gt;\n  &lt;/div&gt;\n\n  &lt;!-- hCaptcha spam protection (no config needed with Web3Forms) --&gt;\n  &lt;div class=\"h-captcha mb-3\" data-captcha=\"true\"&gt;&lt;/div&gt;\n  &lt;script src=\"https://web3forms.com/client/script.js\" async defer&gt;&lt;/script&gt;\n\n  &lt;button type=\"submit\" class=\"btn btn-primary\"&gt;\n    Send Message\n  &lt;/button&gt;\n&lt;/form&gt;\n\n&lt;style&gt;\n.contact-form {\n  max-width: 600px;\n}\n.contact-form .form-control {\n  background-color: var(--bs-body-bg);\n  border-color: var(--bs-border-color);\n  color: var(--bs-body-color);\n}\n.contact-form .form-control:focus {\n  border-color: var(--bs-primary);\n  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);\n}\n&lt;/style&gt;\n\n\n\n---\ntitle: \"Thank You\"\nsearch: false\n---\n\nYour message has been sent successfully!\n\nI'll get back to you as soon as possible.\n\n[← Back to Home](index.qmd)\nUpdate the contact form redirect:\n&lt;input type=\"hidden\" name=\"redirect\" value=\"https://raphaelsimon.fr/thanks.html\"&gt;\n\n\n\n\n\n\nUse today’s date (YYYY-MM-DD) in both folder name and frontmatter:\n# Replace YYYY-MM-DD with today's date\nmkdir -p blog/posts/YYYY-MM-DD-hello-world\nCreate blog/posts/YYYY-MM-DD-hello-world/index.qmd:\n---\ntitle: \"Hello World\"\ndescription: \"Welcome to my new blog - what to expect and why I'm writing.\"\nauthor: \"Raphaël Simon\"\ndate: \"YYYY-MM-DD\"  # Use today's date\ncategories: [meta, welcome]\nimage: thumbnail.jpg\ndraft: false\n---\n\nWelcome to my blog! This is where I'll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections.\n\n## What to Expect\n\nTopics will vary widely - that's by design. I'm interested in:\n\n- **Medicine & Public Health**: Clinical insights, health systems, epidemiology\n- **Software Engineering**: Architecture, best practices, tools\n- **Data Science**: Analysis methods, visualization, ML applications\n- **Complex Systems**: Where these fields collide\n\n## Why Write?\n\nWriting clarifies thinking. By explaining ideas publicly, I'm forced to refine them.\n\nStay tuned for more.\nAdd a placeholder thumbnail or use an existing image.\n\n\n\n\n\n\n/* Custom styles for raphaelsimon.fr */\n\n/* Improve readability */\nbody {\n  font-size: 1.1rem;\n  line-height: 1.7;\n}\n\n/* Homepage hero section */\n.quarto-title-block {\n  margin-bottom: 2rem;\n}\n\n/* Blog post cards */\n.quarto-grid-item {\n  border-radius: 8px;\n  transition: transform 0.2s ease;\n}\n\n.quarto-grid-item:hover {\n  transform: translateY(-2px);\n}\n\n/* Code blocks */\npre {\n  border-radius: 6px;\n}\n\n/* Links */\na {\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n\n/* Footer spacing */\n.page-footer {\n  margin-top: 3rem;\n  padding-top: 1.5rem;\n}\n\n/* Contact form styling handled in contact-form.html */\n\n\n\n\n\n\n# Start local preview with hot reload (typically http://localhost:4200)\nquarto preview\n\n# Full render (generates _site/ directory)\nquarto render\n\n\n\nRun through this checklist locally before deploying:\n\nHomepage loads with navigation\nLatest posts appear on homepage\nBlog listing shows all posts\nBlog post pages render correctly\nAbout page displays profile image and links\nContact form appears and submits\nSearch works (press / or s)\nDark/light mode toggle works\nRSS feed validates (blog/index.xml)\nAll links work\nSite accessible at deployed URL\nHTTPS working\nContact form submits successfully\n\n\n\n\n\n\n\n\nConfigure GitHub Pages in your repository settings:\n\nGo to Settings &gt; Pages\nSet Source to Deploy from a branch\nSet Branch to gh-pages and folder to / (root)\n\nFirst publish from your local machine:\n\nquarto render\nquarto publish gh-pages\nQuarto will create the gh-pages branch and push the rendered site.\n\n\n\nquarto publish gh-pages\nQuarto re-renders by default. Use --no-render if you’ve already rendered:\nquarto publish gh-pages --no-render\n\n\n\nIf using a custom domain like raphaelsimon.fr:\n\nAdd a CNAME file to your project root containing: raphaelsimon.fr\nConfigure DNS at your registrar to point to GitHub Pages\nEnable HTTPS in GitHub Pages settings\n\n\n\n\n\nGoal: publish posts from your phone with minimal friction.\n\n\n\nOn your phone, use the GitHub mobile app\nCreate a new branch\nAdd a folder under blog/posts/YYYY-MM-DD-post-slug/\nCreate index.qmd with frontmatter\nOpen a pull request\nMerge when ready; publishing happens from your normal workflow\n\nWhy this works:\n\nNo special tooling\nSave drafts in a branch\nReview before publishing (even if it’s just you)\n\n\n\n\nIf you often write in a notes app first:\n\nWrite the content as plain Markdown\nCopy into blog/posts/YYYY-MM-DD-post-slug/index.qmd via GitHub mobile\n\n\n\n\nCopy this template for new posts:\n---\ntitle: \"Post title\"\ndescription: \"One sentence summary\"\ndate: \"YYYY-MM-DD\"  # today\ncategories: [tag1, tag2]\ndraft: true\n---\n\nStart writing here.\nSet draft: false when you merge/publish.\n\n\n\n\n\n\n# Create post directory (use today's date)\nmkdir -p blog/posts/YYYY-MM-DD-post-slug\n\n# Edit blog/posts/YYYY-MM-DD-post-slug/index.qmd\n\n# Preview locally\nquarto preview\n\n# Publish\nquarto publish gh-pages\n\n\n\nChanges to _quarto.yml require re-render, which quarto publish does automatically.\n\n\n\n\n\n\n\n\n\n\n\nTask\nCommand\n\n\n\n\nStart preview\nquarto preview\n\n\nFull render\nquarto render\n\n\nPublish to GitHub Pages\nquarto publish gh-pages\n\n\nCreate new post\nmkdir blog/posts/YYYY-MM-DD-slug && touch blog/posts/YYYY-MM-DD-slug/index.qmd\n\n\nCheck installation\nquarto check\n\n\nUpdate Quarto\nquarto update\n\n\n\n\n\n\nPreview not updating: Stop and restart quarto preview\nBuild fails: Check YAML syntax in _quarto.yml and post frontmatter\nContact form not working: Verify Web3Forms access key is correct\nSearch not finding content: Run full quarto render, search index builds on render only\nDark mode not switching: Clear browser cache, check theme configuration\nRSS feed errors: Ensure site-url is set in _quarto.yml\n\n\n\n\nQuarto Websites Documentation\nQuarto Blog Documentation\nQuarto Publishing to GitHub Pages\nWeb3Forms Documentation\nBootswatch Themes\n\n\n\n\n\nIf you prefer Cloudflare Pages over GitHub Pages (for example, if you already have your domain on Cloudflare), here are the options.\n\n\n\nRun quarto render locally\nIn Cloudflare Pages, click Create application &gt; Pages &gt; Upload assets\nName project: raphaelsimon-fr\nUpload contents of _site/ directory\nDeploy\n\n\n\n\nSince Cloudflare doesn’t have Quarto pre-installed, use GitHub Actions:\n.github/workflows/deploy-cloudflare.yml:\nname: Deploy to Cloudflare Pages\n\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n      deployments: write\n\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n\n      - name: Setup Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Render site\n        run: quarto render\n\n      - name: Deploy to Cloudflare Pages\n        uses: cloudflare/pages-action@v1\n        with:\n          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}\n          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}\n          projectName: raphaelsimon-fr\n          directory: _site\n          gitHubToken: ${{ secrets.GITHUB_TOKEN }}\n\n\n\n\nCreate Cloudflare API token:\n\nGo to Cloudflare dashboard &gt; My Profile &gt; API Tokens\nCreate token with “Cloudflare Pages: Edit” permission\n\nGet Account ID from Cloudflare dashboard URL\nAdd secrets to GitHub repository:\n\nCLOUDFLARE_API_TOKEN\nCLOUDFLARE_ACCOUNT_ID\n\n\n\n\n\n\nIn Cloudflare Pages project settings, go to Custom domains\nAdd raphaelsimon.fr\nAdd www.raphaelsimon.fr (optional, for redirect)\nDNS records are auto-configured since domain is on Cloudflare"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#happy-path-recommended",
+    "href": "docs/quarto-setup-guide.html#happy-path-recommended",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "The simplest workflow for this site:\n\nKeep /_site/ gitignored - don’t commit rendered output\nUse quarto publish gh-pages - Quarto’s native publishing to a gh-pages branch\nConfigure GitHub Pages to serve from the gh-pages branch\n\nThis keeps your main branch clean (source only) and lets Quarto handle deployment."
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#prerequisites",
+    "href": "docs/quarto-setup-guide.html#prerequisites",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Git installed and configured\nGitHub account with repository created\nQuarto CLI installed (quarto check to verify)\nWeb3Forms account (for contact form)"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-1-project-initialization",
+    "href": "docs/quarto-setup-guide.html#phase-1-project-initialization",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Warning: If your repository already has files, commit them first. This command creates starter files that may conflict with existing content.\n\n# Navigate to repository\ncd /home/raph/Documents/sandbox/raphaelsimon.fr\n\n# Initialize Quarto website (creates starter files)\nquarto create project website .\nThis creates:\n\n_quarto.yml - Project configuration\nindex.qmd - Homepage\nabout.qmd - About page\nstyles.css - Custom styles\n\n\n\n\nCreate the full directory structure. If directories already exist, these commands are safe to re-run:\nmkdir -p blog/posts\nmkdir -p images\nmkdir -p _includes\ntouch blog/index.qmd\ntouch blog/_metadata.yml\ntouch contact.qmd\nTarget structure:\nraphaelsimon.fr/\n├── _quarto.yml\n├── index.qmd\n├── about.qmd\n├── contact.qmd\n├── styles.css\n├── blog/\n│   ├── index.qmd\n│   ├── _metadata.yml\n│   └── posts/\n├── images/\n│   └── (profile.jpg, favicon.ico)\n├── _includes/\n│   └── contact-form.html\n└── _site/              (generated, gitignored)\n\n\n\nMerge these entries into your existing .gitignore (don’t replace the whole file):\n# Quarto\n/.quarto/\n/_site/\n/_freeze/\n\n# OS\n.DS_Store\nThumbs.db\n\n# Editor\n*.swp\n*~\n\n# Secrets (if any local testing)\n.env"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-2-core-configuration",
+    "href": "docs/quarto-setup-guide.html#phase-2-core-configuration",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Merge carefully with any existing configuration:\nproject:\n  type: website\n  output-dir: _site\n\nwebsite:\n  title: \"Raphaël Simon\"\n  description: \"Personal website - Medicine, Public Health, Software Engineering, Data Science\"\n  site-url: https://raphaelsimon.fr\n  favicon: images/favicon.ico\n\n  # Search functionality (uses Quarto defaults: s, f, /)\n  search:\n    location: navbar\n    type: overlay\n\n  # Top navigation\n  navbar:\n    background: dark\n    left:\n      - text: Home\n        href: index.qmd\n      - text: Blog\n        href: blog/index.qmd\n      - text: About\n        href: about.qmd\n      - text: Contact\n        href: contact.qmd\n    right:\n      - icon: github\n        href: https://github.com/rplsmn\n        aria-label: GitHub\n      - icon: linkedin\n        href: https://linkedin.com/in/raphael-simon-md\n        aria-label: LinkedIn\n      - icon: bluesky\n        href: https://bsky.app/profile/raphsmn.bsky.social\n        aria-label: Bluesky\n      - icon: rss\n        href: blog/index.xml\n        aria-label: RSS Feed\n\n  # Footer\n  page-footer:\n    left: |\n      © 2026 Raphaël Simon\n    right:\n      - icon: github\n        href: https://github.com/rplsmn\n      - icon: envelope\n        href: mailto:contact@raphaelsimon.fr\n\n  # Enable back-to-top button\n  back-to-top-navigation: true\n\n# Theme with dark mode default\nformat:\n  html:\n    theme:\n      dark: darkly\n      light: flatly\n    css: styles.css\n    toc: true\n    code-copy: true\n    code-overflow: wrap\n\n# Default language\nlang: en\n\n# Analytics (optional - add when ready)\n# google-analytics: \"G-XXXXXXXXXX\"\n\n\n\n# Shared options for all blog posts\nfreeze: true\nauthor: \"Raphaël Simon\"\n\n# Default post format\nformat:\n  html:\n    code-fold: true\n    code-tools: true"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-3-content-pages",
+    "href": "docs/quarto-setup-guide.html#phase-3-content-pages",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "---\ntitle: \"Raphaël Simon\"\nsubtitle: \"Consulting · Writing · Complex Problems\"\nlisting:\n  id: recent-posts\n  contents: blog/posts\n  sort: \"date desc\"\n  type: grid\n  max-items: 3\n  grid-columns: 3\n  categories: false\n  fields: [image, date, title, description]\n---\n\nWelcome to my personal website.\n\nI work at the intersection of medicine, public health, software engineering, and data science. I consult on complex interdisciplinary problems and write about topics that interest me.\n\n## Latest Posts\n\n::: {#recent-posts}\n:::\n\n[View all posts →](blog/index.qmd)\n\n\n\n---\ntitle: \"Blog\"\nlisting:\n  contents: posts\n  sort: \"date desc\"\n  type: default\n  categories: true\n  feed: true\n  page-size: 10\n---\n\n\n\n---\ntitle: \"About\"\nimage: images/profile.jpg\nabout:\n  template: trestles\n  image-shape: round\n  image-width: 12em\n  links:\n    - icon: github\n      text: GitHub\n      href: https://github.com/rplsmn\n    - icon: linkedin\n      text: LinkedIn\n      href: https://linkedin.com/in/raphael-simon-md\n    - icon: envelope\n      text: Email\n      href: mailto:contact@raphaelsimon.fr\n---\n\n## Bio\n\n[Write your bio here - background, expertise, interests]\n\n## Expertise\n\n- Medicine & Public Health\n- Software Engineering\n- Data Science\n- Complex Systems\n\n## Consulting\n\nI help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn't fit neatly into traditional categories, [let's talk](contact.qmd).\n\n\n\n---\ntitle: \"Contact\"\ninclude-after-body:\n  - _includes/contact-form.html\n---\n\nHave a question, project idea, or just want to connect? Fill out the form below and I'll get back to you.\n\nYou can also reach me directly at [contact@raphaelsimon.fr](mailto:contact@raphaelsimon.fr).\n\n\n\nFirst, get a Web3Forms access key:\n\nGo to https://web3forms.com\nClick “Create Access Key”\nEnter your email (contact@raphaelsimon.fr)\nCheck email for access key\n\n\nTip: Consider using a Proton alias for contact@ so it can be rotated if scraped.\n\nThen create the form:\n&lt;form action=\"https://api.web3forms.com/submit\" method=\"POST\" class=\"contact-form mt-4\"&gt;\n  &lt;!-- Replace YOUR_ACCESS_KEY with actual key from Web3Forms --&gt;\n  &lt;input type=\"hidden\" name=\"access_key\" value=\"YOUR_ACCESS_KEY\"&gt;\n  &lt;input type=\"hidden\" name=\"subject\" value=\"New message from raphaelsimon.fr\"&gt;\n  &lt;input type=\"hidden\" name=\"from_name\" value=\"raphaelsimon.fr Contact Form\"&gt;\n  &lt;input type=\"checkbox\" name=\"botcheck\" style=\"display: none;\"&gt;\n\n  &lt;div class=\"mb-3\"&gt;\n    &lt;label for=\"name\" class=\"form-label\"&gt;Name *&lt;/label&gt;\n    &lt;input type=\"text\" name=\"name\" id=\"name\" class=\"form-control\" placeholder=\"Your name\" required&gt;\n  &lt;/div&gt;\n\n  &lt;div class=\"mb-3\"&gt;\n    &lt;label for=\"email\" class=\"form-label\"&gt;Email *&lt;/label&gt;\n    &lt;input type=\"email\" name=\"email\" id=\"email\" class=\"form-control\" placeholder=\"your@email.com\" required&gt;\n  &lt;/div&gt;\n\n  &lt;div class=\"mb-3\"&gt;\n    &lt;label for=\"subject\" class=\"form-label\"&gt;Subject&lt;/label&gt;\n    &lt;input type=\"text\" name=\"form_subject\" id=\"subject\" class=\"form-control\" placeholder=\"What's this about?\"&gt;\n  &lt;/div&gt;\n\n  &lt;div class=\"mb-3\"&gt;\n    &lt;label for=\"message\" class=\"form-label\"&gt;Message *&lt;/label&gt;\n    &lt;textarea name=\"message\" id=\"message\" class=\"form-control\" rows=\"6\" placeholder=\"Your message...\" required&gt;&lt;/textarea&gt;\n  &lt;/div&gt;\n\n  &lt;!-- hCaptcha spam protection (no config needed with Web3Forms) --&gt;\n  &lt;div class=\"h-captcha mb-3\" data-captcha=\"true\"&gt;&lt;/div&gt;\n  &lt;script src=\"https://web3forms.com/client/script.js\" async defer&gt;&lt;/script&gt;\n\n  &lt;button type=\"submit\" class=\"btn btn-primary\"&gt;\n    Send Message\n  &lt;/button&gt;\n&lt;/form&gt;\n\n&lt;style&gt;\n.contact-form {\n  max-width: 600px;\n}\n.contact-form .form-control {\n  background-color: var(--bs-body-bg);\n  border-color: var(--bs-border-color);\n  color: var(--bs-body-color);\n}\n.contact-form .form-control:focus {\n  border-color: var(--bs-primary);\n  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);\n}\n&lt;/style&gt;\n\n\n\n---\ntitle: \"Thank You\"\nsearch: false\n---\n\nYour message has been sent successfully!\n\nI'll get back to you as soon as possible.\n\n[← Back to Home](index.qmd)\nUpdate the contact form redirect:\n&lt;input type=\"hidden\" name=\"redirect\" value=\"https://raphaelsimon.fr/thanks.html\"&gt;"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-4-sample-blog-post",
+    "href": "docs/quarto-setup-guide.html#phase-4-sample-blog-post",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Use today’s date (YYYY-MM-DD) in both folder name and frontmatter:\n# Replace YYYY-MM-DD with today's date\nmkdir -p blog/posts/YYYY-MM-DD-hello-world\nCreate blog/posts/YYYY-MM-DD-hello-world/index.qmd:\n---\ntitle: \"Hello World\"\ndescription: \"Welcome to my new blog - what to expect and why I'm writing.\"\nauthor: \"Raphaël Simon\"\ndate: \"YYYY-MM-DD\"  # Use today's date\ncategories: [meta, welcome]\nimage: thumbnail.jpg\ndraft: false\n---\n\nWelcome to my blog! This is where I'll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections.\n\n## What to Expect\n\nTopics will vary widely - that's by design. I'm interested in:\n\n- **Medicine & Public Health**: Clinical insights, health systems, epidemiology\n- **Software Engineering**: Architecture, best practices, tools\n- **Data Science**: Analysis methods, visualization, ML applications\n- **Complex Systems**: Where these fields collide\n\n## Why Write?\n\nWriting clarifies thinking. By explaining ideas publicly, I'm forced to refine them.\n\nStay tuned for more.\nAdd a placeholder thumbnail or use an existing image."
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-5-custom-styling",
+    "href": "docs/quarto-setup-guide.html#phase-5-custom-styling",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "/* Custom styles for raphaelsimon.fr */\n\n/* Improve readability */\nbody {\n  font-size: 1.1rem;\n  line-height: 1.7;\n}\n\n/* Homepage hero section */\n.quarto-title-block {\n  margin-bottom: 2rem;\n}\n\n/* Blog post cards */\n.quarto-grid-item {\n  border-radius: 8px;\n  transition: transform 0.2s ease;\n}\n\n.quarto-grid-item:hover {\n  transform: translateY(-2px);\n}\n\n/* Code blocks */\npre {\n  border-radius: 6px;\n}\n\n/* Links */\na {\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n\n/* Footer spacing */\n.page-footer {\n  margin-top: 3rem;\n  padding-top: 1.5rem;\n}\n\n/* Contact form styling handled in contact-form.html */"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-6-local-testing",
+    "href": "docs/quarto-setup-guide.html#phase-6-local-testing",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "# Start local preview with hot reload (typically http://localhost:4200)\nquarto preview\n\n# Full render (generates _site/ directory)\nquarto render\n\n\n\nRun through this checklist locally before deploying:\n\nHomepage loads with navigation\nLatest posts appear on homepage\nBlog listing shows all posts\nBlog post pages render correctly\nAbout page displays profile image and links\nContact form appears and submits\nSearch works (press / or s)\nDark/light mode toggle works\nRSS feed validates (blog/index.xml)\nAll links work\nSite accessible at deployed URL\nHTTPS working\nContact form submits successfully"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-7-github-pages-deployment-recommended",
+    "href": "docs/quarto-setup-guide.html#phase-7-github-pages-deployment-recommended",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Configure GitHub Pages in your repository settings:\n\nGo to Settings &gt; Pages\nSet Source to Deploy from a branch\nSet Branch to gh-pages and folder to / (root)\n\nFirst publish from your local machine:\n\nquarto render\nquarto publish gh-pages\nQuarto will create the gh-pages branch and push the rendered site.\n\n\n\nquarto publish gh-pages\nQuarto re-renders by default. Use --no-render if you’ve already rendered:\nquarto publish gh-pages --no-render\n\n\n\nIf using a custom domain like raphaelsimon.fr:\n\nAdd a CNAME file to your project root containing: raphaelsimon.fr\nConfigure DNS at your registrar to point to GitHub Pages\nEnable HTTPS in GitHub Pages settings"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-8-phone-first-publishing",
+    "href": "docs/quarto-setup-guide.html#phase-8-phone-first-publishing",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Goal: publish posts from your phone with minimal friction.\n\n\n\nOn your phone, use the GitHub mobile app\nCreate a new branch\nAdd a folder under blog/posts/YYYY-MM-DD-post-slug/\nCreate index.qmd with frontmatter\nOpen a pull request\nMerge when ready; publishing happens from your normal workflow\n\nWhy this works:\n\nNo special tooling\nSave drafts in a branch\nReview before publishing (even if it’s just you)\n\n\n\n\nIf you often write in a notes app first:\n\nWrite the content as plain Markdown\nCopy into blog/posts/YYYY-MM-DD-post-slug/index.qmd via GitHub mobile\n\n\n\n\nCopy this template for new posts:\n---\ntitle: \"Post title\"\ndescription: \"One sentence summary\"\ndate: \"YYYY-MM-DD\"  # today\ncategories: [tag1, tag2]\ndraft: true\n---\n\nStart writing here.\nSet draft: false when you merge/publish."
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#phase-9-ongoing-maintenance",
+    "href": "docs/quarto-setup-guide.html#phase-9-ongoing-maintenance",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "# Create post directory (use today's date)\nmkdir -p blog/posts/YYYY-MM-DD-post-slug\n\n# Edit blog/posts/YYYY-MM-DD-post-slug/index.qmd\n\n# Preview locally\nquarto preview\n\n# Publish\nquarto publish gh-pages\n\n\n\nChanges to _quarto.yml require re-render, which quarto publish does automatically."
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#quick-reference",
+    "href": "docs/quarto-setup-guide.html#quick-reference",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Task\nCommand\n\n\n\n\nStart preview\nquarto preview\n\n\nFull render\nquarto render\n\n\nPublish to GitHub Pages\nquarto publish gh-pages\n\n\nCreate new post\nmkdir blog/posts/YYYY-MM-DD-slug && touch blog/posts/YYYY-MM-DD-slug/index.qmd\n\n\nCheck installation\nquarto check\n\n\nUpdate Quarto\nquarto update"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#troubleshooting",
+    "href": "docs/quarto-setup-guide.html#troubleshooting",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Preview not updating: Stop and restart quarto preview\nBuild fails: Check YAML syntax in _quarto.yml and post frontmatter\nContact form not working: Verify Web3Forms access key is correct\nSearch not finding content: Run full quarto render, search index builds on render only\nDark mode not switching: Clear browser cache, check theme configuration\nRSS feed errors: Ensure site-url is set in _quarto.yml"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#resources",
+    "href": "docs/quarto-setup-guide.html#resources",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "Quarto Websites Documentation\nQuarto Blog Documentation\nQuarto Publishing to GitHub Pages\nWeb3Forms Documentation\nBootswatch Themes"
+  },
+  {
+    "objectID": "docs/quarto-setup-guide.html#appendix-cloudflare-pages-deployment",
+    "href": "docs/quarto-setup-guide.html#appendix-cloudflare-pages-deployment",
+    "title": "Quarto Website Setup Guide for raphaelsimon.fr",
+    "section": "",
+    "text": "If you prefer Cloudflare Pages over GitHub Pages (for example, if you already have your domain on Cloudflare), here are the options.\n\n\n\nRun quarto render locally\nIn Cloudflare Pages, click Create application &gt; Pages &gt; Upload assets\nName project: raphaelsimon-fr\nUpload contents of _site/ directory\nDeploy\n\n\n\n\nSince Cloudflare doesn’t have Quarto pre-installed, use GitHub Actions:\n.github/workflows/deploy-cloudflare.yml:\nname: Deploy to Cloudflare Pages\n\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n      deployments: write\n\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n\n      - name: Setup Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n\n      - name: Render site\n        run: quarto render\n\n      - name: Deploy to Cloudflare Pages\n        uses: cloudflare/pages-action@v1\n        with:\n          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}\n          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}\n          projectName: raphaelsimon-fr\n          directory: _site\n          gitHubToken: ${{ secrets.GITHUB_TOKEN }}\n\n\n\n\nCreate Cloudflare API token:\n\nGo to Cloudflare dashboard &gt; My Profile &gt; API Tokens\nCreate token with “Cloudflare Pages: Edit” permission\n\nGet Account ID from Cloudflare dashboard URL\nAdd secrets to GitHub repository:\n\nCLOUDFLARE_API_TOKEN\nCLOUDFLARE_ACCOUNT_ID\n\n\n\n\n\n\nIn Cloudflare Pages project settings, go to Custom domains\nAdd raphaelsimon.fr\nAdd www.raphaelsimon.fr (optional, for redirect)\nDNS records are auto-configured since domain is on Cloudflare"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Physician turned engineer. I trained in medicine, missed the door to radiology, and walked through another one — into public health, clinical informatics, and eventually software. Now I build things and think about how technology shapes policy (and vice versa).\nI’m drawn to problems that don’t fit neatly into one field. The messier the intersection, the more interesting.\nBased in France. Fluent in several languages, still learning others."
+  },
+  {
+    "objectID": "about.html#bio",
+    "href": "about.html#bio",
+    "title": "About",
+    "section": "",
+    "text": "Physician turned engineer. I trained in medicine, missed the door to radiology, and walked through another one — into public health, clinical informatics, and eventually software. Now I build things and think about how technology shapes policy (and vice versa).\nI’m drawn to problems that don’t fit neatly into one field. The messier the intersection, the more interesting.\nBased in France. Fluent in several languages, still learning others."
+  },
+  {
+    "objectID": "about.html#expertise",
+    "href": "about.html#expertise",
+    "title": "About",
+    "section": "Expertise",
+    "text": "Expertise\n\nMedicine & Public Health\nSoftware Engineering\nData Science\nComplex Systems"
+  },
+  {
+    "objectID": "about.html#consulting",
+    "href": "about.html#consulting",
+    "title": "About",
+    "section": "Consulting",
+    "text": "Consulting\nI help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn’t fit neatly into traditional categories, let’s talk."
+  },
+  {
+    "objectID": "index.html#recent",
+    "href": "index.html#recent",
+    "title": "Raphaël Simon",
+    "section": "Recent",
+    "text": "Recent\n\n\n\n\n\nHello World\n\n\nWelcome to my new blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 2, 2026\n\n\n\n\n\nNo matching items\n\nView all posts →"
+  },
+  {
+    "objectID": "index.html#highlights",
+    "href": "index.html#highlights",
+    "title": "Raphaël Simon",
+    "section": "Highlights",
+    "text": "Highlights\n\nFeatured Posts\n\nHello World\n\n\n\nThings I Built\n\nAutoPMSI - PMSI automation tool\n\n\n\nWorth Reading\n\nSimon Willison’s Weblog"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Have a question, project idea, or just want to connect? Fill out the form below and I’ll get back to you.\nYou can also reach me directly at contact@raphaelsimon.fr.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "CLAUDE.html",
+    "href": "CLAUDE.html",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Personal website for Raphaël Simon hosted at raphaelsimon.fr. Static site for blogging and consulting services.\n\n\n\n\nSimplicity first: No fancy portfolios, shops, or complex modules\nStatic only: No backend servers (WASM is fine)\nEasy maintenance: Site should not be a burden to maintain\nMarkdown-centric: Blog posts are .md files that can be written anywhere, even on a phone\n\n\n\n\n\nDark/light theme with dark default\nAdvanced search (ctrl+k style like duckdb.org)\nContact forms (using static form services)\nCategory systems for blog organization\nNavigation aids (backlinks, breadcrumbs)\nSocial links integration\nLatest posts on homepage\nWASM for effects/enhancements\nAutomated builds from markdown\nMultilingual content (FR/EN primarily, also IT/ES/DE)\n\n\n\n\n\nBackend servers or databases\nComplex portfolio systems\nE-commerce functionality\nAuthentication/user systems\nContent management dashboards\nHeavy JavaScript frameworks if simpler options exist\n\n\n\n\n\nContent workflow: Optimize for quick markdown → published flow\nSearch functionality: Implement robust site search with keyboard shortcuts\nNavigation: Clear paths from any page to home/blog/contact/socials\nTheme: Professional dark theme as default\nStatic generation: Use proven static site generators (Hugo, Quarto, etc.)\n\n\n\n\n\nMust work with standard Git workflows\nShould be deployable as static files\nMinimize build complexity\nOptimize for LLM contributions (clear structure, consistent patterns)\n\n\n\n\nBlog topics vary widely: medicine, public health, software engineering, data science, policy, complex systems. Consulting offering targets niche/complex interdisciplinary problems.\n\n\n\n\nKeep it simple and maintainable\nPreserve markdown-first workflow\nTest that changes don’t break static generation\nEnsure dark theme remains default\nVerify navigation remains clear"
+  },
+  {
+    "objectID": "CLAUDE.html#project-overview",
+    "href": "CLAUDE.html#project-overview",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Personal website for Raphaël Simon hosted at raphaelsimon.fr. Static site for blogging and consulting services."
+  },
+  {
+    "objectID": "CLAUDE.html#core-principles",
+    "href": "CLAUDE.html#core-principles",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Simplicity first: No fancy portfolios, shops, or complex modules\nStatic only: No backend servers (WASM is fine)\nEasy maintenance: Site should not be a burden to maintain\nMarkdown-centric: Blog posts are .md files that can be written anywhere, even on a phone"
+  },
+  {
+    "objectID": "CLAUDE.html#what-is-welcome",
+    "href": "CLAUDE.html#what-is-welcome",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Dark/light theme with dark default\nAdvanced search (ctrl+k style like duckdb.org)\nContact forms (using static form services)\nCategory systems for blog organization\nNavigation aids (backlinks, breadcrumbs)\nSocial links integration\nLatest posts on homepage\nWASM for effects/enhancements\nAutomated builds from markdown\nMultilingual content (FR/EN primarily, also IT/ES/DE)"
+  },
+  {
+    "objectID": "CLAUDE.html#what-is-superfluous",
+    "href": "CLAUDE.html#what-is-superfluous",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Backend servers or databases\nComplex portfolio systems\nE-commerce functionality\nAuthentication/user systems\nContent management dashboards\nHeavy JavaScript frameworks if simpler options exist"
+  },
+  {
+    "objectID": "CLAUDE.html#focus-areas",
+    "href": "CLAUDE.html#focus-areas",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Content workflow: Optimize for quick markdown → published flow\nSearch functionality: Implement robust site search with keyboard shortcuts\nNavigation: Clear paths from any page to home/blog/contact/socials\nTheme: Professional dark theme as default\nStatic generation: Use proven static site generators (Hugo, Quarto, etc.)"
+  },
+  {
+    "objectID": "CLAUDE.html#technical-constraints",
+    "href": "CLAUDE.html#technical-constraints",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Must work with standard Git workflows\nShould be deployable as static files\nMinimize build complexity\nOptimize for LLM contributions (clear structure, consistent patterns)"
+  },
+  {
+    "objectID": "CLAUDE.html#content-context",
+    "href": "CLAUDE.html#content-context",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Blog topics vary widely: medicine, public health, software engineering, data science, policy, complex systems. Consulting offering targets niche/complex interdisciplinary problems."
+  },
+  {
+    "objectID": "CLAUDE.html#when-making-changes",
+    "href": "CLAUDE.html#when-making-changes",
+    "title": "LLM Instructions for raphaelsimon.fr",
+    "section": "",
+    "text": "Keep it simple and maintainable\nPreserve markdown-first workflow\nTest that changes don’t break static generation\nEnsure dark theme remains default\nVerify navigation remains clear"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Hello World\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my new blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 2, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
+  }
+]

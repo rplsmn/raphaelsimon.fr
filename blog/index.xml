@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Raphaël Simon</title>
+<link>https://raphaelsimon.fr/blog/</link>
+<atom:link href="https://raphaelsimon.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Personal website - Medicine, Public Health, Software Engineering, Data Science</description>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Sun, 01 Feb 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hello World</title>
+  <dc:creator>Raphaël Simon</dc:creator>
+  <link>https://raphaelsimon.fr/blog/posts/2026-02-02-hello-world/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Welcome to my blog! This is where I’ll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections.</p>
+<section id="what-to-expect" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-expect">What to Expect</h2>
+<p>Topics will vary widely - that’s by design. I’m interested in:</p>
+<ul>
+<li><strong>Medicine &amp; Public Health</strong>: Clinical insights, health systems, epidemiology</li>
+<li><strong>Software Engineering</strong>: Architecture, best practices, tools</li>
+<li><strong>Data Science</strong>: Analysis methods, visualization, ML applications</li>
+<li><strong>Complex Systems</strong>: Where these fields collide</li>
+</ul>
+</section>
+<section id="why-write" class="level2">
+<h2 class="anchored" data-anchor-id="why-write">Why Write?</h2>
+<p>Writing clarifies thinking. By explaining ideas publicly, I’m forced to refine them.</p>
+<p>Stay tuned for more.</p>
+
+
+<!-- -->
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>meta</category>
+  <category>welcome</category>
+  <guid>https://raphaelsimon.fr/blog/posts/2026-02-02-hello-world/</guid>
+  <pubDate>Sun, 01 Feb 2026 23:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
