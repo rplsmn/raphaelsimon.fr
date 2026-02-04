@@ -62,13 +62,25 @@ def scan_blog_posts(lang_dir):
     if not posts_dir.exists():
         return posts
     
+    # Read _metadata.yml defaults for this language's blog
+    metadata_file = lang_dir / 'blog' / '_metadata.yml'
+    default_translation = 'none'
+    if metadata_file.exists():
+        try:
+            metadata_content = metadata_file.read_text(encoding='utf-8')
+            metadata_defaults = parse_frontmatter('---\n' + metadata_content + '\n---')
+            default_translation = metadata_defaults.get('translation', 'none')
+        except Exception as e:
+            print(f"Warning: Could not read {metadata_file}: {e}")
+    
     for post_file in posts_dir.glob('*/index.qmd'):
         try:
             content = post_file.read_text(encoding='utf-8')
             metadata = parse_frontmatter(content)
             
             slug = extract_slug(post_file)
-            translation = metadata.get('translation', 'none')
+            # Use post's explicit translation field, or fall back to default from _metadata.yml
+            translation = metadata.get('translation', default_translation)
             
             # Get relative path from project root
             rel_path = f"/{lang_dir.name}/blog/posts/{post_file.parent.name}/"
