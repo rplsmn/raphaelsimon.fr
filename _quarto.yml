@@ -6,6 +6,10 @@ project:
     - fr/
     - index.html
 
+# Load multilingual extension
+extensions:
+  - multilang
+
 website:
   title: "Raphaël Simon"
   description: "Personal website - Medicine, Public Health, Software Engineering, Data Science"
@@ -40,16 +44,15 @@ website:
       - icon: rss
         href: en/blog/index.xml
         aria-label: RSS Feed
+      - text: |
+          {{< lang-switch >}}
 
   # Footer
   page-footer:
     left: |
       © 2026 Raphaël Simon
-    right:
-      - icon: github
-        href: https://github.com/rplsmn
-      - icon: envelope
-        href: mailto:contact@raphaelsimon.fr
+    right: |
+      {{< lang-switch >}}
 
   # Enable back-to-top button
   back-to-top-navigation: true
