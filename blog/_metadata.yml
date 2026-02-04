@@ -1,9 +1,0 @@
-# Shared options for all blog posts
-freeze: true
-author: "Raphaël Simon"
-
-# Default post format
-format:
-  html:
-    code-fold: true
-    code-tools: true
