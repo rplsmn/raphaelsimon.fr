@@ -77,7 +77,7 @@ website:
 
   # Footer
   page-footer:
-    left: "Copyright 2024"
+    left: "Copyright <year>"
     right:
       - icon: github
         href: https://github.com/username
@@ -142,7 +142,7 @@ listing:
 title: "Post Title"
 description: "Brief description for listings and SEO"
 author: "Author Name"
-date: "2024-01-15"
+date: "<yyyy-mm-dd"
 categories: [category1, category2]
 image: thumbnail.jpg
 draft: false
@@ -372,59 +372,11 @@ language:
   search-placeholder: "Rechercher..."
 ```
 
-## Deployment to Cloudflare Pages
+## Deployment
 
-### Method 1: Direct Upload
-
-1. Run `quarto render` locally
-2. Upload `_site/` directory to Cloudflare Pages
-
-### Method 2: Git Integration (Recommended)
-
-1. Push rendered site to git (or use CI to render)
-2. Connect Cloudflare Pages to your repository
-3. Configure:
-   - **Build command**: `exit 0` (pre-rendered) or install Quarto in CI
-   - **Build output directory**: `_site`
-   - **Root directory**: `/` (or subdirectory if applicable)
-
-### GitHub Actions for Cloudflare Pages
-
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy to Cloudflare Pages
-
-on:
-  push:
-    branches: [main]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Render
-        run: quarto render
-
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: your-project-name
-          directory: _site
-```
-
-### Custom Domain Setup
-
-1. In Cloudflare Pages dashboard, go to Custom Domains
-2. Add your domain (e.g., example.com)
-3. Update DNS (A or CNAME records) as instructed
-4. Wait for SSL certificate provisioning
+Suggest Github Pages or Cloudflare Pages or Netlify
+Offer a guide for the setup, and the command to update / deploy in one line
+Assume the user handles deployment unless directly asked about it, in that case ask the user what's the current deployment target.
 
 ## Troubleshooting
 
