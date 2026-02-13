@@ -1,6 +1,6 @@
 ---
 title: "À propos"
-image: images/profile.jpeg
+image: ../images/profile.jpeg
 about:
   template: trestles
   image-shape: round
