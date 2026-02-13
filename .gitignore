@@ -19,3 +19,11 @@ Thumbs.db
 temp-unversioned/
 
 **/*.quarto_ipynb
+
+# Rendered LLM docs (should not be tracked)
+CLAUDE.html
+llm-docs/*.html
+llm-docs/*_files/
+
+# Quarto-generated listing files
+index-listing.json

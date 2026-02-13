@@ -7,6 +7,8 @@ project:
     - en/
     - fr/
     - index.html
+    - "!CLAUDE.md"
+    - "!llm-docs/"
 
 # Load multilingual extension
 extensions:
