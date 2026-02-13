@@ -31,17 +31,27 @@ function Meta(meta)
   
   -- Add tags as raw HTML blocks in header-includes
   if #hreflang_tags > 0 then
-    local blocks = {}
+    local raw_blocks = {}
     for _, tag in ipairs(hreflang_tags) do
-      table.insert(blocks, pandoc.RawBlock('html', tag))
+      table.insert(raw_blocks, pandoc.MetaBlocks({pandoc.RawBlock('html', tag)}))
     end
-    
-    if meta['header-includes'] and meta['header-includes'].t == 'MetaList' then
-      for _, block in ipairs(blocks) do
-        table.insert(meta['header-includes'], block)
+
+    if meta['header-includes'] then
+      -- Append to existing header-includes (preserve Quarto's own entries)
+      if meta['header-includes'].t == 'MetaList' then
+        for _, block in ipairs(raw_blocks) do
+          table.insert(meta['header-includes'], block)
+        end
+      else
+        -- Wrap existing value and new blocks into a MetaList
+        local new_list = pandoc.MetaList({meta['header-includes']})
+        for _, block in ipairs(raw_blocks) do
+          table.insert(new_list, block)
+        end
+        meta['header-includes'] = new_list
       end
     else
-      meta['header-includes'] = pandoc.MetaList(blocks)
+      meta['header-includes'] = pandoc.MetaList(raw_blocks)
     end
   end
   
