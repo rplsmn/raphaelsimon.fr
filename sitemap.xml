@@ -1,35 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://raphaelsimon.fr/blog/posts/2026-02-02-hello-world/index.html</loc>
-    <lastmod>2026-02-04T10:00:28.638Z</lastmod>
+    <loc>https://raphaelsimon.fr/fr/thanks.html</loc>
+    <lastmod>2026-02-13T20:53:01.924Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/docs/quarto-setup-guide.html</loc>
-    <lastmod>2026-02-04T10:00:28.638Z</lastmod>
+    <loc>https://raphaelsimon.fr/fr/about.html</loc>
+    <lastmod>2026-02-13T20:58:19.377Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/about.html</loc>
-    <lastmod>2026-02-04T10:00:28.638Z</lastmod>
+    <loc>https://raphaelsimon.fr/fr/blog/index.html</loc>
+    <lastmod>2026-02-13T20:53:01.923Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/index.html</loc>
-    <lastmod>2026-02-04T10:00:28.639Z</lastmod>
+    <loc>https://raphaelsimon.fr/en/thanks.html</loc>
+    <lastmod>2026-02-13T20:53:01.923Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/contact.html</loc>
-    <lastmod>2026-02-04T10:00:28.638Z</lastmod>
+    <loc>https://raphaelsimon.fr/en/about.html</loc>
+    <lastmod>2026-02-13T20:58:13.279Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/thanks.html</loc>
-    <lastmod>2026-02-04T10:00:28.639Z</lastmod>
+    <loc>https://raphaelsimon.fr/en/blog/index.html</loc>
+    <lastmod>2026-02-13T20:53:01.923Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/CLAUDE.html</loc>
-    <lastmod>2026-02-04T10:00:28.638Z</lastmod>
+    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/index.html</loc>
+    <lastmod>2026-02-13T21:30:24.000Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/blog/index.html</loc>
-    <lastmod>2026-02-04T10:00:28.638Z</lastmod>
+    <loc>https://raphaelsimon.fr/en/contact.html</loc>
+    <lastmod>2026-02-13T20:53:01.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/index.html</loc>
+    <lastmod>2026-02-13T20:53:01.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/index.html</loc>
+    <lastmod>2026-02-13T21:30:24.002Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/fr/contact.html</loc>
+    <lastmod>2026-02-13T20:53:01.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/fr/index.html</loc>
+    <lastmod>2026-02-13T20:53:01.924Z</lastmod>
   </url>
 </urlset>

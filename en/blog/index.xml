@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Raphaël Simon</title>
-<link>https://raphaelsimon.fr/blog/</link>
-<atom:link href="https://raphaelsimon.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://raphaelsimon.fr/en/blog/</link>
+<atom:link href="https://raphaelsimon.fr/en/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website - Medicine, Public Health, Software Engineering, Data Science</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sun, 01 Feb 2026 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 02 Feb 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Hello World</title>
   <dc:creator>Raphaël Simon</dc:creator>
-  <link>https://raphaelsimon.fr/blog/posts/2026-02-02-hello-world/</link>
+  <link>https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/</link>
   <description><![CDATA[ 
 
 
@@ -38,15 +38,13 @@
 <p>Stay tuned for more.</p>
 
 
-<!-- -->
-
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>meta</category>
   <category>welcome</category>
-  <guid>https://raphaelsimon.fr/blog/posts/2026-02-02-hello-world/</guid>
-  <pubDate>Sun, 01 Feb 2026 23:00:00 GMT</pubDate>
+  <guid>https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/</guid>
+  <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

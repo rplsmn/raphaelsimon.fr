@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Raphaël Simon</title>
+<link>https://raphaelsimon.fr/fr/blog/</link>
+<atom:link href="https://raphaelsimon.fr/fr/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Personal website - Medicine, Public Health, Software Engineering, Data Science</description>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Mon, 02 Feb 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bonjour le Monde</title>
+  <dc:creator>Raphaël Simon</dc:creator>
+  <link>https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Bienvenue sur mon blog ! C’est ici que je partagerai mes réflexions sur la médecine, la santé publique, l’ingénierie logicielle, la science des données et les problèmes intéressants qui émergent à leurs intersections.</p>
+<section id="à-quoi-sattendre" class="level2">
+<h2 class="anchored" data-anchor-id="à-quoi-sattendre">À Quoi S’Attendre</h2>
+<p>Les sujets varieront considérablement - c’est voulu. Je m’intéresse à :</p>
+<ul>
+<li><strong>Médecine &amp; Santé Publique</strong> : Aperçus cliniques, systèmes de santé, épidémiologie</li>
+<li><strong>Ingénierie Logicielle</strong> : Architecture, meilleures pratiques, outils</li>
+<li><strong>Science des Données</strong> : Méthodes d’analyse, visualisation, applications ML</li>
+<li><strong>Systèmes Complexes</strong> : Là où ces domaines se rejoignent</li>
+</ul>
+</section>
+<section id="pourquoi-écrire" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-écrire">Pourquoi Écrire ?</h2>
+<p>L’écriture clarifie la pensée. En expliquant des idées publiquement, je suis obligé de les affiner.</p>
+<p>Restez à l’écoute pour plus.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a> ]]></description>
+  <category>meta</category>
+  <category>bienvenue</category>
+  <guid>https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/</guid>
+  <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
