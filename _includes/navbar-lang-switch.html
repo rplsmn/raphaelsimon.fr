@@ -4,6 +4,34 @@ document.addEventListener('DOMContentLoaded', function() {
   var langMatch = path.match(/^\/(en|fr)\//);
   var currentLang = langMatch ? langMatch[1] : 'en';
 
+  // Persist language preference
+  try { localStorage.setItem('preferred-lang', currentLang); } catch(e) {}
+
+  // Rewrite navbar links to match current language
+  var navLinks = document.querySelectorAll('.navbar a.nav-link');
+  navLinks.forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (!href) return;
+    // Match links pointing to /en/ or /fr/ paths (or relative ../en/ ../fr/)
+    var match = href.match(/^(\.\.\/|\/)(en|fr)\/(.*)/);
+    if (match && match[2] !== currentLang) {
+      link.setAttribute('href', match[1] + currentLang + '/' + match[3]);
+    }
+  });
+
+  // Also rewrite the site title link if it points to index.html
+  var brandLink = document.querySelector('.navbar-brand');
+  if (brandLink) {
+    var brandHref = brandLink.getAttribute('href');
+    if (brandHref) {
+      var brandMatch = brandHref.match(/^(\.\.\/|\/)?index\.html$/);
+      if (brandMatch) {
+        brandLink.setAttribute('href', '/' + currentLang + '/');
+      }
+    }
+  }
+
+  // Build the ENG | FRA toggle
   function getTargetUrl(targetLang) {
     if (path.match(/^\/(en|fr)\/blog\/posts\//)) {
       return '/' + targetLang + '/';
