@@ -1,0 +1,51 @@
+/*-- scss:defaults --*/
+
+// Darker backgrounds (closer to black, like duckdb.org)
+$body-bg: #111;
+$body-color: #e0e0e0;
+
+// Gold accent color (inspired by hugo-theme-terminal)
+$primary: #eec35e;
+$link-color: #eec35e;
+
+// Darker secondary backgrounds
+$gray-800: #1a1a1a;
+$gray-900: #111;
+
+/*-- scss:rules --*/
+
+// Override Bootstrap dark theme background utilities
+.bg-dark {
+  background-color: #111 !important;
+}
+
+// Navbar background
+.navbar {
+  background-color: #0d0d0d !important;
+}
+
+// Card and panel backgrounds
+.card, .list-group-item {
+  background-color: #161616;
+  border-color: #2a2a2a;
+}
+
+// Border colors
+.border, [class*="border-"] {
+  border-color: #2a2a2a !important;
+}
+
+// Code blocks
+pre {
+  background-color: #0d0d0d;
+}
+
+// Table backgrounds
+.table {
+  --bs-table-bg: #111;
+}
+
+// Footer
+.page-footer {
+  border-top-color: #2a2a2a;
+}
