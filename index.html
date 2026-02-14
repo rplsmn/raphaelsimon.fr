@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    // Detect browser language preference
+    const lang = navigator.language?.startsWith('fr') ? 'fr' : 'en';
+    window.location.replace('/' + lang + '/');
+  </script>
+  <noscript>
+    <!-- Fallback for users with JavaScript disabled -->
+    <meta http-equiv="refresh" content="0;url=/en/" />
+  </noscript>
+</head>
+<body>
+  <p>Redirecting to language-specific homepage...</p>
+  <p>If not redirected automatically, please choose:</p>
+  <ul>
+    <li><a href="/en/">English</a></li>
+    <li><a href="/fr/">Français</a></li>
+  </ul>
+</body>
+</html>
