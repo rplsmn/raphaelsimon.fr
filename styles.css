@@ -163,12 +163,14 @@ a:hover {
 }
 
 .navbar-brand-container {
-  order: 0;
+  order: 0 !important;
+  margin-right: auto !important;
+  margin-left: 0 !important;
 }
 
 #navbarCollapse,
 .navbar-collapse {
-  order: 1;
+  order: 1 !important;
 }
 
 #quarto-search {
