@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 include-after-body:
-  - ../_includes/contact-form.html
+  - ../_includes/contact-form-en.html
 ---
 
 Have a question, project idea, or just want to connect? Fill out the form below and I'll get back to you.
