@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  pre-render:
+    - python3 scripts/build-manifest.py
   render:
     - en/
     - fr/
@@ -65,6 +67,8 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
+    filters:
+      - _extensions/multilang/translation-banner.lua
     include-after-body:
       - _includes/navbar-lang-switch.html
       - _includes/lang-switcher-script.html

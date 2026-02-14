@@ -1,0 +1,12 @@
+{
+  "hello-world": {
+    "en": {
+      "path": "/en/blog/posts/2026-02-02-hello-world/",
+      "translation": "none"
+    },
+    "fr": {
+      "path": "/fr/blog/posts/2026-02-02-hello-world/",
+      "translation": "machine"
+    }
+  }
+}

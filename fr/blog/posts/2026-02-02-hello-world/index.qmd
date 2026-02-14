@@ -1,0 +1,25 @@
+---
+title: "Bonjour le Monde"
+description: "Bienvenue sur mon nouveau blog - à quoi s'attendre et pourquoi j'écris."
+author: "Raphaël Simon"
+date: "2026-02-02"
+categories: [meta, bienvenue]
+draft: false
+---
+
+Bienvenue sur mon blog ! C'est ici que je partagerai mes réflexions sur la médecine, la santé publique, l'ingénierie logicielle, la science des données et les problèmes intéressants qui émergent à leurs intersections.
+
+## À Quoi S'Attendre
+
+Les sujets varieront considérablement - c'est voulu. Je m'intéresse à :
+
+- **Médecine & Santé Publique** : Aperçus cliniques, systèmes de santé, épidémiologie
+- **Ingénierie Logicielle** : Architecture, meilleures pratiques, outils
+- **Science des Données** : Méthodes d'analyse, visualisation, applications ML
+- **Systèmes Complexes** : Là où ces domaines se rejoignent
+
+## Pourquoi Écrire ?
+
+L'écriture clarifie la pensée. En expliquant des idées publiquement, je suis obligé de les affiner.
+
+Restez à l'écoute pour plus.
