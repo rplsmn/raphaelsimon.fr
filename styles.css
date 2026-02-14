@@ -153,6 +153,13 @@ a:hover {
 
 /* Contact form styling handled in contact-form.html */
 
+/* Navbar logo (blinking console GIF) */
+.navbar-logo {
+  height: 1.6rem;
+  width: auto;
+  border-radius: 3px;
+}
+
 /* Language Toggle (ENG | FRA) */
 .lang-toggle {
   display: flex;
