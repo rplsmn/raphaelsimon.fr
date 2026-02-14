@@ -9,7 +9,7 @@ listing:
   sort: "date desc"
   type: default
   max-items: 10
-  date-format: "MMM D, YYYY"
+  date-format: "D MMM, YYYY"
   fields: [date, title, description]
 hreflang:
   en: "/en/"
