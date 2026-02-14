@@ -7,6 +7,8 @@ project:
     - en/
     - fr/
     - index.html
+    - "!CLAUDE.md"
+    - "!llm-docs/"
 
 # Load multilingual extension
 extensions:
@@ -51,8 +53,6 @@ website:
   page-footer:
     left: |
       © 2026 Raphaël Simon
-    right: |
-      {{< lang-switch >}}
 
   # Enable back-to-top button
   back-to-top-navigation: true
@@ -68,10 +68,9 @@ format:
     code-copy: true
     code-overflow: wrap
     filters:
-      - _extensions/multilang/translation-banner.lua
+      - _extensions/multilang/hreflang.lua
     include-after-body:
       - _includes/navbar-lang-switch.html
-      - _includes/lang-switcher-script.html
 
 # Analytics (optional - add when ready)
 # google-analytics: "G-XXXXXXXXXX"

@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: images/profile.jpeg
+image: ../images/profile.jpeg
 about:
   template: trestles
   image-shape: round
@@ -18,6 +18,9 @@ about:
     - icon: envelope
       text: Email
       href: mailto:contact@raphaelsimon.fr
+hreflang:
+  en: "/en/about/"
+  fr: "/fr/about/"
 ---
 
 ## Bio

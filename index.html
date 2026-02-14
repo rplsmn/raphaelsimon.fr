@@ -5,8 +5,10 @@
   <title>Redirecting...</title>
   <meta name="robots" content="noindex, nofollow">
   <script>
-    // Detect browser language preference
-    const lang = navigator.language?.startsWith('fr') ? 'fr' : 'en';
+    // Check saved preference first, then browser language
+    var saved = null;
+    try { saved = localStorage.getItem('preferred-lang'); } catch(e) {}
+    var lang = saved || (navigator.language && navigator.language.startsWith('fr') ? 'fr' : 'en');
     window.location.replace('/' + lang + '/');
   </script>
   <noscript>

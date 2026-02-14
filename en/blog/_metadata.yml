@@ -6,5 +6,5 @@ translation: none
 # Default post format
 format:
   html:
-    code-fold: true
-    code-tools: true
+    code-fold: false
+    code-tools: false
