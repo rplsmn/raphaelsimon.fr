@@ -7,26 +7,33 @@ document.addEventListener('DOMContentLoaded', function() {
   // Persist language preference
   try { localStorage.setItem('preferred-lang', currentLang); } catch(e) {}
 
-  // Rewrite navbar links to match current language
+  // Rewrite navbar links to match current language.
+  // Use the URL API to resolve relative hrefs (../../en/...) to absolute
+  // paths, then swap the language prefix. This works at any directory depth.
   var navLinks = document.querySelectorAll('.navbar a.nav-link');
   navLinks.forEach(function(link) {
     var href = link.getAttribute('href');
-    if (!href) return;
-    // Match links pointing to /en/ or /fr/ paths (or relative ../en/ ../fr/)
-    var match = href.match(/^(\.\.\/|\/)(en|fr)\/(.*)/);
-    if (match && match[2] !== currentLang) {
-      link.setAttribute('href', match[1] + currentLang + '/' + match[3]);
+    if (!href || href.startsWith('http')) return;
+    var resolved = new URL(href, window.location.href).pathname;
+    var match = resolved.match(/^\/(en|fr)\/(.*)/);
+    if (match && match[1] !== currentLang) {
+      link.setAttribute('href', '/' + currentLang + '/' + match[2]);
     }
   });
 
-  // Also rewrite the site title link if it points to index.html
+  // Rewrite the site title link to point to the current language homepage
   var brandLink = document.querySelector('.navbar-brand');
   if (brandLink) {
     var brandHref = brandLink.getAttribute('href');
-    if (brandHref) {
-      var brandMatch = brandHref.match(/^(\.\.\/|\/)?index\.html$/);
-      if (brandMatch) {
+    if (brandHref && !brandHref.startsWith('http')) {
+      var resolved = new URL(brandHref, window.location.href).pathname;
+      if (resolved === '/index.html' || resolved === '/') {
         brandLink.setAttribute('href', '/' + currentLang + '/');
+      } else {
+        var match = resolved.match(/^\/(en|fr)\/(.*)/);
+        if (match && match[1] !== currentLang) {
+          brandLink.setAttribute('href', '/' + currentLang + '/' + match[2]);
+        }
       }
     }
   }
