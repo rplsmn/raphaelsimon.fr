@@ -103,9 +103,16 @@ document.addEventListener('DOMContentLoaded', function() {
   li.appendChild(sep);
   li.appendChild(frSpan);
 
-  var navbar = document.querySelector('.navbar .navbar-nav.ms-auto');
-  if (navbar) {
-    navbar.appendChild(li);
+  // Place language toggle in navbar-tools area (far right, after theme toggle)
+  var navbarTools = document.querySelector('.quarto-navbar-tools');
+  if (navbarTools) {
+    navbarTools.appendChild(li);
+  } else {
+    // Fallback: append to right nav
+    var navbar = document.querySelector('.navbar .navbar-nav.ms-auto');
+    if (navbar) {
+      navbar.appendChild(li);
+    }
   }
 });
 </script>
