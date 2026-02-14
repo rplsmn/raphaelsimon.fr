@@ -45,8 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-26fdb47f2f0528301fe7d78eda151a28.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-cb8ebd1c8c7dbb478a9811e8e158d305.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-042fb95a10c114c4afd32883ce613c45.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-383f21ca2cb0435016079257d4049a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,8 +73,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="alternate" hreflang="fr" href="https://raphaelsimon.fr/fr/blog/posts/hello-world/">
 <link rel="alternate" hreflang="en" href="https://raphaelsimon.fr/en/blog/posts/hello-world/">
+<link rel="alternate" hreflang="fr" href="https://raphaelsimon.fr/fr/blog/posts/hello-world/">
 <link rel="alternate" hreflang="x-default" href="https://raphaelsimon.fr/en/blog/posts/hello-world/">
 
 
@@ -383,30 +383,68 @@ document.addEventListener('DOMContentLoaded', function() {
   var path = window.location.pathname;
   var langMatch = path.match(/^\/(en|fr)\//);
   var currentLang = langMatch ? langMatch[1] : 'en';
+  var origin = window.location.origin;
 
   // Persist language preference
   try { localStorage.setItem('preferred-lang', currentLang); } catch(e) {}
 
-  // Rewrite navbar links to match current language
+  // Navbar label translations
+  var labels = {
+    en: { 'Blog': 'Blog', 'About': 'About', 'Contact': 'Contact' },
+    fr: { 'Blog': 'Blog', 'About': 'À propos', 'Contact': 'Contact' }
+  };
+
+  // Resolve an href (relative or absolute) to a same-origin pathname,
+  // or return null for external URLs.
+  function resolveSameOrigin(href) {
+    if (!href) return null;
+    try {
+      var url = new URL(href, window.location.href);
+      if (url.origin !== origin) return null;
+      return url.pathname;
+    } catch(e) { return null; }
+  }
+
+  // Rewrite navbar links to match current language and translate labels.
   var navLinks = document.querySelectorAll('.navbar a.nav-link');
   navLinks.forEach(function(link) {
-    var href = link.getAttribute('href');
-    if (!href) return;
-    // Match links pointing to /en/ or /fr/ paths (or relative ../en/ ../fr/)
-    var match = href.match(/^(\.\.\/|\/)(en|fr)\/(.*)/);
-    if (match && match[2] !== currentLang) {
-      link.setAttribute('href', match[1] + currentLang + '/' + match[3]);
+    var resolved = resolveSameOrigin(link.getAttribute('href'));
+    if (!resolved) return;
+    var match = resolved.match(/^\/(en|fr)\/(.*)/);
+    if (match && match[1] !== currentLang) {
+      link.setAttribute('href', '/' + currentLang + '/' + match[2]);
+    }
+    // Translate navbar labels
+    var text = link.textContent.trim();
+    if (labels[currentLang][text]) {
+      link.textContent = labels[currentLang][text];
     }
   });
 
-  // Also rewrite the site title link if it points to index.html
+  // Rewrite the site title link to point to the current language homepage
   var brandLink = document.querySelector('.navbar-brand');
   if (brandLink) {
-    var brandHref = brandLink.getAttribute('href');
-    if (brandHref) {
-      var brandMatch = brandHref.match(/^(\.\.\/|\/)?index\.html$/);
-      if (brandMatch) {
+    var resolved = resolveSameOrigin(brandLink.getAttribute('href'));
+    if (resolved) {
+      if (resolved === '/index.html' || resolved === '/') {
         brandLink.setAttribute('href', '/' + currentLang + '/');
+      } else {
+        var match = resolved.match(/^\/(en|fr)\/(.*)/);
+        if (match && match[1] !== currentLang) {
+          brandLink.setAttribute('href', '/' + currentLang + '/' + match[2]);
+        }
+      }
+    }
+  }
+
+  // Rewrite RSS feed link in navbar to match current language
+  var rssLink = document.querySelector('.navbar a[aria-label="RSS Feed"]');
+  if (rssLink) {
+    var resolved = resolveSameOrigin(rssLink.getAttribute('href'));
+    if (resolved) {
+      var match = resolved.match(/^\/(en|fr)\/(.*)/);
+      if (match && match[1] !== currentLang) {
+        rssLink.setAttribute('href', '/' + currentLang + '/' + match[2]);
       }
     }
   }

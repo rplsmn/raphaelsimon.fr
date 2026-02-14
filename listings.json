@@ -1,14 +1,8 @@
 [
   {
-    "listing": "/fr/blog/index.html",
+    "listing": "/fr/index.html",
     "items": [
       "/fr/blog/posts/2026-02-02-hello-world/index.html"
-    ]
-  },
-  {
-    "listing": "/en/blog/index.html",
-    "items": [
-      "/en/blog/posts/2026-02-02-hello-world/index.html"
     ]
   },
   {
@@ -18,7 +12,13 @@
     ]
   },
   {
-    "listing": "/fr/index.html",
+    "listing": "/en/blog/index.html",
+    "items": [
+      "/en/blog/posts/2026-02-02-hello-world/index.html"
+    ]
+  },
+  {
+    "listing": "/fr/blog/index.html",
     "items": [
       "/fr/blog/posts/2026-02-02-hello-world/index.html"
     ]
