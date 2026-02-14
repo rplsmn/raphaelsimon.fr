@@ -1,0 +1,69 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Detect current language from URL path
+  var path = window.location.pathname;
+  var langMatch = path.match(/^\/(en|fr)\//);
+  var currentLang = langMatch ? langMatch[1] : 'en';
+  
+  // Language data
+  var languages = {
+    en: {flag: '🇬🇧', label: 'English'},
+    fr: {flag: '🇫🇷', label: 'Français'}
+  };
+  
+  // Construct target URL for language switch
+  function getTargetUrl(targetLang) {
+    // Blog post: fallback to homepage
+    if (path.match(/^\/(en|fr)\/blog\/posts\//)) {
+      return '/' + targetLang + '/';
+    }
+    
+    // Static page: replace language prefix
+    var pathWithoutLang = path.replace(/^\/(en|fr)\//, '');
+    return '/' + targetLang + '/' + pathWithoutLang;
+  }
+  
+  // Build switcher HTML (avoiding template literals for compatibility)
+  var switcherDiv = document.createElement('div');
+  switcherDiv.className = 'lang-switcher';
+  
+  var currentFlag = document.createElement('span');
+  currentFlag.className = 'current-lang';
+  currentFlag.textContent = languages[currentLang].flag;
+  switcherDiv.appendChild(currentFlag);
+  
+  var globeBtn = document.createElement('button');
+  globeBtn.className = 'lang-globe';
+  globeBtn.setAttribute('aria-label', 'Switch language');
+  globeBtn.textContent = '🌐';
+  switcherDiv.appendChild(globeBtn);
+  
+  var dropdown = document.createElement('div');
+  dropdown.className = 'lang-dropdown';
+  
+  // Add English option
+  var enLink = document.createElement('a');
+  enLink.href = currentLang === 'en' ? '#' : getTargetUrl('en');
+  enLink.className = 'lang-option' + (currentLang === 'en' ? ' current' : '');
+  enLink.textContent = languages.en.flag + ' ' + languages.en.label;
+  dropdown.appendChild(enLink);
+  
+  // Add French option
+  var frLink = document.createElement('a');
+  frLink.href = currentLang === 'fr' ? '#' : getTargetUrl('fr');
+  frLink.className = 'lang-option' + (currentLang === 'fr' ? ' current' : '');
+  frLink.textContent = languages.fr.flag + ' ' + languages.fr.label;
+  dropdown.appendChild(frLink);
+  
+  switcherDiv.appendChild(dropdown);
+  
+  // Insert into navbar (find the right-side icon list)
+  var navbar = document.querySelector('.navbar .navbar-nav.ms-auto');
+  if (navbar) {
+    var switcherContainer = document.createElement('li');
+    switcherContainer.className = 'nav-item';
+    switcherContainer.appendChild(switcherDiv);
+    navbar.appendChild(switcherContainer);
+  }
+});
+</script>

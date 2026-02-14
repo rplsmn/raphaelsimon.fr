@@ -6,6 +6,10 @@ project:
     - fr/
     - index.html
 
+# Load multilingual extension
+extensions:
+  - multilang
+
 website:
   title: "Raphaël Simon"
   description: "Personal website - Medicine, Public Health, Software Engineering, Data Science"
@@ -45,11 +49,8 @@ website:
   page-footer:
     left: |
       © 2026 Raphaël Simon
-    right:
-      - icon: github
-        href: https://github.com/rplsmn
-      - icon: envelope
-        href: mailto:contact@raphaelsimon.fr
+    right: |
+      {{< lang-switch >}}
 
   # Enable back-to-top button
   back-to-top-navigation: true
@@ -64,6 +65,9 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
+    include-after-body:
+      - _includes/navbar-lang-switch.html
+      - _includes/lang-switcher-script.html
 
 # Analytics (optional - add when ready)
 # google-analytics: "G-XXXXXXXXXX"

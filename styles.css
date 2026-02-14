@@ -152,3 +152,76 @@ a:hover {
 }
 
 /* Contact form styling handled in contact-form.html */
+
+/* Language Switcher */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.lang-switcher .current-lang {
+  font-size: 1.2rem;
+}
+
+.lang-switcher .lang-globe {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.lang-switcher .lang-globe:hover {
+  opacity: 0.7;
+}
+
+.lang-switcher .lang-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.lang-switcher:hover .lang-dropdown,
+.lang-switcher .lang-globe:focus + .lang-dropdown {
+  display: block;
+}
+
+.lang-dropdown .lang-option {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--bs-body-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.lang-dropdown .lang-option:hover {
+  background: var(--bs-secondary-bg);
+}
+
+.lang-dropdown .lang-option.current {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Navbar integration */
+.navbar .lang-switcher {
+  margin-left: 1rem;
+}
+
+/* Footer integration */
+.page-footer .lang-switcher {
+  display: inline-flex;
+}
