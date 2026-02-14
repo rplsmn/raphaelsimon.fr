@@ -11,6 +11,8 @@ Additional info :
 
 - Each reviewer subagent should write their review and summaries to llm-docs in markdown files and each coding subagent should commit at each working step in case the session gets interrupted and we lose output / stdout, for easy resume
 - Reviewer file naming : something like .drafts/phase-1-plan-review.md and .drafts/phase-1-implementation-review.md
+- Each reviewer subagent should write their review and summaries to llm-docs in markdown files and each coding subagent should commit at each working step in case the session gets interrupted and we lose output / stdout, for easy resume
+- Reviewer file naming : something like llm-docs/phase-1-plan-review.md and llm-docs/phase-1-implementation-review.md
 - Content translation : the implementation should actually translate the content to French it's all placeholders for now there is no real content on this site.
 
 Proceed
