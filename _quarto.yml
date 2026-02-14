@@ -62,8 +62,12 @@ website:
 format:
   html:
     theme:
-      dark: darkly
-      light: flatly
+      dark:
+        - darkly
+        - custom-dark.scss
+      light:
+        - flatly
+        - custom-light.scss
     css: styles.css
     toc: true
     code-copy: true
