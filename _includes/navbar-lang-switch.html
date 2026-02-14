@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Rewrite the site title link to point to the current language homepage
-  var brandLink = document.querySelector('.navbar-brand');
-  if (brandLink) {
+  // Rewrite all site brand links (logo + title) to point to the current language homepage
+  var brandLinks = document.querySelectorAll('.navbar-brand');
+  brandLinks.forEach(function(brandLink) {
     var resolved = resolveSameOrigin(brandLink.getAttribute('href'));
     if (resolved) {
       if (resolved === '/index.html' || resolved === '/') {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     }
-  }
+  });
 
   // Rewrite RSS feed link in navbar to match current language
   var rssLink = document.querySelector('.navbar a[aria-label="RSS Feed"]');
