@@ -45,8 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-042fb95a10c114c4afd32883ce613c45.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-383f21ca2cb0435016079257d4049a93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-26fdb47f2f0528301fe7d78eda151a28.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cb8ebd1c8c7dbb478a9811e8e158d305.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,8 +101,8 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
-<link rel="alternate" hreflang="en" href="https://raphaelsimon.fr/en/">
 <link rel="alternate" hreflang="fr" href="https://raphaelsimon.fr/fr/">
+<link rel="alternate" hreflang="en" href="https://raphaelsimon.fr/en/">
 <link rel="alternate" hreflang="x-default" href="https://raphaelsimon.fr/en/">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -305,6 +305,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/console-blinking-1.gif" alt="" class="navbar-logo light-content">
+    <img src="../images/console-blinking-1.gif" alt="" class="navbar-logo dark-content">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Raphaël Simon</span>
     </a>
@@ -395,7 +399,7 @@ window.Quarto = {
 <h2 data-anchor-id="récents">Récents</h2>
 <div id="listing-recent-posts" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bWV0YSUyQ2JpZW52ZW51ZQ==" data-listing-date-sort="1769986800000" data-listing-file-modified-sort="1771076756622" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
+<div class="quarto-post image-right" data-index="0" data-categories="bWV0YSUyQ2JpZW52ZW51ZQ==" data-listing-date-sort="1769990400000" data-listing-file-modified-sort="1771078978581" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../fr/blog/posts/2026-02-02-hello-world/index.html" class="no-external">Bonjour le Monde</a>
@@ -488,9 +492,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Rewrite the site title link to point to the current language homepage
-  var brandLink = document.querySelector('.navbar-brand');
-  if (brandLink) {
+  // Rewrite all site brand links (logo + title) to point to the current language homepage
+  var brandLinks = document.querySelectorAll('.navbar-brand');
+  brandLinks.forEach(function(brandLink) {
     var resolved = resolveSameOrigin(brandLink.getAttribute('href'));
     if (resolved) {
       if (resolved === '/index.html' || resolved === '/') {
@@ -502,7 +506,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     }
-  }
+  });
 
   // Rewrite RSS feed link in navbar to match current language
   var rssLink = document.querySelector('.navbar a[aria-label="RSS Feed"]');
