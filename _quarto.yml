@@ -27,7 +27,7 @@ website:
 
   # Top navigation
   navbar:
-    logo: images/console-blinking-1.gif
+    logo: images/console-blinking.gif
     background: dark
     left:
       - text: Blog
