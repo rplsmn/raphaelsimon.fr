@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html",
+    "href": "fr/blog/posts/2026-02-02-hello-world/index.html",
+    "title": "Bonjour le Monde",
+    "section": "",
+    "text": "Bienvenue sur mon blog ! C’est ici que je partagerai mes réflexions sur la médecine, la santé publique, l’ingénierie logicielle, la science des données et les problèmes intéressants qui émergent à leurs intersections."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html#à-quoi-sattendre",
+    "href": "fr/blog/posts/2026-02-02-hello-world/index.html#à-quoi-sattendre",
+    "title": "Bonjour le Monde",
+    "section": "À Quoi S’Attendre",
+    "text": "À Quoi S’Attendre\nLes sujets varieront considérablement - c’est voulu. Je m’intéresse à :\n\nMédecine & Santé Publique : Aperçus cliniques, systèmes de santé, épidémiologie\nIngénierie Logicielle : Architecture, meilleures pratiques, outils\nScience des Données : Méthodes d’analyse, visualisation, applications ML\nSystèmes Complexes : Là où ces domaines se rejoignent"
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html#pourquoi-écrire",
+    "href": "fr/blog/posts/2026-02-02-hello-world/index.html#pourquoi-écrire",
+    "title": "Bonjour le Monde",
+    "section": "Pourquoi Écrire ?",
+    "text": "Pourquoi Écrire ?\nL’écriture clarifie la pensée. En expliquant des idées publiquement, je suis obligé de les affiner.\nRestez à l’écoute pour plus."
+  },
+  {
     "objectID": "fr/about.html",
     "href": "fr/about.html",
     "title": "À propos",
@@ -28,11 +49,39 @@
     "text": "Conseil\nJ’aide les organisations à résoudre des problèmes interdisciplinaires complexes et de niche. Si vous avez un projet difficile qui ne rentre pas dans les catégories traditionnelles, discutons-en."
   },
   {
-    "objectID": "fr/blog/index.html",
-    "href": "fr/blog/index.html",
-    "title": "Blog",
+    "objectID": "fr/index.html#récents",
+    "href": "fr/index.html#récents",
+    "title": "Raphaël Simon",
+    "section": "Récents",
+    "text": "Récents\n\n\n\n\n\nBonjour le Monde\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr., 2026\n\n\n\n\n\nAucun article correspondant\n\nVoir tous les articles →"
+  },
+  {
+    "objectID": "fr/index.html#sélection",
+    "href": "fr/index.html#sélection",
+    "title": "Raphaël Simon",
+    "section": "Sélection",
+    "text": "Sélection\n\nArticles en vedette\n\nHello World\n\n\n\nProjets\n\nAutoPMSI - Outil d’automatisation PMSI\n\n\n\nÀ lire\n\nSimon Willison’s Weblog"
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html",
+    "title": "Hello World",
     "section": "",
-    "text": "Bonjour le Monde\n\n\n\nmeta\n\nbienvenue\n\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
+    "text": "Welcome to my blog! This is where I’ll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#what-to-expect",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html#what-to-expect",
+    "title": "Hello World",
+    "section": "What to Expect",
+    "text": "What to Expect\nTopics will vary widely - that’s by design. I’m interested in:\n\nMedicine & Public Health: Clinical insights, health systems, epidemiology\nSoftware Engineering: Architecture, best practices, tools\nData Science: Analysis methods, visualization, ML applications\nComplex Systems: Where these fields collide"
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "title": "Hello World",
+    "section": "Why Write?",
+    "text": "Why Write?\nWriting clarifies thinking. By explaining ideas publicly, I’m forced to refine them.\nStay tuned for more."
   },
   {
     "objectID": "en/about.html",
@@ -63,41 +112,6 @@
     "text": "Consulting\nI help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn’t fit neatly into traditional categories, let’s talk."
   },
   {
-    "objectID": "en/blog/index.html",
-    "href": "en/blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Hello World\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my new blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 2, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html",
-    "title": "Hello World",
-    "section": "",
-    "text": "Welcome to my blog! This is where I’ll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections."
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#what-to-expect",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html#what-to-expect",
-    "title": "Hello World",
-    "section": "What to Expect",
-    "text": "What to Expect\nTopics will vary widely - that’s by design. I’m interested in:\n\nMedicine & Public Health: Clinical insights, health systems, epidemiology\nSoftware Engineering: Architecture, best practices, tools\nData Science: Analysis methods, visualization, ML applications\nComplex Systems: Where these fields collide"
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
-    "title": "Hello World",
-    "section": "Why Write?",
-    "text": "Why Write?\nWriting clarifies thinking. By explaining ideas publicly, I’m forced to refine them.\nStay tuned for more."
-  },
-  {
-    "objectID": "en/contact.html",
-    "href": "en/contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Have a question, project idea, or just want to connect? Fill out the form below and I’ll get back to you.\nYou can also reach me directly at contact@raphaelsimon.fr.\n\n\n\n Back to top"
-  },
-  {
     "objectID": "en/index.html#recent",
     "href": "en/index.html#recent",
     "title": "Raphaël Simon",
@@ -112,25 +126,18 @@
     "text": "Highlights\n\nFeatured Posts\n\nHello World\n\n\n\nThings I Built\n\nAutoPMSI - PMSI automation tool\n\n\n\nWorth Reading\n\nSimon Willison’s Weblog"
   },
   {
-    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html",
-    "href": "fr/blog/posts/2026-02-02-hello-world/index.html",
-    "title": "Bonjour le Monde",
+    "objectID": "en/contact.html",
+    "href": "en/contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "Bienvenue sur mon blog ! C’est ici que je partagerai mes réflexions sur la médecine, la santé publique, l’ingénierie logicielle, la science des données et les problèmes intéressants qui émergent à leurs intersections."
+    "text": "Have a question, project idea, or just want to connect? Fill out the form below and I’ll get back to you.\nYou can also reach me directly at contact@raphaelsimon.fr.\n\n\n\n Back to top"
   },
   {
-    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html#à-quoi-sattendre",
-    "href": "fr/blog/posts/2026-02-02-hello-world/index.html#à-quoi-sattendre",
-    "title": "Bonjour le Monde",
-    "section": "À Quoi S’Attendre",
-    "text": "À Quoi S’Attendre\nLes sujets varieront considérablement - c’est voulu. Je m’intéresse à :\n\nMédecine & Santé Publique : Aperçus cliniques, systèmes de santé, épidémiologie\nIngénierie Logicielle : Architecture, meilleures pratiques, outils\nScience des Données : Méthodes d’analyse, visualisation, applications ML\nSystèmes Complexes : Là où ces domaines se rejoignent"
-  },
-  {
-    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html#pourquoi-écrire",
-    "href": "fr/blog/posts/2026-02-02-hello-world/index.html#pourquoi-écrire",
-    "title": "Bonjour le Monde",
-    "section": "Pourquoi Écrire ?",
-    "text": "Pourquoi Écrire ?\nL’écriture clarifie la pensée. En expliquant des idées publiquement, je suis obligé de les affiner.\nRestez à l’écoute pour plus."
+    "objectID": "en/blog/index.html",
+    "href": "en/blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Hello World\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my new blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 2, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
     "objectID": "fr/contact.html",
@@ -140,17 +147,10 @@
     "text": "Vous avez une question, une idée de projet, ou vous voulez simplement échanger ? Remplissez le formulaire ci-dessous et je vous répondrai.\nVous pouvez aussi me joindre directement à contact@raphaelsimon.fr.\n\n\n\n Retour au sommet"
   },
   {
-    "objectID": "fr/index.html#récents",
-    "href": "fr/index.html#récents",
-    "title": "Raphaël Simon",
-    "section": "Récents",
-    "text": "Récents\n\n\n\n\n\nBonjour le Monde\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr., 2026\n\n\n\n\n\nAucun article correspondant\n\nVoir tous les articles →"
-  },
-  {
-    "objectID": "fr/index.html#sélection",
-    "href": "fr/index.html#sélection",
-    "title": "Raphaël Simon",
-    "section": "Sélection",
-    "text": "Sélection\n\nArticles en vedette\n\nHello World\n\n\n\nProjets\n\nAutoPMSI - Outil d’automatisation PMSI\n\n\n\nÀ lire\n\nSimon Willison’s Weblog"
+    "objectID": "fr/blog/index.html",
+    "href": "fr/blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Bonjour le Monde\n\n\n\nmeta\n\nbienvenue\n\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
   }
 ]

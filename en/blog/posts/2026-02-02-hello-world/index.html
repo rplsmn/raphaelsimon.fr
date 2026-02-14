@@ -45,8 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-26fdb47f2f0528301fe7d78eda151a28.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark-cb8ebd1c8c7dbb478a9811e8e158d305.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/bootstrap/bootstrap-33689faa9f6d3eb9f0aa92806cfacee6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark-bd3e5e1873b664cbff9bc78a4ba74c83.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,8 +73,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="alternate" hreflang="en" href="https://raphaelsimon.fr/en/blog/posts/hello-world/">
 <link rel="alternate" hreflang="fr" href="https://raphaelsimon.fr/fr/blog/posts/hello-world/">
+<link rel="alternate" hreflang="en" href="https://raphaelsimon.fr/en/blog/posts/hello-world/">
 <link rel="alternate" hreflang="x-default" href="https://raphaelsimon.fr/en/blog/posts/hello-world/">
 
 
@@ -249,8 +249,8 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../../images/console-blinking-1.gif" alt="" class="navbar-logo light-content">
-    <img src="../../../../images/console-blinking-1.gif" alt="" class="navbar-logo dark-content">
+    <img src="../../../../images/console-blinking.gif" alt="" class="navbar-logo light-content">
+    <img src="../../../../images/console-blinking.gif" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Raphaël Simon</span>
@@ -487,9 +487,16 @@ document.addEventListener('DOMContentLoaded', function() {
   li.appendChild(sep);
   li.appendChild(frSpan);
 
-  var navbar = document.querySelector('.navbar .navbar-nav.ms-auto');
-  if (navbar) {
-    navbar.appendChild(li);
+  // Place language toggle in navbar-tools area (far right, after theme toggle)
+  var navbarTools = document.querySelector('.quarto-navbar-tools');
+  if (navbarTools) {
+    navbarTools.appendChild(li);
+  } else {
+    // Fallback: append to right nav
+    var navbar = document.querySelector('.navbar .navbar-nav.ms-auto');
+    if (navbar) {
+      navbar.appendChild(li);
+    }
   }
 });
 </script>
