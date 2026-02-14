@@ -27,3 +27,5 @@ llm-docs/*_files/
 
 # Quarto-generated listing files
 index-listing.json
+
+/.luarc.json
