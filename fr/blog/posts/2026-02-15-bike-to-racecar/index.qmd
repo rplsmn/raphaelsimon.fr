@@ -13,6 +13,10 @@ hreflang:
   fr: /fr/blog/posts/bike-to-racecar/
 ---
 
+::: {.callout-note}
+Cet article a été traduit de [la version anglaise](/en/blog/posts/bike-to-racecar/) par un LLM, avec relecture humaine.
+:::
+
 Depuis fin décembre 2025, je passe 10 à 12 heures par jour à écrire du logiciel avec des agents LLM et des outils en ligne de commande.
 
 J'ai pris des notes depuis le premier jour où j'ai essayé Opus 4.5, sur mon téléphone.
