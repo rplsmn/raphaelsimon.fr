@@ -33,13 +33,16 @@ hreflang:
 ## Sélection
 
 ### Articles en vedette
-- [Hello World](blog/posts/2026-02-02-hello-world/index.qmd)
+- [Deux mois dans une voiture de course](blog/posts/2026-02-15-bike-to-racecar/index.qmd)
 
 ### Projets
-- [AutoPMSI](https://autopmsi.raphaelsimon.fr) - Outil d'automatisation PMSI
+- [AutoPMSI](https://autopmsi.raphaelsimon.fr) - Analyses PMSI en pur local
+- [HADVISOR](https://scansante.shinyapps.io/hadvisor/) - Classification HAD en direct
 
 ### À lire
 - [Simon Willison's Weblog](https://simonwillison.net/)
+- [Matt Shumer's Blog](https://shumer.dev/blog)
+- [Engineers in big tech](https://www.engineering.fyi/)
 :::
 
 ::::

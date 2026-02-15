@@ -1,13 +1,14 @@
 ---
-title: "Two months in a race car"
-description: "What daily AI-assisted development actually feels like: the dopamine, the fatigue, and the things nobody warns you about."
+title: Two months in a race car
+description: 'What daily AI-assisted development actually feels like: the dopamine,
+  the fatigue, and the things nobody warns you about.'
 author: Raphaël Simon
 date: '2026-02-15'
 categories:
 - ai
 - software-engineering
 - personal
-draft: true
+draft: false
 hreflang:
   en: /en/blog/posts/bike-to-racecar/
   fr: /fr/blog/posts/bike-to-racecar/

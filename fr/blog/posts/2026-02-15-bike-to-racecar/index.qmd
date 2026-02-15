@@ -1,13 +1,14 @@
 ---
-title: "Deux mois dans une voiture de course"
-description: "Ce que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient."
+title: Deux mois dans une voiture de course
+description: 'Ce que le développement assisté par IA au quotidien fait vraiment ressentir
+  : la dopamine, la fatigue, et ce dont personne ne vous prévient.'
 author: Raphaël Simon
 date: '2026-02-15'
 categories:
 - ia
 - ingenierie-logicielle
 - personnel
-draft: true
+draft: false
 hreflang:
   en: /en/blog/posts/bike-to-racecar/
   fr: /fr/blog/posts/bike-to-racecar/
