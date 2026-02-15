@@ -1,0 +1,123 @@
+---
+title: "Two months in a race car"
+description: "What daily AI-assisted development actually feels like: the dopamine, the fatigue, and the things nobody warns you about."
+author: Raphaël Simon
+date: '2026-02-15'
+categories:
+- ai
+- software-engineering
+- personal
+draft: true
+hreflang:
+  en: /en/blog/posts/bike-to-racecar/
+  fr: /fr/blog/posts/bike-to-racecar/
+---
+
+Since the end of December 2025, I've spent 10-12 hours a day writing software with LLM coding agents and CLI-tools.
+
+I've kept track of the experience from day one of trying out Opus 4.5, across notes on my phone.
+This post is about what it actually feels like: going from an e-bike to a race car.
+
+## Something changed in November
+
+In the first 3 quarters of 2025, LLMs were as useful to me as they had been since OpenAI unleashed ChatGPT on all of us. I felt like nobody had cracked a sustainable workflow. Lots of copy and paste from the web chat UI. Cool demos and some attempts at more autonomy but lots of horror stories (bye bye production DB). Models hallucinated just as much as they used to, too much for production trust. The output wasn't far enough ahead of what a competent human could produce, in most instances.
+
+Two things changed, almost at once.
+
+1) Models got meaningfully better. Not incrementally. With the release of Anthropic's Claude Opus 4.5, suddenly we got better one-shot successes. Better coherence across long plans. Fewer moments where the model drifts away from what you asked.
+
+2) [CLI agents](https://simonwillison.net/2025/Dec/31/the-year-in-llms/) like Claude Code (or Copilot CLI, Mistral Vibe, Opencode...) gave models access to the machine, in the right way. `grep`, `find`, `git`, CI/CD: bash is all you need apparently! The model can explore code without wasting tokens. It can participate in versioning its own work, and documenting code. It can run tests, read failures, try again. It could do all of this in parallel across branches, or git-worktrees.
+
+I had toyed with giving access to tools using R functions to the LLM after posit::conf 2025, but bash gives you everything: python, R, node, rust...
+Suddenly, I can codify what I want the LLM to do in a specific way and reliably!
+
+Neither alone was sufficient. Together: [superpower](https://github.com/obra/superpowers) (yes, the most popular Claude Code skill is very very well named).
+
+Here's what I built in two months, solo, while keeping up with my normal tasks in a full-time job:
+
+- This personal website with custom CSS, Lua scripts, and a homegrown multi-language system. I'd been postponing this for ages
+- A DuckDB WASM web application for [hospital data analysis](https://autopmsi.raphaelsimon.fr) that I'd kept in a backlog since September 2023
+- My personal homelab with 5 services running in Podman Quadlets in an old machine serving my family, a homepage and a Wake-on-LAN trigger on my RPi, a Tailscale network for it all. I'd always wanted to find the time to recycle that old desktop and learn how to setup Immich and paperless-ngx.
+- Documentation and scripts for a CLI utility at work solving a blocking problem we'd been stuck on for months
+- A Rust port of a [very cool Google research paper](https://google-research.github.io/self-organising-systems/difflogic-ca/) I liked back in March 2025, couldn't reproduce at the time using Sonnet in the chat UI. It was my first use of Claude Code, on my phone using the Claude Code Web UI, the morning after Christmas. [It took 12 days](https://github.com/rplsmn/logicars/), and only because I wanted to really take the time to learn and practice the Rust patterns.
+
+What I seriously see myself doing IN THE NEXT 2 WEEKS:
+- An R package wrapping those CLI scripts for my coworkers
+- A major refactor of a package I maintain at work, plus a webapp for a conference presentation
+- An agent skills sharing system across the organization. I want to build the *skillverse*, a way to pair a package with a skill at using it well.
+
+I am not a 10x engineer. I am an ordinary dev who is suddenly unlocked.
+
+## The bicycle and the racing car.
+
+Here's the analogy I keep coming back to.
+
+Learning to code was like riding a bicycle. Full control. You feel every bump. You go at your own speed. It's tiring but in a healthy way.
+
+IDE autocompletion and web-based LLM chat were like having an e-bike. Faster. More comfortable. You still steer. You have to pay attention to not get carried away by a speed you're not fully producing yourself.
+
+CLI agents are the racing car.
+
+Speed, so much speed. But such speed costs concentration. The smallest error at this velocity is a crash. And your physical condition -- sleep, focus, stress -- suddenly matters a lot. A tired pilot crashes. And I believe that, with the current outlook, by the same time next year I'll be sitting in the cockpit of a fighter jet.[^1]
+
+[^1]: Figuratively. While I have a valid medical LAPL licence for it, I certainly do NOT hold a permit for that!
+
+## What nobody warned me about
+
+Two months in, here are the psychological effects I've noticed in myself. I write them down because I've found very [few honest accounts](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it) of what this does to you.
+
+**Rate limit compulsion.** My plan resets every 5 hours. If I haven't hit the limit, I feel like I'm wasting it. This is straight up a drug dealer's engagement technique. I recognize it. I still fall for it.
+
+**Dopamine of speed.** The execution is so fast it creates a craving. I want more. Sometimes at the cost of not checking the results. The rush of watching code materialize is [genuinely hard to resist](https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163).
+
+**Planning aversion.** Preparing skills, docs, instructions -- it all feels slow. The pull to jump straight into prompting is strong. This is the opposite of what good engineering looks like, and despite KNOWING that I get good results only when the preparation steps are done right, I still get pulled.
+
+**Screen hypnosis.** I catch myself watching the "executing" line in the terminal, mesmerized. The tech that should free me to take a walk glues me to my screen.
+
+**Attachment to bad output.** It's stupidly hard to re-run the same prompt for a better result. I become attached to whatever the model produced. Even when I know it's suboptimal. Even when I know a second attempt would be better.
+
+**The influence problem.** Even with a rigorous plan in front of me, I deviate, like I suddenly am a goldfish or a labradoodle. The model suggests something. It sounds reasonable. I accept it without enough thought. Then I'm off-plan, adding cool UI effects when the core isn't finished and realize it twenty minutes later. LLMs are [really good at persuading](https://www.darioamodei.com/essay/the-adolescence-of-technology) you to do things you didn't plan to do.
+
+**The anthropomorphism trap.** I tell my intern daily -- sometimes multiple times a day -- not to anthropomorphize the model. It limits how we think about using it. It pushes us into terrible cognitive biases. And then I catch myself doing the exact same thing.
+
+**[The Challenger disaster](https://simonwillison.net/2026/Jan/8/llm-predictions-for-2026/).** I often catch myself not thinking hard enough about the consequences of allowing a tool to run on a machine I care about. I've set up a VPS specifically for risky operations. I still take stupid risks on my personal machines.
+
+## The fatigue is real
+
+After a long session, especially with parallel agents / terminals, I'm exhausted. Not the good tired of deep focus. The bad tired of constant decision-making and rapid context-switching. I've talked about it with people who I know are deep into this new workflow, and they have felt it as well. It made me feel seen when I read [a blog about it](https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163). Someone told me that it's the same fatigue as when we learned computer science / how to code. Maybe! But it feels a bit different.
+
+I think the fighter jet metaphor works well here. I'm processing more information per minute. I'm making more decisions per hour. I'm switching contexts faster than maybe my brain is used to, or even was designed for. And when I run multiple agents in parallel -- which is where the real throughput comes from, and it will only grow from here -- I've essentially become air traffic control!
+
+## The safety net is not the model
+
+I haven't measured it, but my gut feeling says hallucination rates haven't changed dramatically. Still around 8-10% of the time, as I've felt before. What changed is the methodology the community and frontier LLM providers have built around it.
+
+[Tests are the real safety net](https://khalilstemmler.com/articles/divergence-convergence-spaghetti-code/). LLM output is chaos -- the model generates code fast, without internal quality constraints. Tests are the checkpoints / guardrails. Without them, the LLM produces spaghetti at unprecedented speed. With them, there's still a chance of spaghetti, but it's easier to keep track and stay on target.
+
+Git + GitHub gives me branch-based work and human review, and a familiar workflow. Lean methodology -- plan, architecture decision records, exit criteria, definition of done -- works REALLY well for pairing humans and LLM. It creates a retrocontrol framework. I used to dislike some of the rituals around agile and friends, but I have to say it's a perfect fit for building a harness for this thing.
+
+Conversely, I feel like this means you still can't really use these tools in a language you are not good enough at. For throwaway code, no problem! Quick HTML tools, a personal script or library, something for the homelab. But for production, hell no. We need to be able to read and judge, at least until we evolve to the next logical step: tons of agents working in a way that creates the perfect harness. It feels possible now. I don't know exactly how, but maybe having thousands or millions (or more!) of LLM agents work on something might allow us to tackle new issues, or old issues for which we had to rely on suboptimal solutions because no one in the history of man has been able to employ millions of humans to the same task.
+
+## The questions that keep me up
+
+**Who captures the value?** If I'm 2-3x more productive, my employer gets 2-3x the output. I get the same salary and more fatigue. The tool I like costs 20 to 200 EUR/month. The equivalent human hours cost [orders of magnitude more](https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163). This is a value capture problem. And right now, the answer is: not the engineer. I'd like to see people try to reduce the workweek, we can clearly have our cake and eat it too. Although I'm not naive: the LLM doesn't need to sleep, and that means someone will think it needs to be given instructions around the clock...
+
+**Where do juniors go?** You need senior experience to review LLM output, validate architecture, catch subtle bugs, manage plans. If there's [no place for juniors](https://podwise.ai/dashboard/episodes/6446247), how do you train the seniors of tomorrow? This isn't a hypothetical. I feel like it's already happening around me.
+
+**What happens to our skills?** Basic neurology: unused synaptic connections get pruned. If engineers stop writing code because AI does it, their coding skill degrades. I need to seriously think about a work methodology that helps me maintain my skills, lest I climb the Dunning-Kruger curve backwards. I haven't solved this yet. It feels like what we do with workouts / running, but for the mind?
+
+**What happens next?** Between the current generation and the previous one, 6 months produced a massive leap. Open-source models lag about [6 months behind](https://shumer.dev/something-big-is-happening). If frontier models can contribute to building the next frontier model, that 6-month gap could become permanent. Or worse, it could widen. The sovereignty implications for a non-US public agency are... significant.
+
+## What I've learned so far
+
+Currently, I'm operating at what I'd call a [supervisory level](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/). I review diffs. I write plans. I manage agents. I rarely type code character by character anymore. And I've done more to clear my personal backlog in two months than I had in the past 2 years. I can't yet say the same for my full-time job, but that's both because I've preferred using my personal Claude Code Subscription for personal projects, and also because I wanted to learn the meta-tools first before taking the leap on my full-time job responsibilities. But I can't delay any longer, and I won't.
+
+But I'm more tired. I'm more distracted. I catch myself cutting corners I wouldn't have cut before. I recognize addiction patterns in my own behavior.
+
+The honest assessment: this is a superpower, or a supercar at least. And it's draining. Both things are true. Most people writing about AI-assisted development pick one side. The evangelists talk about the productivity. The skeptics talk about the limits. The reality is messier.
+
+We NEED to talk about the human cost. Not to slow down adoption. But because the people in the cockpit need to know what the race does to them.
+
+---
+
+*I wrote this post with the help of Claude Code (mainly to summarise the long list of references I'd accumulated in two months, and to suggest a plan for this post from the raw and un-ordered notes). It took a fraction of the time it would have taken otherwise. I am also more tired than I should be on a Sunday night. Make of that what you will.*

@@ -1,0 +1,127 @@
+---
+title: "Deux mois dans une voiture de course"
+description: "Ce que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient."
+author: Raphaël Simon
+date: '2026-02-15'
+categories:
+- ia
+- ingenierie-logicielle
+- personnel
+draft: true
+hreflang:
+  en: /en/blog/posts/bike-to-racecar/
+  fr: /fr/blog/posts/bike-to-racecar/
+---
+
+::: {.callout-note}
+Cet article a été traduit de [la version anglaise](/en/blog/posts/bike-to-racecar/) par un LLM, avec relecture humaine.
+:::
+
+Depuis fin décembre 2025, je passe 10 à 12 heures par jour à écrire du logiciel avec des agents LLM et des outils en ligne de commande.
+
+J'ai pris des notes depuis le premier jour où j'ai essayé Opus 4.5, sur mon téléphone.
+Ce billet raconte ce que ça fait vraiment : passer du vélo électrique à la voiture de course.
+
+## Quelque chose a changé en novembre
+
+Pendant les 3 premiers trimestres de 2025, les LLM m'étaient aussi utiles qu'ils l'avaient été depuis qu'OpenAI a lâché ChatGPT sur nous tous. J'avais l'impression que personne n'avait trouvé de workflow durable. Beaucoup de copier-coller depuis l'interface web. Des démos impressionnantes et quelques tentatives d'autonomie, mais aussi beaucoup d'histoires d'horreur (adieu la base de prod). Les modèles hallucinaient tout autant qu'avant, trop pour qu'on leur fasse confiance en production. Dans la plupart des cas, le résultat n'était pas assez en avance sur ce qu'un humain compétent pouvait produire.
+
+Deux choses ont changé, presque en même temps.
+
+1) Les modèles se sont nettement améliorés. Pas de manière incrémentale. Avec la sortie de Claude Opus 4.5 d'Anthropic, on a soudain obtenu de meilleurs résultats du premier coup. Une meilleure cohérence sur des plans longs. Moins de moments où le modèle dérive de ce qu'on lui a demandé.
+
+2) Les [agents en ligne de commande](https://simonwillison.net/2025/Dec/31/the-year-in-llms/) comme Claude Code (ou Copilot CLI, Mistral Vibe, Opencode...) ont donné aux modèles accès à la machine, de la bonne manière. `grep`, `find`, `git`, CI/CD : bash, c'est tout ce qu'il faut apparemment ! Le modèle peut explorer du code sans gaspiller de tokens. Il peut participer au versionnage de son propre travail et à la documentation. Il peut lancer des tests, lire les erreurs, réessayer. Il peut faire tout ça en parallèle sur plusieurs branches, ou des git-worktrees.
+
+J'avais expérimenté avec des fonctions R pour donner accès à des outils au LLM après posit::conf 2025, mais bash donne accès à tout : python, R, node, rust...
+D'un coup, je peux formaliser ce que je veux que le LLM fasse de manière spécifique et fiable !
+
+Aucun des deux seul ne suffisait. Ensemble : un [superpouvoir](https://github.com/obra/superpowers) (oui, la skill Claude Code la plus populaire porte très très bien son nom).
+
+Voici ce que j'ai construit en deux mois, seul, tout en continuant mes missions à temps plein :
+
+- Ce site personnel avec du CSS custom, des scripts Lua, et un système multilingue fait maison. Je repoussais ça depuis des lustres
+- Une application web DuckDB WASM pour l'[analyse de données hospitalières](https://autopmsi.raphaelsimon.fr) que je gardais dans un backlog depuis septembre 2023
+- Mon homelab personnel avec 5 services tournant dans des Podman Quadlets sur une vieille machine au service de ma famille, une page d'accueil et un déclencheur Wake-on-LAN sur mon RPi, un réseau Tailscale pour le tout. J'avais toujours voulu trouver le temps de recycler ce vieux desktop et apprendre à configurer Immich et paperless-ngx.
+- De la documentation et des scripts pour un utilitaire CLI au travail qui résolvait un problème bloquant depuis des mois
+- Un portage Rust d'un [papier de recherche Google très cool](https://google-research.github.io/self-organising-systems/difflogic-ca/) que j'avais aimé en mars 2025, impossible à reproduire à l'époque avec Sonnet dans l'interface chat. C'était ma première utilisation de Claude Code, sur mon téléphone via l'interface web de Claude Code, le lendemain de Noël. [Ça a pris 12 jours](https://github.com/rplsmn/logicars/), et uniquement parce que je voulais vraiment prendre le temps d'apprendre et de pratiquer les patterns Rust.
+
+Ce que je me vois sérieusement faire DANS LES 2 PROCHAINES SEMAINES :
+- Un package R encapsulant ces scripts CLI pour mes collègues
+- Un refactoring majeur d'un package que je maintiens au travail, plus une webapp pour une présentation en conférence
+- Un système de partage de skills d'agents à travers l'organisation. Je veux construire le *skillverse*, une façon d'associer un package à une skill pour bien l'utiliser.
+
+Je ne suis pas un ingénieur 10x. Je suis un dev ordinaire qui est soudain débloqué.
+
+## Le vélo et la voiture de course
+
+Voici l'analogie qui me revient sans cesse.
+
+Apprendre à coder, c'était comme faire du vélo. Contrôle total. On sent chaque bosse. On va à son rythme. C'est fatigant, mais d'une bonne fatigue.
+
+L'autocomplétion des IDE et le chat LLM dans le navigateur, c'était comme passer au vélo électrique. Plus rapide. Plus confortable. On dirige toujours. Il faut faire attention à ne pas se laisser emporter par une vitesse qu'on ne produit pas soi-même.
+
+Les agents CLI, c'est la voiture de course.
+
+De la vitesse, tellement de vitesse. Mais une telle vitesse coûte en concentration. La moindre erreur à cette allure, c'est le crash. Et la condition physique -- sommeil, concentration, stress -- compte soudain beaucoup. Un pilote fatigué se crashe. Et je crois que, vu la trajectoire actuelle, à la même époque l'année prochaine je serai dans le cockpit d'un avion de chasse.[^1]
+
+[^1]: Au sens figuré. Même si j'ai un certificat médical LAPL valide, je n'ai certainement PAS le brevet pour ça !
+
+## Ce dont personne ne m'avait prévenu
+
+Au bout de deux mois, voici les effets psychologiques que j'ai observés chez moi. Je les note parce que j'ai trouvé très [peu de témoignages honnêtes](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it) sur ce que ça fait.
+
+**La compulsion du rate limit.** Mon forfait se réinitialise toutes les 5 heures. Si je n'ai pas atteint la limite, j'ai l'impression de gaspiller. C'est une technique d'engagement digne d'un dealer. Je le reconnais. J'y tombe quand même.
+
+**La dopamine de la vitesse.** L'exécution est si rapide qu'elle crée une envie irrésistible. J'en veux plus. Parfois au prix de ne pas vérifier les résultats. La montée d'adrénaline en voyant du code se matérialiser est [vraiment difficile à résister](https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163).
+
+**L'aversion à la planification.** Préparer des skills, de la doc, des instructions -- tout ça paraît lent. La tentation de sauter directement dans le prompting est forte. C'est l'opposé d'une bonne ingénierie, et malgré le fait que je SAIS que je n'obtiens de bons résultats que quand la préparation est bien faite, je me fais quand même avoir.
+
+**L'hypnose de l'écran.** Je me surprends à fixer la ligne "exécution en cours" dans le terminal, hypnotisé. La technologie qui devrait me libérer pour aller marcher me colle à l'écran.
+
+**L'attachement au mauvais output.** C'est bêtement difficile de relancer le même prompt pour un meilleur résultat. Je m'attache à ce que le modèle a produit. Même quand je sais que c'est sous-optimal. Même quand je sais qu'un deuxième essai serait meilleur.
+
+**Le problème d'influence.** Même avec un plan rigoureux sous les yeux, je dévie, comme si j'étais soudain un poisson rouge ou un labradoodle. Le modèle suggère quelque chose. Ça semble raisonnable. J'accepte sans assez réfléchir. Et me voilà hors plan, en train d'ajouter des effets UI sympa alors que le cœur n'est pas fini, et je m'en rends compte vingt minutes plus tard. Les LLM sont [vraiment doués pour persuader](https://www.darioamodei.com/essay/the-adolescence-of-technology) de faire des choses qu'on n'avait pas prévu de faire.
+
+**Le piège de l'anthropomorphisme.** Je dis à mon stagiaire tous les jours -- parfois plusieurs fois par jour -- de ne pas anthropomorphiser le modèle. Ça limite notre façon de réfléchir à son utilisation. Ça nous pousse vers de terribles biais cognitifs. Et puis je me surprends à faire exactement la même chose.
+
+**[La catastrophe Challenger](https://simonwillison.net/2026/Jan/8/llm-predictions-for-2026/).** Je me surprends souvent à ne pas réfléchir assez aux conséquences de laisser un outil tourner sur une machine à laquelle je tiens. J'ai monté un VPS spécifiquement pour les opérations risquées. Je prends quand même des risques stupides sur mes machines personnelles.
+
+## La fatigue est réelle
+
+Après une longue session, surtout avec des agents / terminaux en parallèle, je suis épuisé. Pas la bonne fatigue de la concentration profonde. La mauvaise fatigue de la prise de décision constante et du changement de contexte rapide. J'en ai discuté avec des gens que je sais profondément engagés dans ce nouveau workflow, et ils l'ont ressenti aussi. Je me suis senti compris quand j'ai lu [un blog à ce sujet](https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163). Quelqu'un m'a dit que c'est la même fatigue que quand on a appris l'informatique / à coder. Peut-être ! Mais ça semble un peu différent.
+
+Je pense que la métaphore de l'avion de chasse fonctionne bien ici. Je traite plus d'informations par minute. Je prends plus de décisions par heure. Je change de contexte plus vite que mon cerveau n'y est peut-être habitué, ou même conçu pour. Et quand je fais tourner plusieurs agents en parallèle -- c'est là que le vrai débit se produit, et ça ne fera que croître -- je suis essentiellement devenu contrôleur aérien !
+
+## Le filet de sécurité, ce n'est pas le modèle
+
+Je ne l'ai pas mesuré, mais mon intuition me dit que les taux d'hallucination n'ont pas changé dramatiquement. Toujours autour de 8-10% du temps, comme je le ressentais avant. Ce qui a changé, c'est la méthodologie que la communauté et les fournisseurs de LLM de pointe ont construite autour.
+
+[Les tests sont le vrai filet de sécurité](https://khalilstemmler.com/articles/divergence-convergence-spaghetti-code/). Le output d'un LLM, c'est le chaos -- le modèle génère du code vite, sans contrainte interne de qualité. Les tests sont les checkpoints / garde-fous. Sans eux, le LLM produit du spaghetti à une vitesse sans précédent. Avec eux, il y a toujours un risque de spaghetti, mais c'est plus facile de garder le cap.
+
+Git + GitHub me donne un workflow par branches et de la revue humaine, un cadre familier. La méthodologie Lean -- plan, architecture decision records, critères de sortie, definition of done -- fonctionne VRAIMENT bien pour faire travailler humains et LLM ensemble. Ça crée un cadre de rétrocontrôle. J'avais l'habitude de ne pas aimer certains rituels autour de l'agile et compagnie, mais je dois dire que c'est un cadre parfait pour harnacher ce truc.
+
+Inversement, je pense que ça veut dire qu'on ne peut pas vraiment utiliser ces outils dans un langage qu'on ne maîtrise pas assez. Pour du code jetable, pas de problème ! Des outils HTML rapides, un script ou une bibliothèque personnelle, quelque chose pour le homelab. Mais pour la production, certainement pas. On doit être capable de lire et de juger, au moins tant qu'on n'évolue pas vers l'étape logique suivante : des tonnes d'agents qui travaillent de manière à créer le harnais parfait. Ça semble possible maintenant. Je ne sais pas exactement comment, mais peut-être qu'avoir des milliers ou des millions (ou plus !) d'agents LLM travailler sur quelque chose pourrait nous permettre de résoudre de nouveaux problèmes, ou des vieux problèmes pour lesquels on devait se contenter de solutions sous-optimales parce que jamais dans l'histoire de l'humanité on n'a pu employer des millions d'humains sur la même tâche.
+
+## Les questions qui m'empêchent de dormir
+
+**Qui capture la valeur ?** Si je suis 2-3x plus productif, mon employeur obtient 2-3x le résultat. Moi j'ai le même salaire et plus de fatigue. L'outil que j'aime coûte 20 à 200 EUR/mois. Les heures humaines équivalentes coûtent des [ordres de grandeur de plus](https://steve-yegge.medium.com/the-ai-vampire-eda6e4f07163). C'est un problème de captation de valeur. Et pour l'instant, la réponse est : pas l'ingénieur. J'aimerais voir des gens essayer de réduire la semaine de travail, on peut clairement avoir le beurre et l'argent du beurre. Même si je ne suis pas naïf : le LLM n'a pas besoin de dormir, et ça veut dire que quelqu'un pensera qu'il faut lui donner des instructions 24h/24...
+
+**Où vont les juniors ?** Il faut de l'expérience de senior pour relire le output d'un LLM, valider l'architecture, attraper les bugs subtils, gérer les plans. S'il n'y a [pas de place pour les juniors](https://podwise.ai/dashboard/episodes/6446247), comment forme-t-on les seniors de demain ? Ce n'est pas une hypothèse. J'ai l'impression que ça se passe déjà autour de moi.
+
+**Qu'advient-il de nos compétences ?** Neurologie de base : les connexions synaptiques inutilisées sont élaguées. Si les ingénieurs arrêtent d'écrire du code parce que l'IA le fait, leur compétence en programmation se dégrade. Je dois sérieusement réfléchir à une méthodologie de travail qui m'aide à maintenir mes compétences, sous peine de remonter la courbe de Dunning-Kruger à l'envers. Je n'ai pas encore résolu ça. Ça ressemble à ce qu'on fait avec le sport / la course à pied, mais pour l'esprit ?
+
+**Et après ?** Entre la génération actuelle et la précédente, 6 mois ont produit un bond massif. Les modèles open-source ont environ [6 mois de retard](https://shumer.dev/something-big-is-happening). Si les modèles de pointe peuvent contribuer à construire le prochain modèle de pointe, cet écart de 6 mois pourrait devenir permanent. Ou pire, se creuser. Les implications en termes de souveraineté pour une agence publique non-américaine sont... significatives.
+
+## Ce que j'ai appris jusqu'ici
+
+Actuellement, j'opère à ce que j'appellerais un [niveau de supervision](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/). Je relis des diffs. J'écris des plans. Je gère des agents. Je tape rarement du code caractère par caractère. Et j'ai fait plus pour vider mon backlog personnel en deux mois que pendant les 2 années précédentes. Je ne peux pas encore en dire autant pour mon travail à plein temps, à la fois parce que j'ai préféré utiliser mon abonnement personnel Claude Code pour des projets personnels, et aussi parce que je voulais d'abord apprendre les méta-outils avant de me lancer sur mes responsabilités professionnelles. Mais je ne peux plus repousser, et je ne le ferai pas.
+
+Mais je suis plus fatigué. Plus distrait. Je me surprends à couper des coins que je n'aurais pas coupés avant. Je reconnais des schémas addictifs dans mon propre comportement.
+
+Le constat honnête : c'est un superpouvoir, ou au moins une supercar. Et c'est épuisant. Les deux sont vrais. La plupart des gens qui écrivent sur le développement assisté par IA choisissent un camp. Les évangélistes parlent de la productivité. Les sceptiques parlent des limites. La réalité est plus compliquée.
+
+On DOIT parler du coût humain. Pas pour ralentir l'adoption. Mais parce que les gens dans le cockpit doivent savoir ce que la course leur fait.
+
+---
+
+*J'ai écrit ce billet avec l'aide de Claude Code (principalement pour synthétiser la longue liste de références que j'avais accumulées en deux mois, et pour suggérer un plan à partir des notes brutes et non ordonnées). Ça a pris une fraction du temps que ça aurait pris autrement. Je suis aussi plus fatigué que je ne devrais l'être un dimanche soir. Faites-en ce que vous voulez.*

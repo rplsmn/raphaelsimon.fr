@@ -12,19 +12,12 @@ hreflang:
   fr: /fr/blog/posts/hello-world/
 ---
 
-Bienvenue sur mon blog ! C'est ici que je partagerai mes réflexions sur la médecine, la santé publique, l'ingénierie logicielle, la science des données et les problèmes intéressants qui émergent à leurs intersections.
-
-## À Quoi S'Attendre
-
-Les sujets varieront considérablement - c'est voulu. Je m'intéresse à :
-
-- **Médecine & Santé Publique** : Aperçus cliniques, systèmes de santé, épidémiologie
-- **Ingénierie Logicielle** : Architecture, meilleures pratiques, outils
-- **Science des Données** : Méthodes d'analyse, visualisation, applications ML
-- **Systèmes Complexes** : Là où ces domaines se rejoignent
+Bienvenue sur mon blog ! C'est ici que je partagerai mes divagations, sur à peu près tout : de la médecine et la santé publique à l'ingénierie logicielle, la science des données, et les problèmes intéressants qui émergent à leurs intersections.
 
 ## Pourquoi Écrire ?
 
-L'écriture clarifie la pensée. En expliquant des idées publiquement, je suis obligé de les affiner.
+J'essaie de tenir un blog depuis mes 11 ans, ça fait plus de 20 ans maintenant.
+Qu'est-ce qui a changé ? Aucune idée. J'imagine que j'ai assez vieilli pour comprendre à quel point écrire est important ?
+Ou alors c'est juste une lubie qui durera deux semaines.
 
-Restez à l'écoute pour plus.
+Qui sait ?
