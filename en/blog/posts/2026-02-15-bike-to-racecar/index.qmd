@@ -13,7 +13,7 @@ hreflang:
   fr: /fr/blog/posts/bike-to-racecar/
 ---
 
-Since the December 2025, I've spent 10-12 hours a day writing software with LLM coding agents and CLI-tools.
+Since the end of December 2025, I've spent 10-12 hours a day writing software with LLM coding agents and CLI-tools.
 
 I've kept track of the experience from day one of trying out Opus 4.5, across notes on my phone.
 This post is about what it actually feels like : to go from driving an e-bike to a race car.
@@ -26,7 +26,7 @@ Two things changed, almost at once.
 
 1) Models got meaningfully better. Not incrementally. With the release of Anthropic's Claude Opus 4.5, suddenly we get better one-shot successes. Better coherence across long plans. Fewer moments where the model drifts away from what you asked.
 
-2) [CLI agents](https://simonwillison.net/2025/Dec/31/the-year-in-llms/) gave models access to the machine, in the right way. `grep`, `find`, `git`, CI/CD : bash is all you need apparently ! The model can explore code without wasting tokens. It can participate in versionning its own work, and documenting code. It can run tests, read failures, try again. It could do all of this in parallel across branches, or git-worktrees.
+2) [CLI agents](https://simonwillison.net/2025/Dec/31/the-year-in-llms/) like Claude Code (or Copilot CLI, Mistral Vibe, Opencode ...) gave models access to the machine, in the right way. `grep`, `find`, `git`, CI/CD : bash is all you need apparently ! The model can explore code without wasting tokens. It can participate in versionning its own work, and documenting code. It can run tests, read failures, try again. It could do all of this in parallel across branches, or git-worktrees.
 
 I had toyed with giving access to tools using R functions to the LLM after Posit conf 2025, but bash gives you everything : python, R, node, rust ...
 Suddenly, I can codify what I want to LLM to do in a specific way and reliably!
