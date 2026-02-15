@@ -6,5 +6,6 @@ contributes:
   filters:
     - translation-banner.lua
     - hreflang.lua
+    - blog-excerpts.lua
   shortcodes:
     - lang-switch.lua

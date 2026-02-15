@@ -74,6 +74,7 @@ format:
     code-overflow: wrap
     filters:
       - _extensions/multilang/hreflang.lua
+      - _extensions/multilang/blog-excerpts.lua
     include-after-body:
       - _includes/navbar-lang-switch.html
 
