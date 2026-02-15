@@ -39,7 +39,7 @@ hreflang:
 - [AutoPMSI](https://autopmsi.raphaelsimon.fr) - Analyses PMSI en pur local
 - [HADVISOR](https://scansante.shinyapps.io/hadvisor/) - Classification HAD en direct
 
-### À lire
+### Plus de lectures
 - [Simon Willison's Weblog](https://simonwillison.net/)
 - [Matt Shumer's Blog](https://shumer.dev/blog)
 - [Engineers in big tech](https://www.engineering.fyi/)
