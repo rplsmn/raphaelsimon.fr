@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://raphaelsimon.fr/fr/thanks.html</loc>
-    <lastmod>2026-02-14T13:21:12.063Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/fr/about.html</loc>
-    <lastmod>2026-02-14T13:21:12.062Z</lastmod>
+    <loc>https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/index.html</loc>
+    <lastmod>2026-02-15T21:01:18.760Z</lastmod>
   </url>
   <url>
     <loc>https://raphaelsimon.fr/fr/blog/index.html</loc>
-    <lastmod>2026-02-14T13:12:23.357Z</lastmod>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/en/thanks.html</loc>
-    <lastmod>2026-02-14T13:21:12.062Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/en/about.html</loc>
-    <lastmod>2026-02-14T13:21:12.062Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/en/blog/index.html</loc>
-    <lastmod>2026-02-14T13:12:23.356Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/index.html</loc>
-    <lastmod>2026-02-15T06:40:48.235Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/en/contact.html</loc>
-    <lastmod>2026-02-14T13:21:12.062Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/en/index.html</loc>
-    <lastmod>2026-02-14T20:47:11.434Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/index.html</loc>
-    <lastmod>2026-02-15T06:40:48.237Z</lastmod>
+    <loc>https://raphaelsimon.fr/fr/thanks.html</loc>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
   </url>
   <url>
     <loc>https://raphaelsimon.fr/fr/contact.html</loc>
-    <lastmod>2026-02-14T13:21:12.063Z</lastmod>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-15-bike-to-racecar/index.html</loc>
+    <lastmod>2026-02-15T21:01:18.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/about.html</loc>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/index.html</loc>
+    <lastmod>2026-02-15T20:57:54.081Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/contact.html</loc>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/thanks.html</loc>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/blog/index.html</loc>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/index.html</loc>
+    <lastmod>2026-02-15T21:01:18.759Z</lastmod>
   </url>
   <url>
     <loc>https://raphaelsimon.fr/fr/index.html</loc>
-    <lastmod>2026-02-14T20:47:11.435Z</lastmod>
+    <lastmod>2026-02-15T20:58:50.086Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/fr/about.html</loc>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/fr/blog/posts/2026-02-15-bike-to-racecar/index.html</loc>
+    <lastmod>2026-02-15T21:01:18.758Z</lastmod>
   </url>
 </urlset>

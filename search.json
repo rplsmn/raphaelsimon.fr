@@ -1,38 +1,94 @@
 [
   {
-    "objectID": "fr/about.html",
-    "href": "fr/about.html",
-    "title": "À propos",
+    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html",
+    "href": "fr/blog/posts/2026-02-02-hello-world/index.html",
+    "title": "Bonjour le Monde",
     "section": "",
-    "text": "Médecin devenu ingénieur. J’ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l’informatique médicale, et finalement le logiciel. Aujourd’hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).\nJe suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l’intersection est floue, plus c’est intéressant.\nBasé en France. Plusieurs langues parlées couramment, d’autres en cours d’apprentissage."
+    "text": "Bienvenue sur mon blog ! C’est ici que je partagerai mes divagations, sur à peu près tout : de la médecine et la santé publique à l’ingénierie logicielle, la science des données, et les problèmes intéressants qui émergent à leurs intersections."
   },
   {
-    "objectID": "fr/about.html#biographie",
-    "href": "fr/about.html#biographie",
-    "title": "À propos",
-    "section": "",
-    "text": "Médecin devenu ingénieur. J’ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l’informatique médicale, et finalement le logiciel. Aujourd’hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).\nJe suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l’intersection est floue, plus c’est intéressant.\nBasé en France. Plusieurs langues parlées couramment, d’autres en cours d’apprentissage."
-  },
-  {
-    "objectID": "fr/about.html#expertise",
-    "href": "fr/about.html#expertise",
-    "title": "À propos",
-    "section": "Expertise",
-    "text": "Expertise\n\nMédecine et Santé Publique\nIngénierie Logicielle\nScience des Données\nSystèmes Complexes"
-  },
-  {
-    "objectID": "fr/about.html#conseil",
-    "href": "fr/about.html#conseil",
-    "title": "À propos",
-    "section": "Conseil",
-    "text": "Conseil\nJ’aide les organisations à résoudre des problèmes interdisciplinaires complexes et de niche. Si vous avez un projet difficile qui ne rentre pas dans les catégories traditionnelles, discutons-en."
+    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html#pourquoi-écrire",
+    "href": "fr/blog/posts/2026-02-02-hello-world/index.html#pourquoi-écrire",
+    "title": "Bonjour le Monde",
+    "section": "Pourquoi Écrire ?",
+    "text": "Pourquoi Écrire ?\nJ’essaie de tenir un blog depuis mes 11 ans, ça fait plus de 20 ans maintenant. Qu’est-ce qui a changé ? Aucune idée. J’imagine que j’ai assez vieilli pour comprendre à quel point écrire est important ? Ou alors c’est juste une lubie qui durera deux semaines.\nQui sait ?"
   },
   {
     "objectID": "fr/blog/index.html",
     "href": "fr/blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Bonjour le Monde\n\n\n\nmeta\n\nbienvenue\n\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
+    "text": "Deux mois dans une voiture de course\n\n\n\nia\n\ningenierie-logicielle\n\npersonnel\n\n\n\nCe que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient.\n\n\n\n\n\n15 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nBonjour le Monde\n\n\n\nmeta\n\nbienvenue\n\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
+  },
+  {
+    "objectID": "fr/contact.html",
+    "href": "fr/contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Vous avez une question, une idée de projet, ou vous voulez simplement échanger ? Remplissez le formulaire ci-dessous et je vous répondrai.\nVous pouvez aussi me joindre directement à contact@raphaelsimon.fr.\n\n\n\n Retour au sommet"
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html",
+    "title": "Two months in a race car",
+    "section": "",
+    "text": "Since the end of December 2025, I’ve spent 10-12 hours a day writing software with LLM coding agents and CLI-tools.\nI’ve kept track of the experience from day one of trying out Opus 4.5, across notes on my phone. This post is about what it actually feels like: going from an e-bike to a race car."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#something-changed-in-november",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#something-changed-in-november",
+    "title": "Two months in a race car",
+    "section": "Something changed in November",
+    "text": "Something changed in November\nIn the first 3 quarters of 2025, LLMs were as useful to me as they had been since OpenAI unleashed ChatGPT on all of us. I felt like nobody had cracked a sustainable workflow. Lots of copy and paste from the web chat UI. Cool demos and some attempts at more autonomy but lots of horror stories (bye bye production DB). Models hallucinated just as much as they used to, too much for production trust. The output wasn’t far enough ahead of what a competent human could produce, in most instances.\nTwo things changed, almost at once.\n\nModels got meaningfully better. Not incrementally. With the release of Anthropic’s Claude Opus 4.5, suddenly we got better one-shot successes. Better coherence across long plans. Fewer moments where the model drifts away from what you asked.\nCLI agents like Claude Code (or Copilot CLI, Mistral Vibe, Opencode…) gave models access to the machine, in the right way. grep, find, git, CI/CD: bash is all you need apparently! The model can explore code without wasting tokens. It can participate in versioning its own work, and documenting code. It can run tests, read failures, try again. It could do all of this in parallel across branches, or git-worktrees.\n\nI had toyed with giving access to tools using R functions to the LLM after posit::conf 2025, but bash gives you everything: python, R, node, rust… Suddenly, I can codify what I want the LLM to do in a specific way and reliably!\nNeither alone was sufficient. Together: superpower (yes, the most popular Claude Code skill is very very well named).\nHere’s what I built in two months, solo, while keeping up with my normal tasks in a full-time job:\n\nThis personal website with custom CSS, Lua scripts, and a homegrown multi-language system. I’d been postponing this for ages\nA DuckDB WASM web application for hospital data analysis that I’d kept in a backlog since September 2023\nMy personal homelab with 5 services running in Podman Quadlets in an old machine serving my family, a homepage and a Wake-on-LAN trigger on my RPi, a Tailscale network for it all. I’d always wanted to find the time to recycle that old desktop and learn how to setup Immich and paperless-ngx.\nDocumentation and scripts for a CLI utility at work solving a blocking problem we’d been stuck on for months\nA Rust port of a very cool Google research paper I liked back in March 2025, couldn’t reproduce at the time using Sonnet in the chat UI. It was my first use of Claude Code, on my phone using the Claude Code Web UI, the morning after Christmas. It took 12 days, and only because I wanted to really take the time to learn and practice the Rust patterns.\n\nWhat I seriously see myself doing IN THE NEXT 2 WEEKS: - An R package wrapping those CLI scripts for my coworkers - A major refactor of a package I maintain at work, plus a webapp for a conference presentation - An agent skills sharing system across the organization. I want to build the skillverse, a way to pair a package with a skill at using it well.\nI am not a 10x engineer. I am an ordinary dev who is suddenly unlocked."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-bicycle-and-the-racing-car.",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-bicycle-and-the-racing-car.",
+    "title": "Two months in a race car",
+    "section": "The bicycle and the racing car.",
+    "text": "The bicycle and the racing car.\nHere’s the analogy I keep coming back to.\nLearning to code was like riding a bicycle. Full control. You feel every bump. You go at your own speed. It’s tiring but in a healthy way.\nIDE autocompletion and web-based LLM chat were like having an e-bike. Faster. More comfortable. You still steer. You have to pay attention to not get carried away by a speed you’re not fully producing yourself.\nCLI agents are the racing car.\nSpeed, so much speed. But such speed costs concentration. The smallest error at this velocity is a crash. And your physical condition – sleep, focus, stress – suddenly matters a lot. A tired pilot crashes. And I believe that, with the current outlook, by the same time next year I’ll be sitting in the cockpit of a fighter jet.1"
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-nobody-warned-me-about",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-nobody-warned-me-about",
+    "title": "Two months in a race car",
+    "section": "What nobody warned me about",
+    "text": "What nobody warned me about\nTwo months in, here are the psychological effects I’ve noticed in myself. I write them down because I’ve found very few honest accounts of what this does to you.\nRate limit compulsion. My plan resets every 5 hours. If I haven’t hit the limit, I feel like I’m wasting it. This is straight up a drug dealer’s engagement technique. I recognize it. I still fall for it.\nDopamine of speed. The execution is so fast it creates a craving. I want more. Sometimes at the cost of not checking the results. The rush of watching code materialize is genuinely hard to resist.\nPlanning aversion. Preparing skills, docs, instructions – it all feels slow. The pull to jump straight into prompting is strong. This is the opposite of what good engineering looks like, and despite KNOWING that I get good results only when the preparation steps are done right, I still get pulled.\nScreen hypnosis. I catch myself watching the “executing” line in the terminal, mesmerized. The tech that should free me to take a walk glues me to my screen.\nAttachment to bad output. It’s stupidly hard to re-run the same prompt for a better result. I become attached to whatever the model produced. Even when I know it’s suboptimal. Even when I know a second attempt would be better.\nThe influence problem. Even with a rigorous plan in front of me, I deviate, like I suddenly am a goldfish or a labradoodle. The model suggests something. It sounds reasonable. I accept it without enough thought. Then I’m off-plan, adding cool UI effects when the core isn’t finished and realize it twenty minutes later. LLMs are really good at persuading you to do things you didn’t plan to do.\nThe anthropomorphism trap. I tell my intern daily – sometimes multiple times a day – not to anthropomorphize the model. It limits how we think about using it. It pushes us into terrible cognitive biases. And then I catch myself doing the exact same thing.\nThe Challenger disaster. I often catch myself not thinking hard enough about the consequences of allowing a tool to run on a machine I care about. I’ve set up a VPS specifically for risky operations. I still take stupid risks on my personal machines."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-fatigue-is-real",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-fatigue-is-real",
+    "title": "Two months in a race car",
+    "section": "The fatigue is real",
+    "text": "The fatigue is real\nAfter a long session, especially with parallel agents / terminals, I’m exhausted. Not the good tired of deep focus. The bad tired of constant decision-making and rapid context-switching. I’ve talked about it with people who I know are deep into this new workflow, and they have felt it as well. It made me feel seen when I read a blog about it. Someone told me that it’s the same fatigue as when we learned computer science / how to code. Maybe! But it feels a bit different.\nI think the fighter jet metaphor works well here. I’m processing more information per minute. I’m making more decisions per hour. I’m switching contexts faster than maybe my brain is used to, or even was designed for. And when I run multiple agents in parallel – which is where the real throughput comes from, and it will only grow from here – I’ve essentially become air traffic control!"
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-safety-net-is-not-the-model",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-safety-net-is-not-the-model",
+    "title": "Two months in a race car",
+    "section": "The safety net is not the model",
+    "text": "The safety net is not the model\nI haven’t measured it, but my gut feeling says hallucination rates haven’t changed dramatically. Still around 8-10% of the time, as I’ve felt before. What changed is the methodology the community and frontier LLM providers have built around it.\nTests are the real safety net. LLM output is chaos – the model generates code fast, without internal quality constraints. Tests are the checkpoints / guardrails. Without them, the LLM produces spaghetti at unprecedented speed. With them, there’s still a chance of spaghetti, but it’s easier to keep track and stay on target.\nGit + GitHub gives me branch-based work and human review, and a familiar workflow. Lean methodology – plan, architecture decision records, exit criteria, definition of done – works REALLY well for pairing humans and LLM. It creates a retrocontrol framework. I used to dislike some of the rituals around agile and friends, but I have to say it’s a perfect fit for building a harness for this thing.\nConversely, I feel like this means you still can’t really use these tools in a language you are not good enough at. For throwaway code, no problem! Quick HTML tools, a personal script or library, something for the homelab. But for production, hell no. We need to be able to read and judge, at least until we evolve to the next logical step: tons of agents working in a way that creates the perfect harness. It feels possible now. I don’t know exactly how, but maybe having thousands or millions (or more!) of LLM agents work on something might allow us to tackle new issues, or old issues for which we had to rely on suboptimal solutions because no one in the history of man has been able to employ millions of humans to the same task."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-questions-that-keep-me-up",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-questions-that-keep-me-up",
+    "title": "Two months in a race car",
+    "section": "The questions that keep me up",
+    "text": "The questions that keep me up\nWho captures the value? If I’m 2-3x more productive, my employer gets 2-3x the output. I get the same salary and more fatigue. The tool I like costs 20 to 200 EUR/month. The equivalent human hours cost orders of magnitude more. This is a value capture problem. And right now, the answer is: not the engineer. I’d like to see people try to reduce the workweek, we can clearly have our cake and eat it too. Although I’m not naive: the LLM doesn’t need to sleep, and that means someone will think it needs to be given instructions around the clock…\nWhere do juniors go? You need senior experience to review LLM output, validate architecture, catch subtle bugs, manage plans. If there’s no place for juniors, how do you train the seniors of tomorrow? This isn’t a hypothetical. I feel like it’s already happening around me.\nWhat happens to our skills? Basic neurology: unused synaptic connections get pruned. If engineers stop writing code because AI does it, their coding skill degrades. I need to seriously think about a work methodology that helps me maintain my skills, lest I climb the Dunning-Kruger curve backwards. I haven’t solved this yet. It feels like what we do with workouts / running, but for the mind?\nWhat happens next? Between the current generation and the previous one, 6 months produced a massive leap. Open-source models lag about 6 months behind. If frontier models can contribute to building the next frontier model, that 6-month gap could become permanent. Or worse, it could widen. The sovereignty implications for a non-US public agency are… significant."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-ive-learned-so-far",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-ive-learned-so-far",
+    "title": "Two months in a race car",
+    "section": "What I’ve learned so far",
+    "text": "What I’ve learned so far\nCurrently, I’m operating at what I’d call a supervisory level. I review diffs. I write plans. I manage agents. I rarely type code character by character anymore. And I’ve done more to clear my personal backlog in two months than I had in the past 2 years. I can’t yet say the same for my full-time job, but that’s both because I’ve preferred using my personal Claude Code Subscription for personal projects, and also because I wanted to learn the meta-tools first before taking the leap on my full-time job responsibilities. But I can’t delay any longer, and I won’t.\nBut I’m more tired. I’m more distracted. I catch myself cutting corners I wouldn’t have cut before. I recognize addiction patterns in my own behavior.\nThe honest assessment: this is a superpower, or a supercar at least. And it’s draining. Both things are true. Most people writing about AI-assisted development pick one side. The evangelists talk about the productivity. The skeptics talk about the limits. The reality is messier.\nWe NEED to talk about the human cost. Not to slow down adoption. But because the people in the cockpit need to know what the race does to them.\n\nI wrote this post with the help of Claude Code (mainly to summarise the long list of references I’d accumulated in two months, and to suggest a plan for this post from the raw and un-ordered notes). It took a fraction of the time it would have taken otherwise. I am also more tired than I should be on a Sunday night. Make of that what you will."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#footnotes",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#footnotes",
+    "title": "Two months in a race car",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFiguratively. While I have a valid medical LAPL licence for it, I certainly do NOT hold a permit for that!↩︎"
   },
   {
     "objectID": "en/about.html",
@@ -63,32 +119,18 @@
     "text": "Consulting\nI help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn’t fit neatly into traditional categories, let’s talk."
   },
   {
-    "objectID": "en/blog/index.html",
-    "href": "en/blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Hello World\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my new blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 2, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
+    "objectID": "en/index.html#recent",
+    "href": "en/index.html#recent",
+    "title": "Raphaël Simon",
+    "section": "Recent",
+    "text": "Recent\n\n\n\n\n\nTwo months in a race car\n\n\nWhat daily AI-assisted development actually feels like: the dopamine, the fatigue, and the things nobody warns you about.\n\n\n\n\n\n15 Feb, 2026\n\n\n\n\n\n\n\nHere we go again\n\n\nWelcome to my blog - what to expect and why I’m writing.\n\n\n\n\n\n13 Feb, 2026\n\n\n\n\n\nNo matching items\n\nView all posts →"
   },
   {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html",
-    "title": "Hello World",
-    "section": "",
-    "text": "Welcome to my blog! This is where I’ll share thoughts on medicine, public health, software engineering, data science, and the interesting problems that emerge at their intersections."
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#what-to-expect",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html#what-to-expect",
-    "title": "Hello World",
-    "section": "What to Expect",
-    "text": "What to Expect\nTopics will vary widely - that’s by design. I’m interested in:\n\nMedicine & Public Health: Clinical insights, health systems, epidemiology\nSoftware Engineering: Architecture, best practices, tools\nData Science: Analysis methods, visualization, ML applications\nComplex Systems: Where these fields collide"
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
-    "title": "Hello World",
-    "section": "Why Write?",
-    "text": "Why Write?\nWriting clarifies thinking. By explaining ideas publicly, I’m forced to refine them.\nStay tuned for more."
+    "objectID": "en/index.html#highlights",
+    "href": "en/index.html#highlights",
+    "title": "Raphaël Simon",
+    "section": "Highlights",
+    "text": "Highlights\n\nFeatured Posts\n\nTwo months in a race car\n\n\n\nThings I Built\n\nAutoPMSI\nHADVISOR\n\n\n\nWorth Reading\n\nSimon Willison’s Weblog\nMatt Shumer’s Blog\nEngineers in big tech"
   },
   {
     "objectID": "en/contact.html",
@@ -98,59 +140,129 @@
     "text": "Have a question, project idea, or just want to connect? Fill out the form below and I’ll get back to you.\nYou can also reach me directly at contact@raphaelsimon.fr.\n\n\n\n Back to top"
   },
   {
-    "objectID": "en/index.html#recent",
-    "href": "en/index.html#recent",
-    "title": "Raphaël Simon",
-    "section": "Recent",
-    "text": "Recent\n\n\n\n\n\nHello World\n\n\nWelcome to my new blog - what to expect and why I’m writing.\n\n\n\n\n\n2 Feb, 2026\n\n\n\n\n\nNo matching items\n\nView all posts →"
-  },
-  {
-    "objectID": "en/index.html#highlights",
-    "href": "en/index.html#highlights",
-    "title": "Raphaël Simon",
-    "section": "Highlights",
-    "text": "Highlights\n\nFeatured Posts\n\nHello World\n\n\n\nThings I Built\n\nAutoPMSI - PMSI automation tool\n\n\n\nWorth Reading\n\nSimon Willison’s Weblog"
-  },
-  {
-    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html",
-    "href": "fr/blog/posts/2026-02-02-hello-world/index.html",
-    "title": "Bonjour le Monde",
+    "objectID": "en/blog/index.html",
+    "href": "en/blog/index.html",
+    "title": "Blog",
     "section": "",
-    "text": "Bienvenue sur mon blog ! C’est ici que je partagerai mes réflexions sur la médecine, la santé publique, l’ingénierie logicielle, la science des données et les problèmes intéressants qui émergent à leurs intersections."
+    "text": "Two months in a race car\n\n\n\nai\n\nsoftware-engineering\n\npersonal\n\n\n\nWhat daily AI-assisted development actually feels like: the dopamine, the fatigue, and the things nobody warns you about.\n\n\n\n\n\nFeb 15, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nHere we go again\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 13, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
-    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html#à-quoi-sattendre",
-    "href": "fr/blog/posts/2026-02-02-hello-world/index.html#à-quoi-sattendre",
-    "title": "Bonjour le Monde",
-    "section": "À Quoi S’Attendre",
-    "text": "À Quoi S’Attendre\nLes sujets varieront considérablement - c’est voulu. Je m’intéresse à :\n\nMédecine & Santé Publique : Aperçus cliniques, systèmes de santé, épidémiologie\nIngénierie Logicielle : Architecture, meilleures pratiques, outils\nScience des Données : Méthodes d’analyse, visualisation, applications ML\nSystèmes Complexes : Là où ces domaines se rejoignent"
-  },
-  {
-    "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html#pourquoi-écrire",
-    "href": "fr/blog/posts/2026-02-02-hello-world/index.html#pourquoi-écrire",
-    "title": "Bonjour le Monde",
-    "section": "Pourquoi Écrire ?",
-    "text": "Pourquoi Écrire ?\nL’écriture clarifie la pensée. En expliquant des idées publiquement, je suis obligé de les affiner.\nRestez à l’écoute pour plus."
-  },
-  {
-    "objectID": "fr/contact.html",
-    "href": "fr/contact.html",
-    "title": "Contact",
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html",
+    "title": "Here we go again",
     "section": "",
-    "text": "Vous avez une question, une idée de projet, ou vous voulez simplement échanger ? Remplissez le formulaire ci-dessous et je vous répondrai.\nVous pouvez aussi me joindre directement à contact@raphaelsimon.fr.\n\n\n\n Retour au sommet"
+    "text": "Welcome to my blog! This is where I’ll share my ramblings, on anything ranging from medicine and public health to software engineering, data science, and the interesting problems that emerge at their intersections."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "title": "Here we go again",
+    "section": "Why Write?",
+    "text": "Why Write?\nI’ve been trying to run a blog since I was 11, that’s more than 20 years ago. What happened now ? I don’t know. I guess I got old enough to realise how important writing is ? Or maybe I’m just in a phase that will last two weeks.\nWho knows ?"
   },
   {
     "objectID": "fr/index.html#récents",
     "href": "fr/index.html#récents",
     "title": "Raphaël Simon",
     "section": "Récents",
-    "text": "Récents\n\n\n\n\n\nBonjour le Monde\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr., 2026\n\n\n\n\n\nAucun article correspondant\n\nVoir tous les articles →"
+    "text": "Récents\n\n\n\n\n\nDeux mois dans une voiture de course\n\n\nCe que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient.\n\n\n\n\n\n15 févr., 2026\n\n\n\n\n\n\n\nBonjour le Monde\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr., 2026\n\n\n\n\n\nAucun article correspondant\n\nVoir tous les articles →"
   },
   {
     "objectID": "fr/index.html#sélection",
     "href": "fr/index.html#sélection",
     "title": "Raphaël Simon",
     "section": "Sélection",
-    "text": "Sélection\n\nArticles en vedette\n\nHello World\n\n\n\nProjets\n\nAutoPMSI - Outil d’automatisation PMSI\n\n\n\nÀ lire\n\nSimon Willison’s Weblog"
+    "text": "Sélection\n\nArticles en vedette\n\nDeux mois dans une voiture de course\n\n\n\nProjets\n\nAutoPMSI - Analyses PMSI en pur local\nHADVISOR - Classification HAD en direct\n\n\n\nÀ lire\n\nSimon Willison’s Weblog\nMatt Shumer’s Blog\nEngineers in big tech"
+  },
+  {
+    "objectID": "fr/about.html",
+    "href": "fr/about.html",
+    "title": "À propos",
+    "section": "",
+    "text": "Médecin devenu ingénieur. J’ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l’informatique médicale, et finalement le logiciel. Aujourd’hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).\nJe suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l’intersection est floue, plus c’est intéressant.\nBasé en France. Plusieurs langues parlées couramment, d’autres en cours d’apprentissage."
+  },
+  {
+    "objectID": "fr/about.html#biographie",
+    "href": "fr/about.html#biographie",
+    "title": "À propos",
+    "section": "",
+    "text": "Médecin devenu ingénieur. J’ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l’informatique médicale, et finalement le logiciel. Aujourd’hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).\nJe suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l’intersection est floue, plus c’est intéressant.\nBasé en France. Plusieurs langues parlées couramment, d’autres en cours d’apprentissage."
+  },
+  {
+    "objectID": "fr/about.html#expertise",
+    "href": "fr/about.html#expertise",
+    "title": "À propos",
+    "section": "Expertise",
+    "text": "Expertise\n\nMédecine et Santé Publique\nIngénierie Logicielle\nScience des Données\nSystèmes Complexes"
+  },
+  {
+    "objectID": "fr/about.html#conseil",
+    "href": "fr/about.html#conseil",
+    "title": "À propos",
+    "section": "Conseil",
+    "text": "Conseil\nJ’aide les organisations à résoudre des problèmes interdisciplinaires complexes et de niche. Si vous avez un projet difficile qui ne rentre pas dans les catégories traditionnelles, discutons-en."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html",
+    "title": "Deux mois dans une voiture de course",
+    "section": "",
+    "text": "Note\n\n\n\nCet article a été traduit de la version anglaise par un LLM, avec relecture humaine.\nDepuis fin décembre 2025, je passe 10 à 12 heures par jour à écrire du logiciel avec des agents LLM et des outils en ligne de commande.\nJ’ai pris des notes depuis le premier jour où j’ai essayé Opus 4.5, sur mon téléphone. Ce billet raconte ce que ça fait vraiment : passer du vélo électrique à la voiture de course."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#quelque-chose-a-changé-en-novembre",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#quelque-chose-a-changé-en-novembre",
+    "title": "Deux mois dans une voiture de course",
+    "section": "Quelque chose a changé en novembre",
+    "text": "Quelque chose a changé en novembre\nPendant les 3 premiers trimestres de 2025, les LLM m’étaient aussi utiles qu’ils l’avaient été depuis qu’OpenAI a lâché ChatGPT sur nous tous. J’avais l’impression que personne n’avait trouvé de workflow durable. Beaucoup de copier-coller depuis l’interface web. Des démos impressionnantes et quelques tentatives d’autonomie, mais aussi beaucoup d’histoires d’horreur (adieu la base de prod). Les modèles hallucinaient tout autant qu’avant, trop pour qu’on leur fasse confiance en production. Dans la plupart des cas, le résultat n’était pas assez en avance sur ce qu’un humain compétent pouvait produire.\nDeux choses ont changé, presque en même temps.\n\nLes modèles se sont nettement améliorés. Pas de manière incrémentale. Avec la sortie de Claude Opus 4.5 d’Anthropic, on a soudain obtenu de meilleurs résultats du premier coup. Une meilleure cohérence sur des plans longs. Moins de moments où le modèle dérive de ce qu’on lui a demandé.\nLes agents en ligne de commande comme Claude Code (ou Copilot CLI, Mistral Vibe, Opencode…) ont donné aux modèles accès à la machine, de la bonne manière. grep, find, git, CI/CD : bash, c’est tout ce qu’il faut apparemment ! Le modèle peut explorer du code sans gaspiller de tokens. Il peut participer au versionnage de son propre travail et à la documentation. Il peut lancer des tests, lire les erreurs, réessayer. Il peut faire tout ça en parallèle sur plusieurs branches, ou des git-worktrees.\n\nJ’avais expérimenté avec des fonctions R pour donner accès à des outils au LLM après posit::conf 2025, mais bash donne accès à tout : python, R, node, rust… D’un coup, je peux formaliser ce que je veux que le LLM fasse de manière spécifique et fiable !\nAucun des deux seul ne suffisait. Ensemble : un superpouvoir (oui, la skill Claude Code la plus populaire porte très très bien son nom).\nVoici ce que j’ai construit en deux mois, seul, tout en continuant mes missions à temps plein :\n\nCe site personnel avec du CSS custom, des scripts Lua, et un système multilingue fait maison. Je repoussais ça depuis des lustres\nUne application web DuckDB WASM pour l’analyse de données hospitalières que je gardais dans un backlog depuis septembre 2023\nMon homelab personnel avec 5 services tournant dans des Podman Quadlets sur une vieille machine au service de ma famille, une page d’accueil et un déclencheur Wake-on-LAN sur mon RPi, un réseau Tailscale pour le tout. J’avais toujours voulu trouver le temps de recycler ce vieux desktop et apprendre à configurer Immich et paperless-ngx.\nDe la documentation et des scripts pour un utilitaire CLI au travail qui résolvait un problème bloquant depuis des mois\nUn portage Rust d’un papier de recherche Google très cool que j’avais aimé en mars 2025, impossible à reproduire à l’époque avec Sonnet dans l’interface chat. C’était ma première utilisation de Claude Code, sur mon téléphone via l’interface web de Claude Code, le lendemain de Noël. Ça a pris 12 jours, et uniquement parce que je voulais vraiment prendre le temps d’apprendre et de pratiquer les patterns Rust.\n\nCe que je me vois sérieusement faire DANS LES 2 PROCHAINES SEMAINES : - Un package R encapsulant ces scripts CLI pour mes collègues - Un refactoring majeur d’un package que je maintiens au travail, plus une webapp pour une présentation en conférence - Un système de partage de skills d’agents à travers l’organisation. Je veux construire le skillverse, une façon d’associer un package à une skill pour bien l’utiliser.\nJe ne suis pas un ingénieur 10x. Je suis un dev ordinaire qui est soudain débloqué."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#le-vélo-et-la-voiture-de-course",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#le-vélo-et-la-voiture-de-course",
+    "title": "Deux mois dans une voiture de course",
+    "section": "Le vélo et la voiture de course",
+    "text": "Le vélo et la voiture de course\nVoici l’analogie qui me revient sans cesse.\nApprendre à coder, c’était comme faire du vélo. Contrôle total. On sent chaque bosse. On va à son rythme. C’est fatigant, mais d’une bonne fatigue.\nL’autocomplétion des IDE et le chat LLM dans le navigateur, c’était comme passer au vélo électrique. Plus rapide. Plus confortable. On dirige toujours. Il faut faire attention à ne pas se laisser emporter par une vitesse qu’on ne produit pas soi-même.\nLes agents CLI, c’est la voiture de course.\nDe la vitesse, tellement de vitesse. Mais une telle vitesse coûte en concentration. La moindre erreur à cette allure, c’est le crash. Et la condition physique – sommeil, concentration, stress – compte soudain beaucoup. Un pilote fatigué se crashe. Et je crois que, vu la trajectoire actuelle, à la même époque l’année prochaine je serai dans le cockpit d’un avion de chasse.1"
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#ce-dont-personne-ne-mavait-prévenu",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#ce-dont-personne-ne-mavait-prévenu",
+    "title": "Deux mois dans une voiture de course",
+    "section": "Ce dont personne ne m’avait prévenu",
+    "text": "Ce dont personne ne m’avait prévenu\nAu bout de deux mois, voici les effets psychologiques que j’ai observés chez moi. Je les note parce que j’ai trouvé très peu de témoignages honnêtes sur ce que ça fait.\nLa compulsion du rate limit. Mon forfait se réinitialise toutes les 5 heures. Si je n’ai pas atteint la limite, j’ai l’impression de gaspiller. C’est une technique d’engagement digne d’un dealer. Je le reconnais. J’y tombe quand même.\nLa dopamine de la vitesse. L’exécution est si rapide qu’elle crée une envie irrésistible. J’en veux plus. Parfois au prix de ne pas vérifier les résultats. La montée d’adrénaline en voyant du code se matérialiser est vraiment difficile à résister.\nL’aversion à la planification. Préparer des skills, de la doc, des instructions – tout ça paraît lent. La tentation de sauter directement dans le prompting est forte. C’est l’opposé d’une bonne ingénierie, et malgré le fait que je SAIS que je n’obtiens de bons résultats que quand la préparation est bien faite, je me fais quand même avoir.\nL’hypnose de l’écran. Je me surprends à fixer la ligne “exécution en cours” dans le terminal, hypnotisé. La technologie qui devrait me libérer pour aller marcher me colle à l’écran.\nL’attachement au mauvais output. C’est bêtement difficile de relancer le même prompt pour un meilleur résultat. Je m’attache à ce que le modèle a produit. Même quand je sais que c’est sous-optimal. Même quand je sais qu’un deuxième essai serait meilleur.\nLe problème d’influence. Même avec un plan rigoureux sous les yeux, je dévie, comme si j’étais soudain un poisson rouge ou un labradoodle. Le modèle suggère quelque chose. Ça semble raisonnable. J’accepte sans assez réfléchir. Et me voilà hors plan, en train d’ajouter des effets UI sympa alors que le cœur n’est pas fini, et je m’en rends compte vingt minutes plus tard. Les LLM sont vraiment doués pour persuader de faire des choses qu’on n’avait pas prévu de faire.\nLe piège de l’anthropomorphisme. Je dis à mon stagiaire tous les jours – parfois plusieurs fois par jour – de ne pas anthropomorphiser le modèle. Ça limite notre façon de réfléchir à son utilisation. Ça nous pousse vers de terribles biais cognitifs. Et puis je me surprends à faire exactement la même chose.\nLa catastrophe Challenger. Je me surprends souvent à ne pas réfléchir assez aux conséquences de laisser un outil tourner sur une machine à laquelle je tiens. J’ai monté un VPS spécifiquement pour les opérations risquées. Je prends quand même des risques stupides sur mes machines personnelles."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#la-fatigue-est-réelle",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#la-fatigue-est-réelle",
+    "title": "Deux mois dans une voiture de course",
+    "section": "La fatigue est réelle",
+    "text": "La fatigue est réelle\nAprès une longue session, surtout avec des agents / terminaux en parallèle, je suis épuisé. Pas la bonne fatigue de la concentration profonde. La mauvaise fatigue de la prise de décision constante et du changement de contexte rapide. J’en ai discuté avec des gens que je sais profondément engagés dans ce nouveau workflow, et ils l’ont ressenti aussi. Je me suis senti compris quand j’ai lu un blog à ce sujet. Quelqu’un m’a dit que c’est la même fatigue que quand on a appris l’informatique / à coder. Peut-être ! Mais ça semble un peu différent.\nJe pense que la métaphore de l’avion de chasse fonctionne bien ici. Je traite plus d’informations par minute. Je prends plus de décisions par heure. Je change de contexte plus vite que mon cerveau n’y est peut-être habitué, ou même conçu pour. Et quand je fais tourner plusieurs agents en parallèle – c’est là que le vrai débit se produit, et ça ne fera que croître – je suis essentiellement devenu contrôleur aérien !"
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#le-filet-de-sécurité-ce-nest-pas-le-modèle",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#le-filet-de-sécurité-ce-nest-pas-le-modèle",
+    "title": "Deux mois dans une voiture de course",
+    "section": "Le filet de sécurité, ce n’est pas le modèle",
+    "text": "Le filet de sécurité, ce n’est pas le modèle\nJe ne l’ai pas mesuré, mais mon intuition me dit que les taux d’hallucination n’ont pas changé dramatiquement. Toujours autour de 8-10% du temps, comme je le ressentais avant. Ce qui a changé, c’est la méthodologie que la communauté et les fournisseurs de LLM de pointe ont construite autour.\nLes tests sont le vrai filet de sécurité. Le output d’un LLM, c’est le chaos – le modèle génère du code vite, sans contrainte interne de qualité. Les tests sont les checkpoints / garde-fous. Sans eux, le LLM produit du spaghetti à une vitesse sans précédent. Avec eux, il y a toujours un risque de spaghetti, mais c’est plus facile de garder le cap.\nGit + GitHub me donne un workflow par branches et de la revue humaine, un cadre familier. La méthodologie Lean – plan, architecture decision records, critères de sortie, definition of done – fonctionne VRAIMENT bien pour faire travailler humains et LLM ensemble. Ça crée un cadre de rétrocontrôle. J’avais l’habitude de ne pas aimer certains rituels autour de l’agile et compagnie, mais je dois dire que c’est un cadre parfait pour harnacher ce truc.\nInversement, je pense que ça veut dire qu’on ne peut pas vraiment utiliser ces outils dans un langage qu’on ne maîtrise pas assez. Pour du code jetable, pas de problème ! Des outils HTML rapides, un script ou une bibliothèque personnelle, quelque chose pour le homelab. Mais pour la production, certainement pas. On doit être capable de lire et de juger, au moins tant qu’on n’évolue pas vers l’étape logique suivante : des tonnes d’agents qui travaillent de manière à créer le harnais parfait. Ça semble possible maintenant. Je ne sais pas exactement comment, mais peut-être qu’avoir des milliers ou des millions (ou plus !) d’agents LLM travailler sur quelque chose pourrait nous permettre de résoudre de nouveaux problèmes, ou des vieux problèmes pour lesquels on devait se contenter de solutions sous-optimales parce que jamais dans l’histoire de l’humanité on n’a pu employer des millions d’humains sur la même tâche."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#les-questions-qui-mempêchent-de-dormir",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#les-questions-qui-mempêchent-de-dormir",
+    "title": "Deux mois dans une voiture de course",
+    "section": "Les questions qui m’empêchent de dormir",
+    "text": "Les questions qui m’empêchent de dormir\nQui capture la valeur ? Si je suis 2-3x plus productif, mon employeur obtient 2-3x le résultat. Moi j’ai le même salaire et plus de fatigue. L’outil que j’aime coûte 20 à 200 EUR/mois. Les heures humaines équivalentes coûtent des ordres de grandeur de plus. C’est un problème de captation de valeur. Et pour l’instant, la réponse est : pas l’ingénieur. J’aimerais voir des gens essayer de réduire la semaine de travail, on peut clairement avoir le beurre et l’argent du beurre. Même si je ne suis pas naïf : le LLM n’a pas besoin de dormir, et ça veut dire que quelqu’un pensera qu’il faut lui donner des instructions 24h/24…\nOù vont les juniors ? Il faut de l’expérience de senior pour relire le output d’un LLM, valider l’architecture, attraper les bugs subtils, gérer les plans. S’il n’y a pas de place pour les juniors, comment forme-t-on les seniors de demain ? Ce n’est pas une hypothèse. J’ai l’impression que ça se passe déjà autour de moi.\nQu’advient-il de nos compétences ? Neurologie de base : les connexions synaptiques inutilisées sont élaguées. Si les ingénieurs arrêtent d’écrire du code parce que l’IA le fait, leur compétence en programmation se dégrade. Je dois sérieusement réfléchir à une méthodologie de travail qui m’aide à maintenir mes compétences, sous peine de remonter la courbe de Dunning-Kruger à l’envers. Je n’ai pas encore résolu ça. Ça ressemble à ce qu’on fait avec le sport / la course à pied, mais pour l’esprit ?\nEt après ? Entre la génération actuelle et la précédente, 6 mois ont produit un bond massif. Les modèles open-source ont environ 6 mois de retard. Si les modèles de pointe peuvent contribuer à construire le prochain modèle de pointe, cet écart de 6 mois pourrait devenir permanent. Ou pire, se creuser. Les implications en termes de souveraineté pour une agence publique non-américaine sont… significatives."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#ce-que-jai-appris-jusquici",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#ce-que-jai-appris-jusquici",
+    "title": "Deux mois dans une voiture de course",
+    "section": "Ce que j’ai appris jusqu’ici",
+    "text": "Ce que j’ai appris jusqu’ici\nActuellement, j’opère à ce que j’appellerais un niveau de supervision. Je relis des diffs. J’écris des plans. Je gère des agents. Je tape rarement du code caractère par caractère. Et j’ai fait plus pour vider mon backlog personnel en deux mois que pendant les 2 années précédentes. Je ne peux pas encore en dire autant pour mon travail à plein temps, à la fois parce que j’ai préféré utiliser mon abonnement personnel Claude Code pour des projets personnels, et aussi parce que je voulais d’abord apprendre les méta-outils avant de me lancer sur mes responsabilités professionnelles. Mais je ne peux plus repousser, et je ne le ferai pas.\nMais je suis plus fatigué. Plus distrait. Je me surprends à couper des coins que je n’aurais pas coupés avant. Je reconnais des schémas addictifs dans mon propre comportement.\nLe constat honnête : c’est un superpouvoir, ou au moins une supercar. Et c’est épuisant. Les deux sont vrais. La plupart des gens qui écrivent sur le développement assisté par IA choisissent un camp. Les évangélistes parlent de la productivité. Les sceptiques parlent des limites. La réalité est plus compliquée.\nOn DOIT parler du coût humain. Pas pour ralentir l’adoption. Mais parce que les gens dans le cockpit doivent savoir ce que la course leur fait.\n\nJ’ai écrit ce billet avec l’aide de Claude Code (principalement pour synthétiser la longue liste de références que j’avais accumulées en deux mois, et pour suggérer un plan à partir des notes brutes et non ordonnées). Ça a pris une fraction du temps que ça aurait pris autrement. Je suis aussi plus fatigué que je ne devrais l’être un dimanche soir. Faites-en ce que vous voulez."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#footnotes",
+    "href": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html#footnotes",
+    "title": "Deux mois dans une voiture de course",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nAu sens figuré. Même si j’ai un certificat médical LAPL valide, je n’ai certainement PAS le brevet pour ça !↩︎"
   }
 ]
