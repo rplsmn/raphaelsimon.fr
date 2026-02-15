@@ -114,6 +114,49 @@ body {
   }
 }
 
+/* ===== BLOG EXCERPT LISTING ===== */
+
+.excerpt-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.excerpt-item:last-child {
+  border-bottom: none;
+}
+
+.excerpt-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.excerpt-title a {
+  color: var(--bs-heading-color, var(--bs-body-color));
+}
+
+.excerpt-meta {
+  font-size: 0.85rem;
+  color: var(--bs-secondary-color);
+  margin-bottom: 0.75rem;
+}
+
+.excerpt-content {
+  margin-bottom: 0.75rem;
+}
+
+.excerpt-content p:last-child {
+  margin-bottom: 0;
+}
+
+.excerpt-readmore {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===== END BLOG EXCERPT LISTING ===== */
+
 /* ===== END HOMEPAGE STYLES ===== */
 
 /* Homepage hero section (legacy, keeping for non-custom pages) */

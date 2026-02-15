@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../images/favicon.jpg" rel="icon" type="image/jpeg">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -72,68 +70,11 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Envoyer",
     "search-label": "Recherche"
   }
-}</script><script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-recent-posts .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-recent-posts'] = new List('listing-recent-posts', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<link rel="alternate" hreflang="fr" href="https://raphaelsimon.fr/fr/">
+}</script>
 <link rel="alternate" hreflang="en" href="https://raphaelsimon.fr/en/">
+<link rel="alternate" hreflang="fr" href="https://raphaelsimon.fr/fr/">
 <link rel="alternate" hreflang="x-default" href="https://raphaelsimon.fr/en/">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -397,45 +338,58 @@ window.Quarto = {
 <div class="two-column-layout">
 <section id="récents" class="level2 main-column">
 <h2 data-anchor-id="récents">Récents</h2>
-<div id="listing-recent-posts" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="aWElMkNpbmdlbmllcmllLWxvZ2ljaWVsbGUlMkNwZXJzb25uZWw=" data-listing-date-sort="1771110000000" data-listing-file-modified-sort="1771189278758" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2339">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../fr/blog/posts/2026-02-15-bike-to-racecar/index.html" class="no-external">Deux mois dans une voiture de course</a>
-</h3>
-<div class="delink listing-description"><a href="../fr/blog/posts/2026-02-15-bike-to-racecar/index.html" class="no-external">
-<p>Ce que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../fr/blog/posts/2026-02-15-bike-to-racecar/index.html" class="no-external">
-<div class="listing-date">
-15 févr., 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bWV0YSUyQ2JpZW52ZW51ZQ==" data-listing-date-sort="1769986800000" data-listing-file-modified-sort="1771189278760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../fr/blog/posts/2026-02-02-hello-world/index.html" class="no-external">Bonjour le Monde</a>
-</h3>
-<div class="delink listing-description"><a href="../fr/blog/posts/2026-02-02-hello-world/index.html" class="no-external">
-<p>Bienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../fr/blog/posts/2026-02-02-hello-world/index.html" class="no-external">
-<div class="listing-date">
-2 févr., 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">Aucun article correspondant</div>
-</div>
+<article class="excerpt-item">
+  <h3 class="excerpt-title"><a href="blog/posts/2026-02-15-bike-to-racecar/">Deux mois dans une voiture de course</a></h3>
+  <div class="excerpt-meta"><time>15 fev., 2026</time></div>
+  <div class="excerpt-content">
+<p>Depuis fin décembre 2025, je passe 10 à 12 heures par jour à écrire
+du logiciel avec des agents LLM et des outils en ligne de commande.</p>
+<p>J’ai pris des notes depuis le premier jour où j’ai essayé Opus 4.5,
+sur mon téléphone. Ce billet raconte ce que ça fait vraiment : passer du
+vélo électrique à la voiture de course.</p>
+<p>Pendant les 3 premiers trimestres de 2025, les LLM m’étaient aussi
+utiles qu’ils l’avaient été depuis qu’OpenAI a lâché ChatGPT sur nous
+tous. J’avais l’impression que personne n’avait trouvé de workflow
+durable. Beaucoup de copier-coller depuis l’interface web. Des démos
+impressionnantes et quelques tentatives d’autonomie, mais aussi beaucoup
+d’histoires d’horreur (adieu la base de prod). Les modèles hallucinaient
+tout autant qu’avant, trop pour qu’on leur fasse confiance en
+production. Dans la plupart des cas, le résultat n’était pas assez en
+avance sur ce qu’un humain compétent pouvait produire.</p>
+<p>Deux choses ont changé, presque en même temps.</p>
+<ol type="1">
+<li><p>Les modèles se sont nettement améliorés. Pas de manière
+incrémentale. Avec la sortie de Claude Opus 4.5 d’Anthropic, on a
+soudain obtenu de meilleurs résultats du premier coup. Une meilleure
+cohérence sur des plans longs. Moins de moments où le modèle dérive de
+ce qu’on lui a demandé.</p></li>
+<li><p>Les <a href="https://simonwillison.net/2025/Dec/31/the-year-in-llms/">agents en
+ligne de commande</a> comme Claude Code (ou Copilot CLI, Mistral Vibe,
+Opencode…) ont donné aux modèles accès à la machine, de la bonne
+manière. <code>grep</code>, <code>find</code>, <code>git</code>, CI/CD :
+bash, c’est tout ce qu’il faut apparemment ! Le modèle peut explorer du
+code sans gaspiller de tokens. Il peut participer au versionnage de son
+propre travail et à la documentation. Il peut lancer des tests, lire les
+erreurs, réessayer. Il peut faire tout ça en parallèle sur plusieurs
+branches, ou des git-worktrees.</p></li>
+</ol>  </div>
+  <a href="blog/posts/2026-02-15-bike-to-racecar/" class="excerpt-readmore">Lire la suite →</a>
+</article>
+<article class="excerpt-item">
+  <h3 class="excerpt-title"><a href="blog/posts/2026-02-02-hello-world/">Bonjour le Monde</a></h3>
+  <div class="excerpt-meta"><time>2 fev., 2026</time></div>
+  <div class="excerpt-content">
+<p>Bienvenue sur mon blog ! C’est ici que je partagerai mes divagations,
+sur à peu près tout : de la médecine et la santé publique à l’ingénierie
+logicielle, la science des données, et les problèmes intéressants qui
+émergent à leurs intersections.</p>
+<p>J’essaie de tenir un blog depuis mes 11 ans, ça fait plus de 20 ans
+maintenant. Qu’est-ce qui a changé ? Aucune idée. J’imagine que j’ai
+assez vieilli pour comprendre à quel point écrire est important ? Ou
+alors c’est juste une lubie qui durera deux semaines.</p>
+<p>Qui sait ?</p>  </div>
+  <a href="blog/posts/2026-02-02-hello-world/" class="excerpt-readmore">Lire la suite →</a>
+</article>
 <p><a href="../fr/blog/index.html">Voir tous les articles →</a></p>
 </section>
 <section id="sélection" class="level2 sidebar-column">
@@ -453,8 +407,8 @@ window.Quarto = {
 <li><a href="https://scansante.shinyapps.io/hadvisor/">HADVISOR</a> - Classification HAD en direct</li>
 </ul>
 </section>
-<section id="à-lire" class="level3">
-<h3 data-anchor-id="à-lire">À lire</h3>
+<section id="plus-de-lectures" class="level3">
+<h3 data-anchor-id="plus-de-lectures">Plus de lectures</h3>
 <ul>
 <li><a href="https://simonwillison.net/">Simon Willison’s Weblog</a></li>
 <li><a href="https://shumer.dev/blog">Matt Shumer’s Blog</a></li>
@@ -464,7 +418,6 @@ window.Quarto = {
 </section>
 </div>
 </div>
-
 
 
 
