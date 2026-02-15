@@ -3,14 +3,6 @@ title: "Raphaël Simon"
 pagetitle: "Raphaël Simon"
 page-layout: custom
 toc: false
-listing:
-  id: recent-posts
-  contents: blog/posts
-  sort: "date desc"
-  type: default
-  max-items: 10
-  date-format: "D MMM, YYYY"
-  fields: [date, title, description]
 hreflang:
   en: "/en/"
   fr: "/fr/"
@@ -23,7 +15,7 @@ hreflang:
 ::: {.main-column}
 ## Récents
 
-::: {#recent-posts}
+::: {.blog-excerpts}
 :::
 
 [Voir tous les articles →](blog/index.qmd)
