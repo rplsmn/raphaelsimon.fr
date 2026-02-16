@@ -30,11 +30,6 @@ hreflang:
 ### Things I Built
 - [AutoPMSI](https://autopmsi.raphaelsimon.fr)
 - [HADVISOR](https://scansante.shinyapps.io/hadvisor/)
-
-### Worth Reading
-- [Simon Willison's Weblog](https://simonwillison.net/)
-- [Matt Shumer's Blog](https://shumer.dev/blog)
-- [Engineers in big tech](https://www.engineering.fyi/)
 :::
 
 ::::
