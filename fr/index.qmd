@@ -28,8 +28,8 @@ hreflang:
 - [Deux mois dans une voiture de course](blog/posts/2026-02-15-bike-to-racecar/index.qmd)
 
 ### Projets
-- [AutoPMSI](https://autopmsi.raphaelsimon.fr) - Analyses PMSI en pur local
-- [HADVISOR](https://scansante.shinyapps.io/hadvisor/) - Classification HAD en direct
+- [AutoPMSI](https://autopmsi.raphaelsimon.fr)
+- [HADVISOR](https://scansante.shinyapps.io/hadvisor/)
 :::
 
 ::::
