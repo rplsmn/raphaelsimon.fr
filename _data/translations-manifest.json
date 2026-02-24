@@ -9,6 +9,12 @@
       "translation": "machine"
     }
   },
+  "cold-skills": {
+    "en": {
+      "path": "/en/blog/posts/2026-02-24-cold-skills/",
+      "translation": "none"
+    }
+  },
   "hello-world": {
     "en": {
       "path": "/en/blog/posts/2026-02-02-hello-world/",

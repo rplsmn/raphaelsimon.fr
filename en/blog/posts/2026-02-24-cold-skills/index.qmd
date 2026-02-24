@@ -1,0 +1,38 @@
+---
+title: Skills as packages
+description: How to grow a skills collection for your LLM without overloading it
+author: Raphaël Simon
+date: '2026-02-24'
+categories:
+- ai
+- software-engineering
+- llm-skills
+draft: true
+hreflang:
+  en: /en/blog/posts/cold-skills/
+---
+
+Skills are such a good idea.
+Skills are here to stay. The Skills spec[] is clever, progressive disclosure is really what was needed.
+Skills are to the LLM what packages are to your programming language of choice (unless you're writing C apparently)
+
+Skills factorise common operations you like into a shorter interface. It's a good-enough attempt at providing more reproducibility to LLM outputs.
+Skills are supported by most of the tools out there : OpenCode, Mistral Vibe, Claude Code, Gemini CLI, Copilot CLI ...
+
+Currently, skills can be located in your global folder (say, ~/.claude/skills or ~/.agents/skills), or in your local repo.
+Some tools like Claude Code support an --add-dir argument to specify another folder to add to the session, and if this folder contains skills they are added to the context.
+
+Current issues :
+- Growing libraries of skills. They will grow naturally. We all like to hoard : install <pkg> just to test and then forget about your global machine library. But current solutions like npx skills by Vercel add the skills either to global or local. No "unactivated" skills anywhere.
+- Skills going stale : npx skills does that well. I don't know if it tracks in-repo skills well but at least it updates global skills, I've tried it.
+- Skills distribution : if you are testing many CLI tools (they change all the time), you need skills in .claude, .agents, .vibe ...
+- Git pollution : your global skills influence the LLM output but you're not committing them to the repo. Why would you want to commit some inside the repo ? You want skills that operate at the repo level, because your R skills are useless in your Rust crate, but they are here to affect the LLM behavior. I understand and share the need to tell others that LLMs are working on this repo and which skills they are using, but do you need to share the full text ? It's not really a good fit amongst the commits that change / fix and otherwise progress your project
+
+Solutions :
+
+- A cold storage : a central source of truth, a place where you can access skills you need at any time, but not activated (in context for the LLM). Managed by a program, with metadata to power skills search, discovery, update, adding and removing, and publishing (you can make skills faster than packages !)
+- A declarative file for skills dependencies : like packages, we can have a file that tells others what we use, maybe even which revision.
+- Using a staging fleeting folder : when you run claude() or vibe(), add a folder that reads the skills-deps file and adds the skills to that folder. Not seen by git, but in context for the llm.
+- Commands to update your skills, like with packages.
+
+Where I am now : rplsmn/shared-safe-config (rename !)
