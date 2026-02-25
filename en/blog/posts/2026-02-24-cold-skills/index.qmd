@@ -23,7 +23,7 @@ Currently, skills can be located in your global folder (say, ~/.claude/skills or
 Some tools like Claude Code support an --add-dir argument to specify another folder to add to the session, and if this folder contains skills they are added to the context.
 
 Current issues :
-- Growing libraries of skills. They will grow naturally. We all like to hoard : install <pkg> just to test and then forget about your global machine library. But current solutions like npx skills by Vercel add the skills either to global or local. No "unactivated" skills anywhere.
+- Growing libraries of skills. They will grow naturally. We all like to hoard : install <pkg> just to test and then forget about your global machine library. But current solutions like npx skills Vercel add the skills either to global or local. No "unactivated" skills anywhere.
 - Skills going stale : npx skills does that well. I don't know if it tracks in-repo skills well but at least it updates global skills, I've tried it.
 - Skills distribution : if you are testing many CLI tools (they change all the time), you need skills in .claude, .agents, .vibe ...
 - Git pollution : your global skills influence the LLM output but you're not committing them to the repo. Why would you want to commit some inside the repo ? You want skills that operate at the repo level, because your R skills are useless in your Rust crate, but they are here to affect the LLM behavior. I understand and share the need to tell others that LLMs are working on this repo and which skills they are using, but do you need to share the full text ? It's not really a good fit amongst the commits that change / fix and otherwise progress your project
@@ -36,3 +36,25 @@ Solutions :
 - Commands to update your skills, like with packages.
 
 Where I am now : rplsmn/shared-safe-config (rename !)
+
+I have :
+
+- A machine setup script that installs Claude Code, Open Code, Mistral Vibe, Copilot CLI and wrappers around their entrypoints add start and stop hooks.
+  - on startup, 2 directories are added : 1) the ARTIFACTS_DIR where agents store their ... artifacts ! That means plans, specs, reserach reports etc and 2) a temporary (lifetime = session) dir where local skills are symlinked depending on a manifest file in the repo
+  - on exit, the artifact dir makes a commit, and pushes to the remote, the temp-dir is destroyed.
+- A registry that saves skills and agents to a central location and serves symlinks to the relevant folders for all 4 tools
+- A script to automate the distribution of global scripts via a library.json file where core:true means the skill goes to global, and the rest is cold
+- A bash tool that can :
+  - Add / remove a local skill to a repo via a symlink ; tracked only by a manifest file in the repo
+  - List skills available on the machine, and their activation state
+  - Add / remove *temporary* skills to the temporary session dir (without editing the manifest)
+  - Synchronise the global library when the registry changes
+  - Promote a skill to the registry when it's mature
+
+I want to add :
+
+- Adding a skill found in the while, starting with github repo
+- Managing skills versions, and their origin, for update / retrograde from the cli
+- Declaring skill dependencies on each other
+- A proper search interface + function for finding skills in a repo + and auto add based on patterns in the repo (R markers, cargo.toml, env descriptions ...)
+- Extract the management of my gitconfig to another tool !!
