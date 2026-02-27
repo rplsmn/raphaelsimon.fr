@@ -20,7 +20,7 @@ The more I use CLI LLM tools like Claude Code and Opencode, the more I realise t
 - it does exactly what packages do with my favourite languages : factorise some cool stuff into reusable chunks that I can call with very few words
 - it's still not mature and it should definatly evolve to behave like packages
 
-I've been experimenting with ideas that revolve around this skills as packages approximation and I like the current results enough that I want to talk about it, if only to read it back again in a few months and see how bad this take is.
+I've been experimenting with ideas that revolve around this skills as packages approximation and I like the current results enough that I want to talk about it, if only to read it back again in a few months and see how bad this take is. My current take on this is [skm - the skill kit manager]()
 
 ## Skills are such a good idea
 
@@ -114,63 +114,20 @@ It's clearly my most "finger-waving" thing right now, I'll need to use it for a 
 
 Here are a examples of `skm status` and `skm add/remove` :
 
+![skm-status.png] 
+![skm-remove.png]
+
 ## Things I need to figure out
 
 Ok so if I wasn't clear until now, to my future self reading this : I really enjoy what I'm doing here, I love this new workflow with skills. 
 But there are many things I'm missing right now :
 
+- A proper registry : instead of a private personnal repo, I'd prefer relying on a proper registry with snapshots and all the goodies, and a way to publish to it.
 - Versionning : if skills are packages, then i'd like to figure skills versions semantics. That would enable to declare / pull exact dependencies for each project from the manifest.
 - Dependencies : if skills rely on other skills, i'd like to figure out how to track skills dependencies 
 - Discovery and distribution : the current flow is based on a repo, i'd like to learn how to setup a proper registry to push/pull to/from
+- How to fight against poisonning : supply-chain attacks made a few headlines this past year, and skills are so vulnerable to it, as well as their speed-addicted users like me who will often trade review for another turn in the session ... 
 
-## From me to me (6 months from now)
+## From me to future-me
 
-Future me, if you haven't deleted this site out of shame for what you wrote, here's what I hope you are gloating about : 
-
-====
- 
-ills are here to stay. The Skills spec[] is clever, progressive disclosure is really what was needed.
-Skills are to the LLM what packages are to your programming language of choice (unless you're writing C apparently)
-
-Skills factorise common operations you like into a shorter interface. It's a good-enough attempt at providing more reproducibility to LLM outputs.
-Skills are supported by most of the tools out there : OpenCode, Mistral Vibe, Claude Code, Gemini CLI, Copilot CLI ...
-
-Currently, skills can be located in your global folder (say, ~/.claude/skills or ~/.agents/skills), or in your local repo.
-Some tools like Claude Code support an --add-dir argument to specify another folder to add to the session, and if this folder contains skills they are added to the context.
-
-Current issues :
-- Growing libraries of skills. They will grow naturally. We all like to hoard : install <pkg> just to test and then forget about your global machine library. But current solutions like npx skills Vercel add the skills either to global or local. No "unactivated" skills anywhere.
-- Skills going stale : npx skills does that well. I don't know if it tracks in-repo skills well but at least it updates global skills, I've tried it.
-- Skills distribution : if you are testing many CLI tools (they change all the time), you need skills in .claude, .agents, .vibe ...
-- Git pollution : your global skills influence the LLM output but you're not committing them to the repo. Why would you want to commit some inside the repo ? You want skills that operate at the repo level, because your R skills are useless in your Rust crate, but they are here to affect the LLM behavior. I understand and share the need to tell others that LLMs are working on this repo and which skills they are using, but do you need to share the full text ? It's not really a good fit amongst the commits that change / fix and otherwise progress your project
-
-Solutions :
-
-- A cold storage : a central source of truth, a place where you can access skills you need at any time, but not activated (in context for the LLM). Managed by a program, with metadata to power skills search, discovery, update, adding and removing, and publishing (you can make skills faster than packages !)
-- A declarative file for skills dependencies : like packages, we can have a file that tells others what we use, maybe even which revision.
-- Using a staging fleeting folder : when you run claude() or vibe(), add a folder that reads the skills-deps file and adds the skills to that folder. Not seen by git, but in context for the llm.
-- Commands to update your skills, like with packages.
-
-Where I am now : rplsmn/shared-safe-config (rename !)
-
-I have :
-
-- A machine setup script that installs Claude Code, Open Code, Mistral Vibe, Copilot CLI and wrappers around their entrypoints add start and stop hooks.
-  - on startup, 2 directories are added : 1) the ARTIFACTS_DIR where agents store their ... artifacts ! That means plans, specs, reserach reports etc and 2) a temporary (lifetime = session) dir where local skills are symlinked depending on a manifest file in the repo
-  - on exit, the artifact dir makes a commit, and pushes to the remote, the temp-dir is destroyed.
-- A registry that saves skills and agents to a central location and serves symlinks to the relevant folders for all 4 tools
-- A script to automate the distribution of global scripts via a library.json file where core:true means the skill goes to global, and the rest is cold
-- A bash tool that can :
-  - Add / remove a local skill to a repo via a symlink ; tracked only by a manifest file in the repo
-  - List skills available on the machine, and their activation state
-  - Add / remove *temporary* skills to the temporary session dir (without editing the manifest)
-  - Synchronise the global library when the registry changes
-  - Promote a skill to the registry when it's mature
-
-I want to add :
-
-- Adding a skill found in the while, starting with github repo
-- Managing skills versions, and their origin, for update / retrograde from the cli
-- Declaring skill dependencies on each other
-- A proper search interface + function for finding skills in a repo + and auto add based on patterns in the repo (R markers, cargo.toml, env descriptions ...)
-- Extract the management of my gitconfig to another tool !!
+Future me, if you haven't deleted this site out of shame for what you wrote, I hope that skills-as-packages is evident by now, and if you've dropped the skill kit for some really cool open source skill manager made by awesome people, I forgive you.
