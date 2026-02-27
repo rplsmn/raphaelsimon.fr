@@ -6,9 +6,9 @@ date: '2026-02-24'
 categories:
 - ai
 - software-engineering
-- llm-skills
-- skillverse
-draft: true
+- llm
+- afk
+draft: false
 hreflang:
   en: /en/blog/posts/cold-skills/
 ---
@@ -18,9 +18,9 @@ hreflang:
 The more I use CLI LLM tools like Claude Code and Opencode, the more I realise that :
 - the skills specification is one of the best ideas I've seen and used until now
 - it does exactly what packages do with my favourite languages : factorise some cool stuff into reusable chunks that I can call with very few words
-- it's still not mature and it should definatly evolve to behave like packages
+- it's still not mature and it should definitely evolve to behave like packages
 
-I've been experimenting with ideas that revolve around this skills as packages approximation and I like the current results enough that I want to talk about it, if only to read it back again in a few months and see how bad this take is. My current take on this is [skm - the skill kit manager]()
+I've been experimenting with ideas that revolve around this skills as packages approximation and I like the current results enough that I want to talk about it, if only to read it back again in a few months and see how bad this take is. My current take on this is [akm - the agent kit manager](https://github.com/akm-rs/akm)
 
 ## Skills are such a good idea
 
@@ -29,67 +29,52 @@ Everyone was playing around with prompt engineering and reusing bits that worked
 
 Right after codifying actions, skills are the best option for reproducibility of good output (or at least, the output you expect from a task).
 
-I daily drive 4 tools : Claude Code, Copilot CLI, Mistral Vibe and OpenCode. They all support skills. So do at least 30 others like Cursor, Kimi Code CLI, Antigravity, Cline, Codex, Gemini CLI and all the others that I can't name but know exist.
+I daily drive 2 tools : Claude Code and Copilot CLI, and I try to replicate everything I learn into Mistral Vibe and OpenCode too. They all support skills. So do at least 30 others like Cursor, Kimi Code CLI, Antigravity, Cline, Codex, Gemini CLI and all the others that I can't name but know exist.
 If that's not a consensus, I don't know what is.
 
-I'm used close to a 100 different of them at the time of writing, I'd say around 80 found online and 10 to 20 tailor built for a repo / situation. They help push the agent towards working methodologies like lean, tdd, how to write ADRs, how to review code, how to use a specific R or JS package ... They work !
-My favourite home-made, which truly means "my version of what everyone and their dog is also making", are solve-issue, planning-team and implementing-team : 3 skills that work together at solving an issue on the repo's Github page by writing a specification with me, then using subagents and team driven agent orchestration to derive a plan, make a few rounds of review, then wait for me to read and then implement / review in rounds again, all in a single session. I still get a shot of dopamine each time I see the agents trigger the skills, or when I get a full new feature after an hours long session ends and it's one-shot right or close to it.
+To this date, I've tried probably around 100 skills. I'd say around 80 found online and 10 to 20 tailor built for a repo / situation. They help push the agent towards working methodologies like lean, tdd, how to write ADRs, how to review code, how to use a specific R or JS package ... They work !
 
 ## Skill management needs to mature
 
-**a) Growth without management.**
-
 The first thing that bothered me happened because I'm a hoarder : I was downloading skills left and right, and asking Opus to make a lot of them from books/blogs and package documentation of my favourite packages, "to have them just in case".
-Suddenly, I land on a [skill aggregator](skillsmp.com/) which states that it's found 200k+ skills !
-Even with progressive disclosure, at a stupidly impossible 1 tok/skill that's still more tokens than Opus' context window, twice it's "smart window" !
+Suddenly, I land on a [skill aggregator](https://skillsmp.com/) which states that it's found 200k+ skills !
+Even with progressive disclosure, at a stupidly impossible 1 tok/skill that's still more tokens than Opus' context window, twice its "smart window" !
 Even though I was FAR from flooding the LLM's context with my < 100 skills, it now felt like I was doing something unsustainable.
-
-**b) Staleness.**
 
 Another issue that arose even more quickly : staleness.
 Between [superpowers](https://github.com/obra/superpowers)[^1] that kept growing, but only updated automatically in Claude Code (thanks to the marketplace installation), my own skills evolving each session, my repos quickly ended up having different versions of the same skills, and I couldn't track what was where or what was working/not.
 
-[^1]: If you don't know about that one you're misssing something crucial. The brainstorming skill is probably the single most value-adding skill I've used yet
-**c) Distribution across tools.**
+[^1]: If you don't know about that one you're missing something crucial. The brainstorming skill is probably the single most value-adding skill I've used yet
 
 In addition, all these skills had to be copy pasted in the appropriate places : .claude, .github, wait no that's .agents, wait I want it globally, wait no it's creating confusion in that repo, WAIT this machine has none of my global skills !!
 The frustration of manually managing all of this really triggered my nerd reflex of trying to [automate the thing](https://xkcd.com/1319/).
-
-**d) Git pollution vs. reproducibility.**
 
 Last, but not least maybe, I have conflicting feelings about repo-local skills. I can make the case for skills being in the repo, to let others know how you've used LLMs to generate code or documentation. But I also find it quite annoying how different and noisy it is to the rest of the codebase. I don't think I need to have the full spec committed to 4 different folders in my repo just because I test drive 4 CLI tools. I should be able to declare the skills I use in a compact and standardized format.
 
 ## Wait : isn't this just what package managers are for ?
 
-*Why is it February 2026 and nobody has built this yet? Is it because it's too early (not enough skills in the wild), too fragmented (every tool has its own format), or just because nobody's been bothered enough?*
+Skills are packages for LLMs, and I feel like we need to push the same standards. Every popular open source language has packages and a package manager. Bits of symbols someone has bundled together that make the program do a cool action and you get to call it with one or few symbols. Factorise the behaviour. We describe package dependencies in manifest files, rely on versioning, and one or multiple registries to hold the latest versions. That's a core part of centralising open source efforts, enforcing documentation standards, and in return gain more reproducibility, distribution, install / update commands. Python has PyPi, Node has npm, R has CRAN, Rust has Cargo ... Obviously the analogy collapses because skills are not actual code, but it's more than enough to warrant a similar treatment.
 
-It's a weird feeling for me to try and build something that, to my current knowledge, nobody had already built and distributed globally.
-I'm at a point in my developper evolution that I no longer forget that open source exists and waste[^2] hours and days either reinventing the wheel or somehow accepting to suffer through a task that someone had generously wrapped in a package somewhere.
-No, I now know to quickly say "hey it would be cool if I could have this done this way, let's search through Google and Github" and usually land on something cool, very often with tens of thousands of Github stars, showing me again and again how much is out there that I don't know about.
-I don't know how that stage is called, not a newborn anymore but not too far from it ?
+It's a weird feeling for me to try and build something that, to my current knowledge, nobody had already built and open-sourced yet it feels like I can't be the only one thinking. Is it the way LLM coding seems to atomise everything instead of bringing ideas together ? Is everyone developing the cool things in their basement ? Is everyone afraid of getting their ideas stolen now that the cost of writing code is in full deflation ? I really don't know, but I don't fit in these categories and I have my own goal of writing more : so here I am !
 
-Anyway, the only thing I found when I started tinkering with automated skill management around mid-january (repo says 13/01 for first commit) was ... nothing. I mean, the marketplace thing in Claude Code was nice, but I mean open-source and tool-agnostic solution.
-
-About 2 weeks ago I finally noticed (thanks to SkillsMP) that `[npx skills]`(https://www.npmjs.com/package/skills?activeTab=readme) existed, and this one is really cool ! It solved quite a few of the issues I was having, especially ditribution across many CLI tools (they support ~40 !!!), updating and tracking from source, global/local management.
+Anyway, the only thing I found when I started tinkering with automated skill management around mid-january (repo says 13/01 for first commit) was ... nothing. I mean, the marketplace thing in Claude Code was nice, but I mean open-source and tool-agnostic solution. About 2 weeks ago I finally noticed (thanks to SkillsMP) that [npx skills](https://www.npmjs.com/package/skills?activeTab=readme) existed, and this one is really cool ! It solved quite a few of the issues I was having, especially distribution across many CLI tools (they support ~40 !!!), updating and tracking from source, global/local management.
 
 But there was still the issue of growing collection of skills, and repo-pollution.
 
-[^2]: I say waste but I have to admit that's more often than not quite a useful learning experience to spend some time tinkering with the problem without knowing a ready-made solution exists
+## My take : `akm`, the [agent kit manager](https://github.com/akm-rs/akm)
 
-## My take : SKM, the skill kit manager
+What is akm ? a CLI-tool, currently really just a patchwork of bash scripts and dreams.
 
-What is SKM ? a CLI-tool, currently really just a patchwork or bash scripts and dreams.
-It currently glues together :
+It glues together :
 - A cold storage for skills
 - A distribution system across LLM cli-tools 
 - A management system for skills scope 
 - A skill promotion system
 
-
 So, first things first : the novel thing I built for myself is a cold-storage for skills.
 It's quite simple : skills are stored in .local/share/llm-skills in each machine, single copy, CLI-tool invisible.
 
-I then generate a library.json file from the assortment of folders, and I can add variables to each skill : is it destined to the global folder (core: true) ? What are it's tags (for search) ?
+I then generate a library.json file from the assortment of folders, and I can add variables to each skill : is it destined to the global folder (core: true) ? What are its tags (for search) ?
 Then it's all bash scripts and 3 layers of skill activation :
 
 ### Layer 1
@@ -102,31 +87,34 @@ My growing collection is managed in a git repo, and I use it as the central sour
 
 At the repo level, I'm quite proud of the current iteration :
 
-I have a wrapper around the entrypoint each CLI tool (claude() etc) that creates a temporary directory and passes it to the `--add-dir` argument, then reads a manifest file in the repo that declares the skills to activate in that repo and symlinks then to the temp-dir. When I exit the session, the temp-dir is deleted. I can add/remove skills to the repo's manifest using a cli command, which edits the manifest in .agents/ and that's it. I like this, it maps to my mental model of adding packages to DESCRIPTION in R, or requirements.txt or cargo.toml or package.json.
+I have a wrapper around the entrypoint each CLI tool (claude() etc) that creates a temporary directory and passes it to the `--add-dir` argument, then reads a manifest file in the repo that declares the skills to activate in that repo and symlinks them to the temp-dir. When I exit the session, the temp-dir is deleted. I can add/remove skills to the repo's manifest using a cli command, which edits the manifest in .agents/ and that's it. I like this, it maps to my mental model of adding packages to DESCRIPTION in R, or requirements.txt or cargo.toml or package.json.
 
 ### Layer 3
 
-And then there's this thing I am very attached too, but I can't really justify it as well as the rest. The CLI too I built has 2 move commands : `load` and `unload`.
+And then there's this thing I am very attached to, but I can't really justify it as well as the rest. akm has `load` and `unload`.
 What they do is hotload a skill in the temp dir, *without* adding it to the manifest. 
-What am I trying to achieve with this ? First, I want agents in separate sessions to be able to use skills needed only for their session, without modifying the repo's manifest. Maybe a specific task needs a very niche skill, like "how to exactly do this thing that you have to do now for the task the user asked, but is not directly relevant to the repo". 
-My ultimate goal there is to see if I can somehow have "just in time" (JIT) skills, maybe even BUILD one inside a nested team of agents that elaborate it after iterating on recursive tasks ? 
-It's clearly my most "finger-waving" thing right now, I'll need to use it for a while and see what happens. 
 
-Here are a examples of `skm status` and `skm add/remove` :
+What am I trying to achieve with this ? 
 
-![skm-status.png] 
-![skm-remove.png]
+First, I want agents in separate sessions to be able to use skills needed only for their session, without modifying the repo's manifest. A specific task needs a very niche skill ? 
+My ultimate goal there is to see if I can somehow have "just in time" (JIT) skills, maybe even *build* one inside a nested team of agents that elaborate it in iterative tasks ? 
+It's clearly the most "finger-waving" thing right now, I'll need to use it for a while and see what happens. 
+
+Here are some examples of `akm status` and `akm add/remove` :
+
+![](akm-status.png) 
+![](akm-remove.png)
 
 ## Things I need to figure out
 
-Ok so if I wasn't clear until now, to my future self reading this : I really enjoy what I'm doing here, I love this new workflow with skills. 
-But there are many things I'm missing right now :
+I really enjoy what I'm doing here, I love this new workflow with skills. But there are many things I'm missing right now :
 
-- A proper registry : instead of a private personnal repo, I'd prefer relying on a proper registry with snapshots and all the goodies, and a way to publish to it.
-- Versionning : if skills are packages, then i'd like to figure skills versions semantics. That would enable to declare / pull exact dependencies for each project from the manifest.
-- Dependencies : if skills rely on other skills, i'd like to figure out how to track skills dependencies 
-- Discovery and distribution : the current flow is based on a repo, i'd like to learn how to setup a proper registry to push/pull to/from
-- How to fight against poisonning : supply-chain attacks made a few headlines this past year, and skills are so vulnerable to it, as well as their speed-addicted users like me who will often trade review for another turn in the session ... 
+- A proper registry : instead of a private personal repo, I'd prefer relying on a proper registry with snapshots and all the goodies, and a way to publish to it.
+- Versioning : if skills are packages, then I'd like to figure out skills versions semantics. That would enable to declare / pull exact dependencies for each project from the manifest.
+- Dependencies : if skills rely on other skills, I'd like to figure out how to track skills dependencies 
+- Discovery and distribution : the current flow is based on a repo, I'd like to learn how to setup a proper registry to push/pull to/from
+- How to fight against poisoning : supply-chain attacks made a few headlines this past year, and skills are so vulnerable to it, as well as their speed-addicted users like me who will often trade review for another turn in the session ... 
+- A CLI UI for skill search / metadata / management
 
 ## From me to future-me
 
