@@ -76,15 +76,20 @@ But there was still the issue of growing collection of skills, and repo-pollutio
 
 [^2]: I say waste but I have to admit that's more often than not quite a useful learning experience to spend some time tinkering with the problem without knowing a ready-made solution exists
 
-## My take : skillverse
+## My take : SKM, the skill kit manager
 
-**a) Cold storage.**
+What is SKM ? a CLI-tool, currently really just a patchwork or bash scripts and dreams.
+It currently glues together :
+- A cold storage for skills
+- A distribution system across LLM cli-tools 
+- A management system for skills scope 
+- A skill promotion system
 
-So, the first thing I built was a cold-storage for skills.
+
+So, first things first : the novel thing I built for myself is a cold-storage for skills.
 It's quite simple : skills are stored in .local/share/llm-skills in each machine, single copy, CLI-tool invisible.
 
 I then generate a library.json file from the assortment of folders, and I can add variables to each skill : is it destined to the global folder (core: true) ? What are it's tags (for search) ?
-
 Then it's all bash scripts and 3 layers of skill activation :
 
 ### Layer 1
@@ -97,31 +102,34 @@ My growing collection is managed in a git repo, and I use it as the central sour
 
 At the repo level, I'm quite proud of the current iteration :
 
-- I have a wrapper around the entrypoint each CLI tool (claude() etc) that creates a temporary directory and passes it to the `--add-dir` argument, then reads a manifest file in the repo that declares the skills to activate in that repo and symlinks then to the temp-dir. When I exit the session, the temp-dir is deleted. I can add/remove
+I have a wrapper around the entrypoint each CLI tool (claude() etc) that creates a temporary directory and passes it to the `--add-dir` argument, then reads a manifest file in the repo that declares the skills to activate in that repo and symlinks then to the temp-dir. When I exit the session, the temp-dir is deleted. I can add/remove skills to the repo's manifest using a cli command, which edits the manifest in .agents/ and that's it. I like this, it maps to my mental model of adding packages to DESCRIPTION in R, or requirements.txt or cargo.toml or package.json.
 
-**b) Three-layer activation.**
-**c) Symlinks, not copies.**
-**d) A CLI to manage it all.**
+### Layer 3
 
-**Suggested terminal snippets (pick 1-2, clean up for readability):**
+And then there's this thing I am very attached too, but I can't really justify it as well as the rest. The CLI too I built has 2 move commands : `load` and `unload`.
+What they do is hotload a skill in the temp dir, *without* adding it to the manifest. 
+What am I trying to achieve with this ? First, I want agents in separate sessions to be able to use skills needed only for their session, without modifying the repo's manifest. Maybe a specific task needs a very niche skill, like "how to exactly do this thing that you have to do now for the task the user asked, but is not directly relevant to the repo". 
+My ultimate goal there is to see if I can somehow have "just in time" (JIT) skills, maybe even BUILD one inside a nested team of agents that elaborate it after iterating on recursive tasks ? 
+It's clearly my most "finger-waving" thing right now, I'll need to use it for a while and see what happens. 
+
+Here are a examples of `skm status` and `skm add/remove` :
 
 ## Things I need to figure out
 
-**a) Versioning.**
-**b) Dependencies.**
-**c) Discovery and distribution.**
-**d) The naming problem.**
+Ok so if I wasn't clear until now, to my future self reading this : I really enjoy what I'm doing here, I love this new workflow with skills. 
+But there are many things I'm missing right now :
 
-(I like Skill Kit Manager-> skm)
+- Versionning : if skills are packages, then i'd like to figure skills versions semantics. That would enable to declare / pull exact dependencies for each project from the manifest.
+- Dependencies : if skills rely on other skills, i'd like to figure out how to track skills dependencies 
+- Discovery and distribution : the current flow is based on a repo, i'd like to learn how to setup a proper registry to push/pull to/from
 
 ## From me to me (6 months from now)
 
-*If you re-read this post in a year, what do you want to have been right about?*
+Future me, if you haven't deleted this site out of shame for what you wrote, here's what I hope you are gloating about : 
 
-
-
-Skills are such a good idea.
-Skills are here to stay. The Skills spec[] is clever, progressive disclosure is really what was needed.
+====
+ 
+ills are here to stay. The Skills spec[] is clever, progressive disclosure is really what was needed.
 Skills are to the LLM what packages are to your programming language of choice (unless you're writing C apparently)
 
 Skills factorise common operations you like into a shorter interface. It's a good-enough attempt at providing more reproducibility to LLM outputs.
