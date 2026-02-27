@@ -70,8 +70,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="alternate" hreflang="fr" href="https://raphaelsimon.fr/fr/">
 <link rel="alternate" hreflang="en" href="https://raphaelsimon.fr/en/">
+<link rel="alternate" hreflang="fr" href="https://raphaelsimon.fr/fr/">
 <link rel="alternate" hreflang="x-default" href="https://raphaelsimon.fr/en/">
 
 
@@ -331,6 +331,33 @@ ul.task-list li input[type="checkbox"] {
 <div class="two-column-layout">
 <section id="recent" class="level2 main-column">
 <h2 data-anchor-id="recent">Recent</h2>
+<article class="excerpt-item">
+  <h3 class="excerpt-title"><a href="blog/posts/2026-02-24-cold-skills/">Skills as packages</a></h3>
+  <div class="excerpt-meta"><time>24 Feb, 2026</time></div>
+  <div class="excerpt-content">
+<p>The more I use CLI LLM tools like Claude Code and Opencode, the more
+I realise that : - the skills specification is one of the best ideas
+I’ve seen and used until now - it does exactly what packages do with my
+favourite languages : factorise some cool stuff into reusable chunks
+that I can call with very few words - it’s still not mature and it
+should definitely evolve to behave like packages</p>
+<p>I’ve been experimenting with ideas that revolve around this skills as
+packages approximation and I like the current results enough that I want
+to talk about it, if only to read it back again in a few months and see
+how bad this take is. My current take on this is <a href="https://github.com/akm-rs/akm">akm - the agent kit manager</a></p>
+<p>LLM Skills, as in the <a href="https://agentskills.io/home">open
+specification</a> for a reusable prompt format, are CLEVER. Everyone was
+playing around with prompt engineering and reusing bits that worked in
+larger and larger prompts, copy and pasting things, cross referencing
+structural documents. Skills deliver on all fronts : progressive
+disclosure lets us save some context for the good stuff before landing
+in the <a href="https://www.youtube.com/watch?v=rmvDxxNubIg">dumb
+zone</a>, self-activation means we don’t have to waste turns or tokens
+naming the invocation, and the folder structure means we can have even
+more progressive disclosure, with files read only in certain situations,
+scripts used as part of the skill … ...</p>  </div>
+  <a href="blog/posts/2026-02-24-cold-skills/" class="excerpt-readmore">Read more →</a>
+</article>
 <article class="excerpt-item">
   <h3 class="excerpt-title"><a href="blog/posts/2026-02-15-bike-to-racecar/">Two months in a race car</a></h3>
   <div class="excerpt-meta"><time>15 Feb, 2026</time></div>

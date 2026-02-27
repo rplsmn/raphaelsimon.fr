@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/index.html</loc>
-    <lastmod>2026-02-16T19:51:36.902Z</lastmod>
+    <lastmod>2026-02-27T21:40:21.312Z</lastmod>
   </url>
   <url>
     <loc>https://raphaelsimon.fr/fr/blog/index.html</loc>
@@ -17,19 +17,11 @@
     <lastmod>2026-02-14T13:15:11.886Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-15-bike-to-racecar/index.html</loc>
-    <lastmod>2026-02-16T19:51:36.900Z</lastmod>
+    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/index.html</loc>
+    <lastmod>2026-02-27T21:40:21.311Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/en/about.html</loc>
-    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/en/index.html</loc>
-    <lastmod>2026-02-16T19:48:07.188Z</lastmod>
-  </url>
-  <url>
-    <loc>https://raphaelsimon.fr/en/contact.html</loc>
+    <loc>https://raphaelsimon.fr/en/blog/index.html</loc>
     <lastmod>2026-02-14T13:15:11.886Z</lastmod>
   </url>
   <url>
@@ -37,12 +29,24 @@
     <lastmod>2026-02-14T13:15:11.886Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/en/blog/index.html</loc>
+    <loc>https://raphaelsimon.fr/en/contact.html</loc>
     <lastmod>2026-02-14T13:15:11.886Z</lastmod>
   </url>
   <url>
-    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/index.html</loc>
-    <lastmod>2026-02-16T19:51:36.902Z</lastmod>
+    <loc>https://raphaelsimon.fr/en/index.html</loc>
+    <lastmod>2026-02-16T19:48:07.188Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/about.html</loc>
+    <lastmod>2026-02-14T13:15:11.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-15-bike-to-racecar/index.html</loc>
+    <lastmod>2026-02-27T21:40:21.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://raphaelsimon.fr/en/blog/posts/2026-02-24-cold-skills/index.html</loc>
+    <lastmod>2026-02-27T21:40:21.310Z</lastmod>
   </url>
   <url>
     <loc>https://raphaelsimon.fr/fr/index.html</loc>
@@ -54,6 +58,6 @@
   </url>
   <url>
     <loc>https://raphaelsimon.fr/fr/blog/posts/2026-02-15-bike-to-racecar/index.html</loc>
-    <lastmod>2026-02-16T19:51:36.901Z</lastmod>
+    <lastmod>2026-02-27T21:40:21.310Z</lastmod>
   </url>
 </urlset>
