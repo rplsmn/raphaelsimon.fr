@@ -9,7 +9,7 @@
 <link>https://raphaelsimon.fr/en/blog/</link>
 <atom:link href="https://raphaelsimon.fr/en/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website - Medicine, Public Health, Software Engineering, Data Science</description>
-<generator>quarto-1.8.27</generator>
+<generator>quarto-1.7.32</generator>
 <lastBuildDate>Mon, 23 Feb 2026 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Skills as packages</title>
@@ -24,7 +24,7 @@
 <section id="skills-are-to-llms-what-packages-are-to-programming-languages" class="level2">
 <h2 class="anchored" data-anchor-id="skills-are-to-llms-what-packages-are-to-programming-languages">Skills are to LLMs what packages are to programming languages</h2>
 <p>The more I use CLI LLM tools like Claude Code and Opencode, the more I realise that : - the skills specification is one of the best ideas I’ve seen and used until now - it does exactly what packages do with my favourite languages : factorise some cool stuff into reusable chunks that I can call with very few words - it’s still not mature and it should definitely evolve to behave like packages</p>
-<p>I’ve been experimenting with ideas that revolve around this skills as packages approximation and I like the current results enough that I want to talk about it, if only to read it back again in a few months and see how bad this take is. My current take on this is <a href="https://github.com/akm-rs/akm">akm - the agent kit manager</a></p>
+<p>I’ve been experimenting with ideas that revolve around this skills as packages approximation and I like the current results enough that I want to talk about it, if only to read it back again in a few months and see how bad this take is. My current take on this is an agent kit manager (akm)</p>
 </section>
 <section id="skills-are-such-a-good-idea" class="level2">
 <h2 class="anchored" data-anchor-id="skills-are-such-a-good-idea">Skills are such a good idea</h2>
@@ -48,9 +48,9 @@
 <p>But there was still the issue of growing collection of skills, and repo-pollution.</p>
 </section>
 <section id="my-take-akm-the-agent-kit-manager" class="level2">
-<h2 class="anchored" data-anchor-id="my-take-akm-the-agent-kit-manager">My take : <code>akm</code>, the <a href="https://github.com/akm-rs/akm">agent kit manager</a></h2>
-<p>What is akm ? a CLI-tool, currently really just a patchwork of bash scripts and dreams.</p>
-<p>It glues together : - A cold storage for skills - A distribution system across LLM cli-tools - A management system for skills scope - A skill promotion system</p>
+<h2 class="anchored" data-anchor-id="my-take-akm-the-agent-kit-manager">My take : <code>akm</code>, the agent kit manager</h2>
+<p>What is <a href="https://github.com/akm-rs/akm">akm</a> ? a CLI-tool, currently really just a patchwork of bash scripts and dreams.</p>
+<p>It glues together : - A cold storage for skills - A distribution system across LLM cli-tools - A management system for skills scope - A skill promotion system - An artifacts (plans etc) centralisation system, outside the repo but in scope for the LLM (again, it’s really just add-dir and a wrapper around the CLI tool entrypoint) - An instructions centralisation manager : edit once, distribute across tools and repos</p>
 <p>So, first things first : the novel thing I built for myself is a cold-storage for skills. It’s quite simple : skills are stored in .local/share/llm-skills in each machine, single copy, CLI-tool invisible.</p>
 <p>I then generate a library.json file from the assortment of folders, and I can add variables to each skill : is it destined to the global folder (core: true) ? What are its tags (for search) ? Then it’s all bash scripts and 3 layers of skill activation :</p>
 <section id="layer-1" class="level3">
@@ -71,6 +71,14 @@
 <p>Here are some examples of <code>akm status</code> and <code>akm add/remove</code> :</p>
 <p><img src="https://raphaelsimon.fr/en/blog/posts/2026-02-24-cold-skills/akm-status.png" class="img-fluid"> <img src="https://raphaelsimon.fr/en/blog/posts/2026-02-24-cold-skills/akm-remove.png" class="img-fluid"></p>
 </section>
+</section>
+<section id="the-artifacts-manager" class="level2">
+<h2 class="anchored" data-anchor-id="the-artifacts-manager">The artifacts manager</h2>
+<p>The last thing I want to mention is the artifacts manager. It’s really just a directory that is added to the context of the LLM, and where I can store things like plans, notes, ADRs, or whatever I want to keep track of across sessions but don’t want to commit to the repo. It’s really just a <code>--add-dir ~/.akm/artifacts/&lt;repo&gt;/</code> automatically added when starting a session, with auto commit / push / pull for cross-machine sync. It has been quite useful already, and that’s actually this perk that led me to transform my initial project that also had gitconfig and other personal files into akm : a friend asked to use my artifacts trick and that gave me the confidence to open source the whole thing :-)</p>
+</section>
+<section id="the-instructions-manager" class="level2">
+<h2 class="anchored" data-anchor-id="the-instructions-manager">The instructions manager</h2>
+<p>Even more simple : akm creates global-instructions.md in ~/.akm/ and symlinks it to the global instructions of each CLI tool. This way I can edit it once and have it distributed across all tools. I even added last minute a config command to mimic git config –edit.</p>
 </section>
 <section id="things-i-need-to-figure-out" class="level2">
 <h2 class="anchored" data-anchor-id="things-i-need-to-figure-out">Things I need to figure out</h2>
