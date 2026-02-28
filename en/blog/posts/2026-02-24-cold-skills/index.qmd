@@ -109,7 +109,11 @@ Here are some examples of `akm status` and `akm add/remove` :
 
 ## The artifacts manager
 
-The last thing I want to mention is the artifacts manager. It's really just a directory that is added to the context of the LLM, and where I can store things like plans, notes, ADRs, or whatever I want to keep track of across sessions but don't want to commit to the repo. It's really just a `--add-dir ~/.akm/artifacts/<repo>/` automatically added when starting a session, with auto commit / push / pull for cross-machine sync. It has been quite useful already, and that's actually this perk that led me to transform my initial project that also had gitconfig and other personal files into akm : a friend asked to use my artifacts trick and that gave me the confidence to open source the whole thing :-)   
+The last thing I want to mention is the artifacts manager. It's really just a directory that is added to the context of the LLM, and where I can store things like plans, notes, ADRs, or whatever I want to keep track of across sessions but don't want to commit to the repo. It's really just a `--add-dir ~/.akm/artifacts/<repo>/` automatically added when starting a session, with auto commit / push / pull for cross-machine sync. It has been quite useful already, and that's actually this perk that led me to transform my initial project that also had gitconfig and other personal files into akm : a friend asked to use my artifacts trick and that gave me the confidence to open source the whole thing :-) 
+
+## The instructions manager
+
+Even more simple : akm creates global-instructions.md in ~/.akm/ and symlinks it to the global instructions of each CLI tool. This way I can edit it once and have it distributed across all tools. I even added last minute a config command to mimic git config --edit. 
 
 ## Things I need to figure out
 
