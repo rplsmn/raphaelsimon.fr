@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "fr/blog/index.html",
-    "href": "fr/blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Deux mois dans une voiture de course\n\n\n\nia\n\ningenierie-logicielle\n\npersonnel\n\n\n\nCe que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient.\n\n\n\n\n\n15 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nBonjour le Monde\n\n\n\nmeta\n\nbienvenue\n\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
-  },
-  {
     "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html",
     "href": "fr/blog/posts/2026-02-02-hello-world/index.html",
     "title": "Bonjour le Monde",
@@ -21,11 +14,46 @@
     "text": "Pourquoi Écrire ?\nJ’essaie de tenir un blog depuis mes 11 ans, ça fait plus de 20 ans maintenant. Qu’est-ce qui a changé ? Aucune idée. J’imagine que j’ai assez vieilli pour comprendre à quel point écrire est important ? Ou alors c’est juste une lubie qui durera deux semaines.\nQui sait ?"
   },
   {
+    "objectID": "fr/blog/index.html",
+    "href": "fr/blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Deux mois dans une voiture de course\n\n\n\nia\n\ningenierie-logicielle\n\npersonnel\n\n\n\nCe que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient.\n\n\n\n\n\n15 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nBonjour le Monde\n\n\n\nmeta\n\nbienvenue\n\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
+  },
+  {
     "objectID": "fr/contact.html",
     "href": "fr/contact.html",
     "title": "Contact",
     "section": "",
     "text": "Vous avez une question, une idée de projet, ou vous voulez simplement échanger ? Remplissez le formulaire ci-dessous et je vous répondrai.\nVous pouvez aussi me joindre directement à contact@raphaelsimon.fr.\n\n\n\n Retour au sommet"
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html",
+    "title": "Here we go again",
+    "section": "",
+    "text": "Welcome to my blog! This is where I’ll share my ramblings, on anything ranging from medicine and public health to software engineering, data science, and the interesting problems that emerge at their intersections."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "title": "Here we go again",
+    "section": "Why Write?",
+    "text": "Why Write?\nI’ve been trying to run a blog since I was 11, that’s more than 20 years ago. What happened now ? I don’t know. I guess I got old enough to realise how important writing is ? Or maybe I’m just in a phase that will last two weeks.\nWho knows ?"
+  },
+  {
+    "objectID": "en/blog/index.html",
+    "href": "en/blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Skills as packages\n\n\n\nai\n\nsoftware-engineering\n\nllm\n\nafk\n\n\n\nHow I look at skills and how I manage them\n\n\n\n\n\nFeb 24, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nTwo months in a race car\n\n\n\nai\n\nsoftware-engineering\n\npersonal\n\n\n\nWhat daily AI-assisted development actually feels like: the dopamine, the fatigue, and the things nobody warns you about.\n\n\n\n\n\nFeb 15, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nHere we go again\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 13, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "en/contact.html",
+    "href": "en/contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Have a question, project idea, or just want to connect? Fill out the form below and I’ll get back to you.\nYou can also reach me directly at contact@raphaelsimon.fr.\n\n\n\n Back to top"
   },
   {
     "objectID": "en/index.html#recent",
@@ -40,6 +68,34 @@
     "title": "Raphaël Simon",
     "section": "Highlights",
     "text": "Highlights\n\nFeatured Posts\n\nTwo months in a race car\n\n\n\nThings I Built\n\nAutoPMSI\nHADVISOR"
+  },
+  {
+    "objectID": "en/about.html",
+    "href": "en/about.html",
+    "title": "About",
+    "section": "",
+    "text": "Physician turned engineer. I trained in medicine, missed the door to radiology, and walked through another one — into public health, clinical informatics, and eventually software. Now I build things and think about how technology shapes policy (and vice versa).\nI’m drawn to problems that don’t fit neatly into one field. The messier the intersection, the more interesting.\nBased in France. Fluent in several languages, still learning others."
+  },
+  {
+    "objectID": "en/about.html#bio",
+    "href": "en/about.html#bio",
+    "title": "About",
+    "section": "",
+    "text": "Physician turned engineer. I trained in medicine, missed the door to radiology, and walked through another one — into public health, clinical informatics, and eventually software. Now I build things and think about how technology shapes policy (and vice versa).\nI’m drawn to problems that don’t fit neatly into one field. The messier the intersection, the more interesting.\nBased in France. Fluent in several languages, still learning others."
+  },
+  {
+    "objectID": "en/about.html#expertise",
+    "href": "en/about.html#expertise",
+    "title": "About",
+    "section": "Expertise",
+    "text": "Expertise\n\nMedicine & Public Health\nSoftware Engineering\nData Science\nComplex Systems"
+  },
+  {
+    "objectID": "en/about.html#consulting",
+    "href": "en/about.html#consulting",
+    "title": "About",
+    "section": "Consulting",
+    "text": "Consulting\nI help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn’t fit neatly into traditional categories, let’s talk."
   },
   {
     "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html",
@@ -182,60 +238,18 @@
     "text": "Footnotes\n\n\nIf you don’t know about that one you’re missing something crucial. The brainstorming skill is probably the single most value-adding skill I’ve used yet↩︎"
   },
   {
-    "objectID": "en/contact.html",
-    "href": "en/contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Have a question, project idea, or just want to connect? Fill out the form below and I’ll get back to you.\nYou can also reach me directly at contact@raphaelsimon.fr.\n\n\n\n Back to top"
+    "objectID": "fr/index.html#récents",
+    "href": "fr/index.html#récents",
+    "title": "Raphaël Simon",
+    "section": "Récents",
+    "text": "Récents\n\n  Deux mois dans une voiture de course\n  15 fev., 2026\n  \nDepuis fin décembre 2025, je passe 10 à 12 heures par jour à écrire\ndu logiciel avec des agents LLM et des outils en ligne de commande.\nJ’ai pris des notes depuis le premier jour où j’ai essayé Opus 4.5,\nsur mon téléphone. Ce billet raconte ce que ça fait vraiment : passer du\nvélo électrique à la voiture de course.\nPendant les 3 premiers trimestres de 2025, les LLM m’étaient aussi\nutiles qu’ils l’avaient été depuis qu’OpenAI a lâché ChatGPT sur nous\ntous. J’avais l’impression que personne n’avait trouvé de workflow\ndurable. Beaucoup de copier-coller depuis l’interface web. Des démos\nimpressionnantes et quelques tentatives d’autonomie, mais aussi beaucoup\nd’histoires d’horreur (adieu la base de prod). Les modèles hallucinaient\ntout autant qu’avant, trop pour qu’on leur fasse confiance en\nproduction. Dans la plupart des cas, le résultat n’était pas assez en\navance sur ce qu’un humain compétent pouvait produire.\nDeux choses ont changé, presque en même temps.\n\nLes modèles se sont nettement améliorés. Pas de manière\nincrémentale. Avec la sortie de Claude Opus 4.5 d’Anthropic, on a\nsoudain obtenu de meilleurs résultats du premier coup. Une meilleure\ncohérence sur des plans longs. Moins de moments où le modèle dérive de\nce qu’on lui a demandé.\nLes agents en\nligne de commande comme Claude Code (ou Copilot CLI, Mistral Vibe,\nOpencode…) ont donné aux modèles accès à la machine, de la bonne\nmanière. grep, find, git, CI/CD :\nbash, c’est tout ce qu’il faut apparemment ! Le modèle peut explorer du\ncode sans gaspiller de tokens. Il peut participer au versionnage de son\npropre travail et à la documentation. Il peut lancer des tests, lire les\nerreurs, réessayer. Il peut faire tout ça en parallèle sur plusieurs\nbranches, ou des git-worktrees.\n  \n  Lire la suite →\n\n\n  Bonjour le Monde\n  2 fev., 2026\n  \nBienvenue sur mon blog ! C’est ici que je partagerai mes divagations,\nsur à peu près tout : de la médecine et la santé publique à l’ingénierie\nlogicielle, la science des données, et les problèmes intéressants qui\némergent à leurs intersections.\nJ’essaie de tenir un blog depuis mes 11 ans, ça fait plus de 20 ans\nmaintenant. Qu’est-ce qui a changé ? Aucune idée. J’imagine que j’ai\nassez vieilli pour comprendre à quel point écrire est important ? Ou\nalors c’est juste une lubie qui durera deux semaines.\nQui sait ?  \n  Lire la suite →\n\nVoir tous les articles →"
   },
   {
-    "objectID": "en/about.html",
-    "href": "en/about.html",
-    "title": "About",
-    "section": "",
-    "text": "Physician turned engineer. I trained in medicine, missed the door to radiology, and walked through another one — into public health, clinical informatics, and eventually software. Now I build things and think about how technology shapes policy (and vice versa).\nI’m drawn to problems that don’t fit neatly into one field. The messier the intersection, the more interesting.\nBased in France. Fluent in several languages, still learning others."
-  },
-  {
-    "objectID": "en/about.html#bio",
-    "href": "en/about.html#bio",
-    "title": "About",
-    "section": "",
-    "text": "Physician turned engineer. I trained in medicine, missed the door to radiology, and walked through another one — into public health, clinical informatics, and eventually software. Now I build things and think about how technology shapes policy (and vice versa).\nI’m drawn to problems that don’t fit neatly into one field. The messier the intersection, the more interesting.\nBased in France. Fluent in several languages, still learning others."
-  },
-  {
-    "objectID": "en/about.html#expertise",
-    "href": "en/about.html#expertise",
-    "title": "About",
-    "section": "Expertise",
-    "text": "Expertise\n\nMedicine & Public Health\nSoftware Engineering\nData Science\nComplex Systems"
-  },
-  {
-    "objectID": "en/about.html#consulting",
-    "href": "en/about.html#consulting",
-    "title": "About",
-    "section": "Consulting",
-    "text": "Consulting\nI help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn’t fit neatly into traditional categories, let’s talk."
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html",
-    "title": "Here we go again",
-    "section": "",
-    "text": "Welcome to my blog! This is where I’ll share my ramblings, on anything ranging from medicine and public health to software engineering, data science, and the interesting problems that emerge at their intersections."
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
-    "title": "Here we go again",
-    "section": "Why Write?",
-    "text": "Why Write?\nI’ve been trying to run a blog since I was 11, that’s more than 20 years ago. What happened now ? I don’t know. I guess I got old enough to realise how important writing is ? Or maybe I’m just in a phase that will last two weeks.\nWho knows ?"
-  },
-  {
-    "objectID": "en/blog/index.html",
-    "href": "en/blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Skills as packages\n\n\n\nai\n\nsoftware-engineering\n\nllm\n\nafk\n\n\n\nHow I look at skills and how I manage them\n\n\n\n\n\nFeb 24, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nTwo months in a race car\n\n\n\nai\n\nsoftware-engineering\n\npersonal\n\n\n\nWhat daily AI-assisted development actually feels like: the dopamine, the fatigue, and the things nobody warns you about.\n\n\n\n\n\nFeb 15, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nHere we go again\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 13, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
+    "objectID": "fr/index.html#sélection",
+    "href": "fr/index.html#sélection",
+    "title": "Raphaël Simon",
+    "section": "Sélection",
+    "text": "Sélection\n\nArticles en vedette\n\nDeux mois dans une voiture de course\n\n\n\nProjets\n\nAutoPMSI\nHADVISOR"
   },
   {
     "objectID": "fr/about.html",
@@ -327,19 +341,5 @@
     "title": "Deux mois dans une voiture de course",
     "section": "Notes de bas de page",
     "text": "Notes de bas de page\n\n\nAu sens figuré. Même si j’ai un certificat médical LAPL valide, je n’ai certainement PAS le brevet pour ça !↩︎"
-  },
-  {
-    "objectID": "fr/index.html#récents",
-    "href": "fr/index.html#récents",
-    "title": "Raphaël Simon",
-    "section": "Récents",
-    "text": "Récents\n\n  Deux mois dans une voiture de course\n  15 fev., 2026\n  \nDepuis fin décembre 2025, je passe 10 à 12 heures par jour à écrire\ndu logiciel avec des agents LLM et des outils en ligne de commande.\nJ’ai pris des notes depuis le premier jour où j’ai essayé Opus 4.5,\nsur mon téléphone. Ce billet raconte ce que ça fait vraiment : passer du\nvélo électrique à la voiture de course.\nPendant les 3 premiers trimestres de 2025, les LLM m’étaient aussi\nutiles qu’ils l’avaient été depuis qu’OpenAI a lâché ChatGPT sur nous\ntous. J’avais l’impression que personne n’avait trouvé de workflow\ndurable. Beaucoup de copier-coller depuis l’interface web. Des démos\nimpressionnantes et quelques tentatives d’autonomie, mais aussi beaucoup\nd’histoires d’horreur (adieu la base de prod). Les modèles hallucinaient\ntout autant qu’avant, trop pour qu’on leur fasse confiance en\nproduction. Dans la plupart des cas, le résultat n’était pas assez en\navance sur ce qu’un humain compétent pouvait produire.\nDeux choses ont changé, presque en même temps.\n\nLes modèles se sont nettement améliorés. Pas de manière\nincrémentale. Avec la sortie de Claude Opus 4.5 d’Anthropic, on a\nsoudain obtenu de meilleurs résultats du premier coup. Une meilleure\ncohérence sur des plans longs. Moins de moments où le modèle dérive de\nce qu’on lui a demandé.\nLes agents en\nligne de commande comme Claude Code (ou Copilot CLI, Mistral Vibe,\nOpencode…) ont donné aux modèles accès à la machine, de la bonne\nmanière. grep, find, git, CI/CD :\nbash, c’est tout ce qu’il faut apparemment ! Le modèle peut explorer du\ncode sans gaspiller de tokens. Il peut participer au versionnage de son\npropre travail et à la documentation. Il peut lancer des tests, lire les\nerreurs, réessayer. Il peut faire tout ça en parallèle sur plusieurs\nbranches, ou des git-worktrees.\n  \n  Lire la suite →\n\n\n  Bonjour le Monde\n  2 fev., 2026\n  \nBienvenue sur mon blog ! C’est ici que je partagerai mes divagations,\nsur à peu près tout : de la médecine et la santé publique à l’ingénierie\nlogicielle, la science des données, et les problèmes intéressants qui\némergent à leurs intersections.\nJ’essaie de tenir un blog depuis mes 11 ans, ça fait plus de 20 ans\nmaintenant. Qu’est-ce qui a changé ? Aucune idée. J’imagine que j’ai\nassez vieilli pour comprendre à quel point écrire est important ? Ou\nalors c’est juste une lubie qui durera deux semaines.\nQui sait ?  \n  Lire la suite →\n\nVoir tous les articles →"
-  },
-  {
-    "objectID": "fr/index.html#sélection",
-    "href": "fr/index.html#sélection",
-    "title": "Raphaël Simon",
-    "section": "Sélection",
-    "text": "Sélection\n\nArticles en vedette\n\nDeux mois dans une voiture de course\n\n\n\nProjets\n\nAutoPMSI\nHADVISOR"
   }
 ]
