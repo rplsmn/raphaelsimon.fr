@@ -134,4 +134,4 @@ Je prends vraiment plaisir à ce que je fais ici, j'adore ce nouveau workflow av
 
 ## De moi à mon moi du futur
 
-Moi du futur, si tu n'as pas supprimé ce site par honte de ce que tu as écrit, j'espère que le concept de skills-comme-packages est devenu une évidence, et si tu as laissé tomber le skill kit pour un super gestionnaire de skills open source fait par des gens formidables, je te pardonne.
+Moi du futur, si tu n'as pas supprimé ce site par honte de ce que tu as écrit, j'espère que le concept de skills-packages est devenu une évidence, et si tu as laissé tomber l'agent kit manager pour un super gestionnaire de skills open source fait par des gens formidables, je te pardonne.
