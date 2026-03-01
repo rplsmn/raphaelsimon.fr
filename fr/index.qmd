@@ -25,9 +25,11 @@ hreflang:
 ## Sélection
 
 ### Articles en vedette
+- [Les skills comme des packages](blog/posts/2026-02-24-cold-skills/index.qmd)
 - [Deux mois dans une voiture de course](blog/posts/2026-02-15-bike-to-racecar/index.qmd)
 
 ### Projets
+- [Agent Kit Manager](https://akm.raphaelsimon.fr)
 - [AutoPMSI](https://autopmsi.raphaelsimon.fr)
 - [HADVISOR](https://scansante.shinyapps.io/hadvisor/)
 :::

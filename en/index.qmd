@@ -25,9 +25,11 @@ hreflang:
 ## Highlights
 
 ### Featured Posts
+- [Skills as packages](blog/posts/2026-02-24-cold-skills/index.qmd)
 - [Two months in a race car](blog/posts/2026-02-15-bike-to-racecar/index.qmd)
 
 ### Things I Built
+- [Agent Kit Manager](https://akm.raphaelsimon.fr)
 - [AutoPMSI](https://autopmsi.raphaelsimon.fr)
 - [HADVISOR](https://scansante.shinyapps.io/hadvisor/)
 :::
