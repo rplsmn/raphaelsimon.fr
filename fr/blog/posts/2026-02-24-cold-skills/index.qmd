@@ -20,7 +20,8 @@ Cet article a été traduit de [la version anglaise](/en/blog/posts/cold-skills/
 
 ## Les skills sont aux LLM ce que les packages sont aux langages de programmation
 
-Plus j'utilise des outils LLM en CLI comme Claude Code et Opencode, plus je réalise que :<br>
+Plus j'utilise des outils LLM en CLI comme Claude Code et Opencode, plus je réalise que :
+
 - le principe des skills est l'une des meilleures idées que j'ai vues et utilisées jusqu'ici dans l'exercice de travailler avec des LLMs
 - ça fait exactement ce que les packages font avec mes langages préférés : factoriser des trucs complexes et utiles en briques réutilisables qu'on peut appeler en quelques mots
 - c'est encore immature et ça devrait clairement évoluer pour se comporter comme des packages
