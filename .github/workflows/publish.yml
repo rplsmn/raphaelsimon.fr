@@ -1,0 +1,65 @@
+# =============================================================================
+# Quarto Publish — raphaelsimon.fr
+# =============================================================================
+# Builds and deploys the Quarto website to GitHub Pages via `quarto publish`.
+#
+# Currently: manual trigger only (workflow_dispatch).
+# To enable automatic deploys on push to main, replace the `on:` block with:
+#
+#   on:
+#     push:
+#       branches: [main]
+#     workflow_dispatch:
+#
+# =============================================================================
+
+name: Build & Deploy Site
+
+on:
+  workflow_dispatch:
+
+# Grant GITHUB_TOKEN write access so `quarto publish` can push to gh-pages
+permissions:
+  contents: write
+  pages: write
+
+# Prevent concurrent deploys — cancel any in-flight run
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python (needed by pre-render script) ────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      # ── 3. Quarto ─────────────────────────────────────────────────────
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "1.7.23"
+
+      # ── 4. Build & Deploy ─────────────────────────────────────────────
+      # `quarto publish gh-pages` runs the pre-render script, renders the
+      # site, and force-pushes the output to the gh-pages branch.
+      # The CNAME file is preserved because it lives in the repo root and
+      # Quarto copies project-level files to the output directory.
+      - name: Publish to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
