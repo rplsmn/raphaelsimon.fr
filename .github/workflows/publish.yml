@@ -2,20 +2,13 @@
 # Quarto Publish — raphaelsimon.fr
 # =============================================================================
 # Builds and deploys the Quarto website to GitHub Pages via `quarto publish`.
-#
-# Currently: manual trigger only (workflow_dispatch).
-# To enable automatic deploys on push to main, replace the `on:` block with:
-#
-#   on:
-#     push:
-#       branches: [main]
-#     workflow_dispatch:
-#
 # =============================================================================
 
 name: Build & Deploy Site
 
 on:
+  push:
+    branches: [publish]
   workflow_dispatch:
 
 # Grant GITHUB_TOKEN write access so `quarto publish` can push to gh-pages
