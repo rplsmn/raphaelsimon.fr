@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "fr/about.html",
+    "href": "fr/about.html",
+    "title": "À propos",
+    "section": "",
+    "text": "Médecin devenu ingénieur. J’ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l’informatique médicale, et finalement le logiciel. Aujourd’hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).\nJe suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l’intersection est floue, plus c’est intéressant.\nBasé en France. Plusieurs langues parlées couramment, d’autres en cours d’apprentissage."
+  },
+  {
+    "objectID": "fr/about.html#biographie",
+    "href": "fr/about.html#biographie",
+    "title": "À propos",
+    "section": "",
+    "text": "Médecin devenu ingénieur. J’ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l’informatique médicale, et finalement le logiciel. Aujourd’hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).\nJe suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l’intersection est floue, plus c’est intéressant.\nBasé en France. Plusieurs langues parlées couramment, d’autres en cours d’apprentissage."
+  },
+  {
+    "objectID": "fr/about.html#expertise",
+    "href": "fr/about.html#expertise",
+    "title": "À propos",
+    "section": "Expertise",
+    "text": "Expertise\n\nMédecine et Santé Publique\nIngénierie Logicielle\nScience des Données\nSystèmes Complexes"
+  },
+  {
+    "objectID": "fr/about.html#conseil",
+    "href": "fr/about.html#conseil",
+    "title": "À propos",
+    "section": "Conseil",
+    "text": "Conseil\nJ’aide les organisations à résoudre des problèmes interdisciplinaires complexes et de niche. Si vous avez un projet difficile qui ne rentre pas dans les catégories traditionnelles, discutons-en."
+  },
+  {
+    "objectID": "fr/contact.html",
+    "href": "fr/contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Vous avez une question, une idée de projet, ou vous voulez simplement échanger ? Remplissez le formulaire ci-dessous et je vous répondrai.\nVous pouvez aussi me joindre directement à contact@raphaelsimon.fr.\n\n\n\n Retour au sommet"
+  },
+  {
     "objectID": "fr/blog/posts/2026-02-02-hello-world/index.html",
     "href": "fr/blog/posts/2026-02-02-hello-world/index.html",
     "title": "Bonjour le Monde",
@@ -18,56 +53,7 @@
     "href": "fr/blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Deux mois dans une voiture de course\n\n\n\nia\n\ningenierie-logicielle\n\npersonnel\n\n\n\nCe que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient.\n\n\n\n\n\n15 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nBonjour le Monde\n\n\n\nmeta\n\nbienvenue\n\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
-  },
-  {
-    "objectID": "fr/contact.html",
-    "href": "fr/contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Vous avez une question, une idée de projet, ou vous voulez simplement échanger ? Remplissez le formulaire ci-dessous et je vous répondrai.\nVous pouvez aussi me joindre directement à contact@raphaelsimon.fr.\n\n\n\n Retour au sommet"
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html",
-    "title": "Here we go again",
-    "section": "",
-    "text": "Welcome to my blog! This is where I’ll share my ramblings, on anything ranging from medicine and public health to software engineering, data science, and the interesting problems that emerge at their intersections."
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
-    "href": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
-    "title": "Here we go again",
-    "section": "Why Write?",
-    "text": "Why Write?\nI’ve been trying to run a blog since I was 11, that’s more than 20 years ago. What happened now ? I don’t know. I guess I got old enough to realise how important writing is ? Or maybe I’m just in a phase that will last two weeks.\nWho knows ?"
-  },
-  {
-    "objectID": "en/blog/index.html",
-    "href": "en/blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Skills as packages\n\n\n\nai\n\nsoftware-engineering\n\nllm\n\nafk\n\n\n\nHow I look at skills and how I manage them\n\n\n\n\n\nFeb 24, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nTwo months in a race car\n\n\n\nai\n\nsoftware-engineering\n\npersonal\n\n\n\nWhat daily AI-assisted development actually feels like: the dopamine, the fatigue, and the things nobody warns you about.\n\n\n\n\n\nFeb 15, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nHere we go again\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 13, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
-  },
-  {
-    "objectID": "en/contact.html",
-    "href": "en/contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Have a question, project idea, or just want to connect? Fill out the form below and I’ll get back to you.\nYou can also reach me directly at contact@raphaelsimon.fr.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "en/index.html#recent",
-    "href": "en/index.html#recent",
-    "title": "Raphaël Simon",
-    "section": "Recent",
-    "text": "Recent\n\n  Skills as packages\n  24 Feb, 2026\n  \nThe more I use CLI LLM tools like Claude Code and Opencode, the more\nI realise that : - the skills specification is one of the best ideas\nI’ve seen and used until now - it does exactly what packages do with my\nfavourite languages : factorise some cool stuff into reusable chunks\nthat I can call with very few words - it’s still not mature and it\nshould definitely evolve to behave like packages\nI’ve been experimenting with ideas that revolve around this skills as\npackages approximation and I like the current results enough that I want\nto talk about it, if only to read it back again in a few months and see\nhow bad this take is. My current take on this is an agent kit manager\n(akm)\nLLM Skills, as in the open\nspecification for a reusable prompt format, are CLEVER. Everyone was\nplaying around with prompt engineering and reusing bits that worked in\nlarger and larger prompts, copy and pasting things, cross referencing\nstructural documents. Skills deliver on all fronts : progressive\ndisclosure lets us save some context for the good stuff before landing\nin the dumb\nzone, self-activation means we don’t have to waste turns or tokens\nnaming the invocation, and the folder structure means we can have even\nmore progressive disclosure, with files read only in certain situations,\nscripts used as part of the skill … ...  \n  Read more →\n\n\n  Two months in a race car\n  15 Feb, 2026\n  \nSince the end of December 2025, I’ve spent 10-12 hours a day writing\nsoftware with LLM coding agents and CLI-tools.\nI’ve kept track of the experience from day one of trying out Opus\n4.5, across notes on my phone. This post is about what it actually feels\nlike: going from an e-bike to a race car.\nIn the first 3 quarters of 2025, LLMs were as useful to me as they\nhad been since OpenAI unleashed ChatGPT on all of us. I felt like nobody\nhad cracked a sustainable workflow. Lots of copy and paste from the web\nchat UI. Cool demos and some attempts at more autonomy but lots of\nhorror stories (bye bye production DB). Models hallucinated just as much\nas they used to, too much for production trust. The output wasn’t far\nenough ahead of what a competent human could produce, in most\ninstances.\nTwo things changed, almost at once.\n\nModels got meaningfully better. Not incrementally. With the\nrelease of Anthropic’s Claude Opus 4.5, suddenly we got better one-shot\nsuccesses. Better coherence across long plans. Fewer moments where the\nmodel drifts away from what you asked.\nCLI\nagents like Claude Code (or Copilot CLI, Mistral Vibe, Opencode…)\ngave models access to the machine, in the right way. grep,\nfind, git, CI/CD: bash is all you need\napparently! The model can explore code without wasting tokens. It can\nparticipate in versioning its own work, and documenting code. It can run\ntests, read failures, try again. It could do all of this in parallel\nacross branches, or git-worktrees.\n  \n  Read more →\n\n\n  Here we go again\n  13 Feb, 2026\n  \nWelcome to my blog! This is where I’ll share my ramblings, on\nanything ranging from medicine and public health to software\nengineering, data science, and the interesting problems that emerge at\ntheir intersections.\nI’ve been trying to run a blog since I was 11, that’s more than 20\nyears ago. What happened now ? I don’t know. I guess I got old enough to\nrealise how important writing is ? Or maybe I’m just in a phase that\nwill last two weeks.\nWho knows ?  \n  Read more →\n\nView all posts →"
-  },
-  {
-    "objectID": "en/index.html#highlights",
-    "href": "en/index.html#highlights",
-    "title": "Raphaël Simon",
-    "section": "Highlights",
-    "text": "Highlights\n\nFeatured Posts\n\nTwo months in a race car\n\n\n\nThings I Built\n\nAutoPMSI\nHADVISOR"
+    "text": "Les skills sont des packages\n\n\n\nia\n\ningenierie-logicielle\n\nllm\n\nafk\n\n\n\nComment je vois les skills et comment je les gère\n\n\n\n\n\n24 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nDeux mois dans une voiture de course\n\n\n\nia\n\ningenierie-logicielle\n\npersonnel\n\n\n\nCe que le développement assisté par IA au quotidien fait vraiment ressentir : la dopamine, la fatigue, et ce dont personne ne vous prévient.\n\n\n\n\n\n15 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nBonjour le Monde\n\n\n\nmeta\n\nbienvenue\n\n\n\nBienvenue sur mon nouveau blog - à quoi s’attendre et pourquoi j’écris.\n\n\n\n\n\n2 févr. 2026\n\n\nRaphaël Simon\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
   },
   {
     "objectID": "en/about.html",
@@ -98,67 +84,46 @@
     "text": "Consulting\nI help organizations tackle niche and complex interdisciplinary problems. If you have a challenging project that doesn’t fit neatly into traditional categories, let’s talk."
   },
   {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html",
-    "title": "Two months in a race car",
+    "objectID": "en/contact.html",
+    "href": "en/contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "Since the end of December 2025, I’ve spent 10-12 hours a day writing software with LLM coding agents and CLI-tools.\nI’ve kept track of the experience from day one of trying out Opus 4.5, across notes on my phone. This post is about what it actually feels like: going from an e-bike to a race car."
+    "text": "Have a question, project idea, or just want to connect? Fill out the form below and I’ll get back to you.\nYou can also reach me directly at contact@raphaelsimon.fr.\n\n\n\n Back to top"
   },
   {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#something-changed-in-november",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#something-changed-in-november",
-    "title": "Two months in a race car",
-    "section": "Something changed in November",
-    "text": "Something changed in November\nIn the first 3 quarters of 2025, LLMs were as useful to me as they had been since OpenAI unleashed ChatGPT on all of us. I felt like nobody had cracked a sustainable workflow. Lots of copy and paste from the web chat UI. Cool demos and some attempts at more autonomy but lots of horror stories (bye bye production DB). Models hallucinated just as much as they used to, too much for production trust. The output wasn’t far enough ahead of what a competent human could produce, in most instances.\nTwo things changed, almost at once.\n\nModels got meaningfully better. Not incrementally. With the release of Anthropic’s Claude Opus 4.5, suddenly we got better one-shot successes. Better coherence across long plans. Fewer moments where the model drifts away from what you asked.\nCLI agents like Claude Code (or Copilot CLI, Mistral Vibe, Opencode…) gave models access to the machine, in the right way. grep, find, git, CI/CD: bash is all you need apparently! The model can explore code without wasting tokens. It can participate in versioning its own work, and documenting code. It can run tests, read failures, try again. It could do all of this in parallel across branches, or git-worktrees.\n\nI had toyed with giving access to tools using R functions to the LLM after posit::conf 2025, but bash gives you everything: python, R, node, rust… Suddenly, I can codify what I want the LLM to do in a specific way and reliably!\nNeither alone was sufficient. Together: superpower (yes, the most popular Claude Code skill is very very well named).\nHere’s what I built in two months, solo, while keeping up with my normal tasks in a full-time job:\n\nThis personal website with custom CSS, Lua scripts, and a homegrown multi-language system. I’d been postponing this for ages\nA DuckDB WASM web application for hospital data analysis that I’d kept in a backlog since September 2023\nMy personal homelab with 5 services running in Podman Quadlets in an old machine serving my family, a homepage and a Wake-on-LAN trigger on my RPi, a Tailscale network for it all. I’d always wanted to find the time to recycle that old desktop and learn how to setup Immich and paperless-ngx.\nDocumentation and scripts for a CLI utility at work solving a blocking problem we’d been stuck on for months\nA Rust port of a very cool Google research paper I liked back in March 2025, couldn’t reproduce at the time using Sonnet in the chat UI. It was my first use of Claude Code, on my phone using the Claude Code Web UI, the morning after Christmas. It took 12 days, and only because I wanted to really take the time to learn and practice the Rust patterns.\n\nWhat I seriously see myself doing IN THE NEXT 2 WEEKS: - An R package wrapping those CLI scripts for my coworkers - A major refactor of a package I maintain at work, plus a webapp for a conference presentation - An agent skills sharing system across the organization. I want to build the skillverse, a way to pair a package with a skill at using it well.\nI am not a 10x engineer. I am an ordinary dev who is suddenly unlocked."
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html",
+    "title": "Here we go again",
+    "section": "",
+    "text": "Welcome to my blog! This is where I’ll share my ramblings, on anything ranging from medicine and public health to software engineering, data science, and the interesting problems that emerge at their intersections."
   },
   {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-bicycle-and-the-racing-car.",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-bicycle-and-the-racing-car.",
-    "title": "Two months in a race car",
-    "section": "The bicycle and the racing car.",
-    "text": "The bicycle and the racing car.\nHere’s the analogy I keep coming back to.\nLearning to code was like riding a bicycle. Full control. You feel every bump. You go at your own speed. It’s tiring but in a healthy way.\nIDE autocompletion and web-based LLM chat were like having an e-bike. Faster. More comfortable. You still steer. You have to pay attention to not get carried away by a speed you’re not fully producing yourself.\nCLI agents are the racing car.\nSpeed, so much speed. But such speed costs concentration. The smallest error at this velocity is a crash. And your physical condition – sleep, focus, stress – suddenly matters a lot. A tired pilot crashes. And I believe that, with the current outlook, by the same time next year I’ll be sitting in the cockpit of a fighter jet.1"
+    "objectID": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "href": "en/blog/posts/2026-02-02-hello-world/index.html#why-write",
+    "title": "Here we go again",
+    "section": "Why Write?",
+    "text": "Why Write?\nI’ve been trying to run a blog since I was 11, that’s more than 20 years ago. What happened now ? I don’t know. I guess I got old enough to realise how important writing is ? Or maybe I’m just in a phase that will last two weeks.\nWho knows ?"
   },
   {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-nobody-warned-me-about",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-nobody-warned-me-about",
-    "title": "Two months in a race car",
-    "section": "What nobody warned me about",
-    "text": "What nobody warned me about\nTwo months in, here are the psychological effects I’ve noticed in myself. I write them down because I’ve found very few honest accounts of what this does to you.\nRate limit compulsion. My plan resets every 5 hours. If I haven’t hit the limit, I feel like I’m wasting it. This is straight up a drug dealer’s engagement technique. I recognize it. I still fall for it.\nDopamine of speed. The execution is so fast it creates a craving. I want more. Sometimes at the cost of not checking the results. The rush of watching code materialize is genuinely hard to resist.\nPlanning aversion. Preparing skills, docs, instructions – it all feels slow. The pull to jump straight into prompting is strong. This is the opposite of what good engineering looks like, and despite KNOWING that I get good results only when the preparation steps are done right, I still get pulled.\nScreen hypnosis. I catch myself watching the “executing” line in the terminal, mesmerized. The tech that should free me to take a walk glues me to my screen.\nAttachment to bad output. It’s stupidly hard to re-run the same prompt for a better result. I become attached to whatever the model produced. Even when I know it’s suboptimal. Even when I know a second attempt would be better.\nThe influence problem. Even with a rigorous plan in front of me, I deviate, like I suddenly am a goldfish or a labradoodle. The model suggests something. It sounds reasonable. I accept it without enough thought. Then I’m off-plan, adding cool UI effects when the core isn’t finished and realize it twenty minutes later. LLMs are really good at persuading you to do things you didn’t plan to do.\nThe anthropomorphism trap. I tell my intern daily – sometimes multiple times a day – not to anthropomorphize the model. It limits how we think about using it. It pushes us into terrible cognitive biases. And then I catch myself doing the exact same thing.\nThe Challenger disaster. I often catch myself not thinking hard enough about the consequences of allowing a tool to run on a machine I care about. I’ve set up a VPS specifically for risky operations. I still take stupid risks on my personal machines."
+    "objectID": "en/blog/index.html",
+    "href": "en/blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Skills as packages\n\n\n\nai\n\nsoftware-engineering\n\nllm\n\nafk\n\n\n\nHow I look at skills and how I manage them\n\n\n\n\n\nFeb 24, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nTwo months in a race car\n\n\n\nai\n\nsoftware-engineering\n\npersonal\n\n\n\nWhat daily AI-assisted development actually feels like: the dopamine, the fatigue, and the things nobody warns you about.\n\n\n\n\n\nFeb 15, 2026\n\n\nRaphaël Simon\n\n\n\n\n\n\n\n\n\n\n\n\nHere we go again\n\n\n\nmeta\n\nwelcome\n\n\n\nWelcome to my blog - what to expect and why I’m writing.\n\n\n\n\n\nFeb 13, 2026\n\n\nRaphaël Simon\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-fatigue-is-real",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-fatigue-is-real",
-    "title": "Two months in a race car",
-    "section": "The fatigue is real",
-    "text": "The fatigue is real\nAfter a long session, especially with parallel agents / terminals, I’m exhausted. Not the good tired of deep focus. The bad tired of constant decision-making and rapid context-switching. I’ve talked about it with people who I know are deep into this new workflow, and they have felt it as well. It made me feel seen when I read a blog about it. Someone told me that it’s the same fatigue as when we learned computer science / how to code. Maybe! But it feels a bit different.\nI think the fighter jet metaphor works well here. I’m processing more information per minute. I’m making more decisions per hour. I’m switching contexts faster than maybe my brain is used to, or even was designed for. And when I run multiple agents in parallel – which is where the real throughput comes from, and it will only grow from here – I’ve essentially become air traffic control!"
+    "objectID": "en/index.html#recent",
+    "href": "en/index.html#recent",
+    "title": "Raphaël Simon",
+    "section": "Recent",
+    "text": "Recent\n\n  Skills as packages\n  24 Feb, 2026\n  \nThe more I use CLI LLM tools like Claude Code and Opencode, the more\nI realise that : - the skills specification is one of the best ideas\nI’ve seen and used until now - it does exactly what packages do with my\nfavourite languages : factorise some cool stuff into reusable chunks\nthat I can call with very few words - it’s still not mature and it\nshould definitely evolve to behave like packages\nI’ve been experimenting with ideas that revolve around this skills as\npackages approximation and I like the current results enough that I want\nto talk about it, if only to read it back again in a few months and see\nhow bad this take is. My current take on this is an agent kit manager\n(akm)\nLLM Skills, as in the open\nspecification for a reusable prompt format, are CLEVER. Everyone was\nplaying around with prompt engineering and reusing bits that worked in\nlarger and larger prompts, copy and pasting things, cross referencing\nstructural documents. Skills deliver on all fronts : progressive\ndisclosure lets us save some context for the good stuff before landing\nin the dumb\nzone, self-activation means we don’t have to waste turns or tokens\nnaming the invocation, and the folder structure means we can have even\nmore progressive disclosure, with files read only in certain situations,\nscripts used as part of the skill … ...  \n  Read more →\n\n\n  Two months in a race car\n  15 Feb, 2026\n  \nSince the end of December 2025, I’ve spent 10-12 hours a day writing\nsoftware with LLM coding agents and CLI-tools.\nI’ve kept track of the experience from day one of trying out Opus\n4.5, across notes on my phone. This post is about what it actually feels\nlike: going from an e-bike to a race car.\nIn the first 3 quarters of 2025, LLMs were as useful to me as they\nhad been since OpenAI unleashed ChatGPT on all of us. I felt like nobody\nhad cracked a sustainable workflow. Lots of copy and paste from the web\nchat UI. Cool demos and some attempts at more autonomy but lots of\nhorror stories (bye bye production DB). Models hallucinated just as much\nas they used to, too much for production trust. The output wasn’t far\nenough ahead of what a competent human could produce, in most\ninstances.\nTwo things changed, almost at once.\n\nModels got meaningfully better. Not incrementally. With the\nrelease of Anthropic’s Claude Opus 4.5, suddenly we got better one-shot\nsuccesses. Better coherence across long plans. Fewer moments where the\nmodel drifts away from what you asked.\nCLI\nagents like Claude Code (or Copilot CLI, Mistral Vibe, Opencode…)\ngave models access to the machine, in the right way. grep,\nfind, git, CI/CD: bash is all you need\napparently! The model can explore code without wasting tokens. It can\nparticipate in versioning its own work, and documenting code. It can run\ntests, read failures, try again. It could do all of this in parallel\nacross branches, or git-worktrees.\n  \n  Read more →\n\n\n  Here we go again\n  13 Feb, 2026\n  \nWelcome to my blog! This is where I’ll share my ramblings, on\nanything ranging from medicine and public health to software\nengineering, data science, and the interesting problems that emerge at\ntheir intersections.\nI’ve been trying to run a blog since I was 11, that’s more than 20\nyears ago. What happened now ? I don’t know. I guess I got old enough to\nrealise how important writing is ? Or maybe I’m just in a phase that\nwill last two weeks.\nWho knows ?  \n  Read more →\n\nView all posts →"
   },
   {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-safety-net-is-not-the-model",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-safety-net-is-not-the-model",
-    "title": "Two months in a race car",
-    "section": "The safety net is not the model",
-    "text": "The safety net is not the model\nI haven’t measured it, but my gut feeling says hallucination rates haven’t changed dramatically. Still around 8-10% of the time, as I’ve felt before. What changed is the methodology the community and frontier LLM providers have built around it.\nTests are the real safety net. LLM output is chaos – the model generates code fast, without internal quality constraints. Tests are the checkpoints / guardrails. Without them, the LLM produces spaghetti at unprecedented speed. With them, there’s still a chance of spaghetti, but it’s easier to keep track and stay on target.\nGit + GitHub gives me branch-based work and human review, and a familiar workflow. Lean methodology – plan, architecture decision records, exit criteria, definition of done – works REALLY well for pairing humans and LLM. It creates a retrocontrol framework. I used to dislike some of the rituals around agile and friends, but I have to say it’s a perfect fit for building a harness for this thing.\nConversely, I feel like this means you still can’t really use these tools in a language you are not good enough at. For throwaway code, no problem! Quick HTML tools, a personal script or library, something for the homelab. But for production, hell no. We need to be able to read and judge, at least until we evolve to the next logical step: tons of agents working in a way that creates the perfect harness. It feels possible now. I don’t know exactly how, but maybe having thousands or millions (or more!) of LLM agents work on something might allow us to tackle new issues, or old issues for which we had to rely on suboptimal solutions because no one in the history of man has been able to employ millions of humans to the same task."
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-questions-that-keep-me-up",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-questions-that-keep-me-up",
-    "title": "Two months in a race car",
-    "section": "The questions that keep me up",
-    "text": "The questions that keep me up\nWho captures the value? If I’m 2-3x more productive, my employer gets 2-3x the output. I get the same salary and more fatigue. The tool I like costs 20 to 200 EUR/month. The equivalent human hours cost orders of magnitude more. This is a value capture problem. And right now, the answer is: not the engineer. I’d like to see people try to reduce the workweek, we can clearly have our cake and eat it too. Although I’m not naive: the LLM doesn’t need to sleep, and that means someone will think it needs to be given instructions around the clock…\nWhere do juniors go? You need senior experience to review LLM output, validate architecture, catch subtle bugs, manage plans. If there’s no place for juniors, how do you train the seniors of tomorrow? This isn’t a hypothetical. I feel like it’s already happening around me.\nWhat happens to our skills? Basic neurology: unused synaptic connections get pruned. If engineers stop writing code because AI does it, their coding skill degrades. I need to seriously think about a work methodology that helps me maintain my skills, lest I climb the Dunning-Kruger curve backwards. I haven’t solved this yet. It feels like what we do with workouts / running, but for the mind?\nWhat happens next? Between the current generation and the previous one, 6 months produced a massive leap. Open-source models lag about 6 months behind. If frontier models can contribute to building the next frontier model, that 6-month gap could become permanent. Or worse, it could widen. The sovereignty implications for a non-US public agency are… significant."
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-ive-learned-so-far",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-ive-learned-so-far",
-    "title": "Two months in a race car",
-    "section": "What I’ve learned so far",
-    "text": "What I’ve learned so far\nCurrently, I’m operating at what I’d call a supervisory level. I review diffs. I write plans. I manage agents. I rarely type code character by character anymore. And I’ve done more to clear my personal backlog in two months than I had in the past 2 years. I can’t yet say the same for my full-time job, but that’s both because I’ve preferred using my personal Claude Code Subscription for personal projects, and also because I wanted to learn the meta-tools first before taking the leap on my full-time job responsibilities. But I can’t delay any longer, and I won’t.\nBut I’m more tired. I’m more distracted. I catch myself cutting corners I wouldn’t have cut before. I recognize addiction patterns in my own behavior.\nThe honest assessment: this is a superpower, or a supercar at least. And it’s draining. Both things are true. Most people writing about AI-assisted development pick one side. The evangelists talk about the productivity. The skeptics talk about the limits. The reality is messier.\nWe NEED to talk about the human cost. Not to slow down adoption. But because the people in the cockpit need to know what the race does to them.\n\nI wrote this post with the help of Claude Code (mainly to summarise the long list of references I’d accumulated in two months, and to suggest a plan for this post from the raw and un-ordered notes). It took a fraction of the time it would have taken otherwise. I am also more tired than I should be on a Sunday night. Make of that what you will."
-  },
-  {
-    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#footnotes",
-    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#footnotes",
-    "title": "Two months in a race car",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nFiguratively. While I have a valid medical LAPL licence for it, I certainly do NOT hold a permit for that!↩︎"
+    "objectID": "en/index.html#highlights",
+    "href": "en/index.html#highlights",
+    "title": "Raphaël Simon",
+    "section": "Highlights",
+    "text": "Highlights\n\nFeatured Posts\n\nSkills as packages\nTwo months in a race car\n\n\n\nThings I Built\n\nAgent Kit Manager\nAutoPMSI\nHADVISOR"
   },
   {
     "objectID": "en/blog/posts/2026-02-24-cold-skills/index.html",
@@ -238,46 +203,158 @@
     "text": "Footnotes\n\n\nIf you don’t know about that one you’re missing something crucial. The brainstorming skill is probably the single most value-adding skill I’ve used yet↩︎"
   },
   {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html",
+    "title": "Two months in a race car",
+    "section": "",
+    "text": "Since the end of December 2025, I’ve spent 10-12 hours a day writing software with LLM coding agents and CLI-tools.\nI’ve kept track of the experience from day one of trying out Opus 4.5, across notes on my phone. This post is about what it actually feels like: going from an e-bike to a race car."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#something-changed-in-november",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#something-changed-in-november",
+    "title": "Two months in a race car",
+    "section": "Something changed in November",
+    "text": "Something changed in November\nIn the first 3 quarters of 2025, LLMs were as useful to me as they had been since OpenAI unleashed ChatGPT on all of us. I felt like nobody had cracked a sustainable workflow. Lots of copy and paste from the web chat UI. Cool demos and some attempts at more autonomy but lots of horror stories (bye bye production DB). Models hallucinated just as much as they used to, too much for production trust. The output wasn’t far enough ahead of what a competent human could produce, in most instances.\nTwo things changed, almost at once.\n\nModels got meaningfully better. Not incrementally. With the release of Anthropic’s Claude Opus 4.5, suddenly we got better one-shot successes. Better coherence across long plans. Fewer moments where the model drifts away from what you asked.\nCLI agents like Claude Code (or Copilot CLI, Mistral Vibe, Opencode…) gave models access to the machine, in the right way. grep, find, git, CI/CD: bash is all you need apparently! The model can explore code without wasting tokens. It can participate in versioning its own work, and documenting code. It can run tests, read failures, try again. It could do all of this in parallel across branches, or git-worktrees.\n\nI had toyed with giving access to tools using R functions to the LLM after posit::conf 2025, but bash gives you everything: python, R, node, rust… Suddenly, I can codify what I want the LLM to do in a specific way and reliably!\nNeither alone was sufficient. Together: superpower (yes, the most popular Claude Code skill is very very well named).\nHere’s what I built in two months, solo, while keeping up with my normal tasks in a full-time job:\n\nThis personal website with custom CSS, Lua scripts, and a homegrown multi-language system. I’d been postponing this for ages\nA DuckDB WASM web application for hospital data analysis that I’d kept in a backlog since September 2023\nMy personal homelab with 5 services running in Podman Quadlets in an old machine serving my family, a homepage and a Wake-on-LAN trigger on my RPi, a Tailscale network for it all. I’d always wanted to find the time to recycle that old desktop and learn how to setup Immich and paperless-ngx.\nDocumentation and scripts for a CLI utility at work solving a blocking problem we’d been stuck on for months\nA Rust port of a very cool Google research paper I liked back in March 2025, couldn’t reproduce at the time using Sonnet in the chat UI. It was my first use of Claude Code, on my phone using the Claude Code Web UI, the morning after Christmas. It took 12 days, and only because I wanted to really take the time to learn and practice the Rust patterns.\n\nWhat I seriously see myself doing IN THE NEXT 2 WEEKS: - An R package wrapping those CLI scripts for my coworkers - A major refactor of a package I maintain at work, plus a webapp for a conference presentation - An agent skills sharing system across the organization. I want to build the skillverse, a way to pair a package with a skill at using it well.\nI am not a 10x engineer. I am an ordinary dev who is suddenly unlocked."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-bicycle-and-the-racing-car.",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-bicycle-and-the-racing-car.",
+    "title": "Two months in a race car",
+    "section": "The bicycle and the racing car.",
+    "text": "The bicycle and the racing car.\nHere’s the analogy I keep coming back to.\nLearning to code was like riding a bicycle. Full control. You feel every bump. You go at your own speed. It’s tiring but in a healthy way.\nIDE autocompletion and web-based LLM chat were like having an e-bike. Faster. More comfortable. You still steer. You have to pay attention to not get carried away by a speed you’re not fully producing yourself.\nCLI agents are the racing car.\nSpeed, so much speed. But such speed costs concentration. The smallest error at this velocity is a crash. And your physical condition – sleep, focus, stress – suddenly matters a lot. A tired pilot crashes. And I believe that, with the current outlook, by the same time next year I’ll be sitting in the cockpit of a fighter jet.1"
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-nobody-warned-me-about",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-nobody-warned-me-about",
+    "title": "Two months in a race car",
+    "section": "What nobody warned me about",
+    "text": "What nobody warned me about\nTwo months in, here are the psychological effects I’ve noticed in myself. I write them down because I’ve found very few honest accounts of what this does to you.\nRate limit compulsion. My plan resets every 5 hours. If I haven’t hit the limit, I feel like I’m wasting it. This is straight up a drug dealer’s engagement technique. I recognize it. I still fall for it.\nDopamine of speed. The execution is so fast it creates a craving. I want more. Sometimes at the cost of not checking the results. The rush of watching code materialize is genuinely hard to resist.\nPlanning aversion. Preparing skills, docs, instructions – it all feels slow. The pull to jump straight into prompting is strong. This is the opposite of what good engineering looks like, and despite KNOWING that I get good results only when the preparation steps are done right, I still get pulled.\nScreen hypnosis. I catch myself watching the “executing” line in the terminal, mesmerized. The tech that should free me to take a walk glues me to my screen.\nAttachment to bad output. It’s stupidly hard to re-run the same prompt for a better result. I become attached to whatever the model produced. Even when I know it’s suboptimal. Even when I know a second attempt would be better.\nThe influence problem. Even with a rigorous plan in front of me, I deviate, like I suddenly am a goldfish or a labradoodle. The model suggests something. It sounds reasonable. I accept it without enough thought. Then I’m off-plan, adding cool UI effects when the core isn’t finished and realize it twenty minutes later. LLMs are really good at persuading you to do things you didn’t plan to do.\nThe anthropomorphism trap. I tell my intern daily – sometimes multiple times a day – not to anthropomorphize the model. It limits how we think about using it. It pushes us into terrible cognitive biases. And then I catch myself doing the exact same thing.\nThe Challenger disaster. I often catch myself not thinking hard enough about the consequences of allowing a tool to run on a machine I care about. I’ve set up a VPS specifically for risky operations. I still take stupid risks on my personal machines."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-fatigue-is-real",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-fatigue-is-real",
+    "title": "Two months in a race car",
+    "section": "The fatigue is real",
+    "text": "The fatigue is real\nAfter a long session, especially with parallel agents / terminals, I’m exhausted. Not the good tired of deep focus. The bad tired of constant decision-making and rapid context-switching. I’ve talked about it with people who I know are deep into this new workflow, and they have felt it as well. It made me feel seen when I read a blog about it. Someone told me that it’s the same fatigue as when we learned computer science / how to code. Maybe! But it feels a bit different.\nI think the fighter jet metaphor works well here. I’m processing more information per minute. I’m making more decisions per hour. I’m switching contexts faster than maybe my brain is used to, or even was designed for. And when I run multiple agents in parallel – which is where the real throughput comes from, and it will only grow from here – I’ve essentially become air traffic control!"
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-safety-net-is-not-the-model",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-safety-net-is-not-the-model",
+    "title": "Two months in a race car",
+    "section": "The safety net is not the model",
+    "text": "The safety net is not the model\nI haven’t measured it, but my gut feeling says hallucination rates haven’t changed dramatically. Still around 8-10% of the time, as I’ve felt before. What changed is the methodology the community and frontier LLM providers have built around it.\nTests are the real safety net. LLM output is chaos – the model generates code fast, without internal quality constraints. Tests are the checkpoints / guardrails. Without them, the LLM produces spaghetti at unprecedented speed. With them, there’s still a chance of spaghetti, but it’s easier to keep track and stay on target.\nGit + GitHub gives me branch-based work and human review, and a familiar workflow. Lean methodology – plan, architecture decision records, exit criteria, definition of done – works REALLY well for pairing humans and LLM. It creates a retrocontrol framework. I used to dislike some of the rituals around agile and friends, but I have to say it’s a perfect fit for building a harness for this thing.\nConversely, I feel like this means you still can’t really use these tools in a language you are not good enough at. For throwaway code, no problem! Quick HTML tools, a personal script or library, something for the homelab. But for production, hell no. We need to be able to read and judge, at least until we evolve to the next logical step: tons of agents working in a way that creates the perfect harness. It feels possible now. I don’t know exactly how, but maybe having thousands or millions (or more!) of LLM agents work on something might allow us to tackle new issues, or old issues for which we had to rely on suboptimal solutions because no one in the history of man has been able to employ millions of humans to the same task."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-questions-that-keep-me-up",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#the-questions-that-keep-me-up",
+    "title": "Two months in a race car",
+    "section": "The questions that keep me up",
+    "text": "The questions that keep me up\nWho captures the value? If I’m 2-3x more productive, my employer gets 2-3x the output. I get the same salary and more fatigue. The tool I like costs 20 to 200 EUR/month. The equivalent human hours cost orders of magnitude more. This is a value capture problem. And right now, the answer is: not the engineer. I’d like to see people try to reduce the workweek, we can clearly have our cake and eat it too. Although I’m not naive: the LLM doesn’t need to sleep, and that means someone will think it needs to be given instructions around the clock…\nWhere do juniors go? You need senior experience to review LLM output, validate architecture, catch subtle bugs, manage plans. If there’s no place for juniors, how do you train the seniors of tomorrow? This isn’t a hypothetical. I feel like it’s already happening around me.\nWhat happens to our skills? Basic neurology: unused synaptic connections get pruned. If engineers stop writing code because AI does it, their coding skill degrades. I need to seriously think about a work methodology that helps me maintain my skills, lest I climb the Dunning-Kruger curve backwards. I haven’t solved this yet. It feels like what we do with workouts / running, but for the mind?\nWhat happens next? Between the current generation and the previous one, 6 months produced a massive leap. Open-source models lag about 6 months behind. If frontier models can contribute to building the next frontier model, that 6-month gap could become permanent. Or worse, it could widen. The sovereignty implications for a non-US public agency are… significant."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-ive-learned-so-far",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#what-ive-learned-so-far",
+    "title": "Two months in a race car",
+    "section": "What I’ve learned so far",
+    "text": "What I’ve learned so far\nCurrently, I’m operating at what I’d call a supervisory level. I review diffs. I write plans. I manage agents. I rarely type code character by character anymore. And I’ve done more to clear my personal backlog in two months than I had in the past 2 years. I can’t yet say the same for my full-time job, but that’s both because I’ve preferred using my personal Claude Code Subscription for personal projects, and also because I wanted to learn the meta-tools first before taking the leap on my full-time job responsibilities. But I can’t delay any longer, and I won’t.\nBut I’m more tired. I’m more distracted. I catch myself cutting corners I wouldn’t have cut before. I recognize addiction patterns in my own behavior.\nThe honest assessment: this is a superpower, or a supercar at least. And it’s draining. Both things are true. Most people writing about AI-assisted development pick one side. The evangelists talk about the productivity. The skeptics talk about the limits. The reality is messier.\nWe NEED to talk about the human cost. Not to slow down adoption. But because the people in the cockpit need to know what the race does to them.\n\nI wrote this post with the help of Claude Code (mainly to summarise the long list of references I’d accumulated in two months, and to suggest a plan for this post from the raw and un-ordered notes). It took a fraction of the time it would have taken otherwise. I am also more tired than I should be on a Sunday night. Make of that what you will."
+  },
+  {
+    "objectID": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#footnotes",
+    "href": "en/blog/posts/2026-02-15-bike-to-racecar/index.html#footnotes",
+    "title": "Two months in a race car",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFiguratively. While I have a valid medical LAPL licence for it, I certainly do NOT hold a permit for that!↩︎"
+  },
+  {
     "objectID": "fr/index.html#récents",
     "href": "fr/index.html#récents",
     "title": "Raphaël Simon",
     "section": "Récents",
-    "text": "Récents\n\n  Deux mois dans une voiture de course\n  15 fev., 2026\n  \nDepuis fin décembre 2025, je passe 10 à 12 heures par jour à écrire\ndu logiciel avec des agents LLM et des outils en ligne de commande.\nJ’ai pris des notes depuis le premier jour où j’ai essayé Opus 4.5,\nsur mon téléphone. Ce billet raconte ce que ça fait vraiment : passer du\nvélo électrique à la voiture de course.\nPendant les 3 premiers trimestres de 2025, les LLM m’étaient aussi\nutiles qu’ils l’avaient été depuis qu’OpenAI a lâché ChatGPT sur nous\ntous. J’avais l’impression que personne n’avait trouvé de workflow\ndurable. Beaucoup de copier-coller depuis l’interface web. Des démos\nimpressionnantes et quelques tentatives d’autonomie, mais aussi beaucoup\nd’histoires d’horreur (adieu la base de prod). Les modèles hallucinaient\ntout autant qu’avant, trop pour qu’on leur fasse confiance en\nproduction. Dans la plupart des cas, le résultat n’était pas assez en\navance sur ce qu’un humain compétent pouvait produire.\nDeux choses ont changé, presque en même temps.\n\nLes modèles se sont nettement améliorés. Pas de manière\nincrémentale. Avec la sortie de Claude Opus 4.5 d’Anthropic, on a\nsoudain obtenu de meilleurs résultats du premier coup. Une meilleure\ncohérence sur des plans longs. Moins de moments où le modèle dérive de\nce qu’on lui a demandé.\nLes agents en\nligne de commande comme Claude Code (ou Copilot CLI, Mistral Vibe,\nOpencode…) ont donné aux modèles accès à la machine, de la bonne\nmanière. grep, find, git, CI/CD :\nbash, c’est tout ce qu’il faut apparemment ! Le modèle peut explorer du\ncode sans gaspiller de tokens. Il peut participer au versionnage de son\npropre travail et à la documentation. Il peut lancer des tests, lire les\nerreurs, réessayer. Il peut faire tout ça en parallèle sur plusieurs\nbranches, ou des git-worktrees.\n  \n  Lire la suite →\n\n\n  Bonjour le Monde\n  2 fev., 2026\n  \nBienvenue sur mon blog ! C’est ici que je partagerai mes divagations,\nsur à peu près tout : de la médecine et la santé publique à l’ingénierie\nlogicielle, la science des données, et les problèmes intéressants qui\némergent à leurs intersections.\nJ’essaie de tenir un blog depuis mes 11 ans, ça fait plus de 20 ans\nmaintenant. Qu’est-ce qui a changé ? Aucune idée. J’imagine que j’ai\nassez vieilli pour comprendre à quel point écrire est important ? Ou\nalors c’est juste une lubie qui durera deux semaines.\nQui sait ?  \n  Lire la suite →\n\nVoir tous les articles →"
+    "text": "Récents\n\n  Les skills sont des packages\n  24 fev., 2026\n  \nPlus j’utilise des outils LLM en CLI comme Claude Code et Opencode,\nplus je réalise que :\n\nle principe des skills est l’une des meilleures idées que j’ai vues\net utilisées jusqu’ici dans l’exercice de travailler avec des LLMs\nça fait exactement ce que les packages font avec mes langages\npréférés : factoriser des trucs complexes et utiles en briques\nréutilisables qu’on peut appeler en quelques mots\nc’est encore immature et ça devrait clairement évoluer pour se\ncomporter comme des packages\n\nJe bidouille autour de cette approximation skills~=packages et les\nrésultats actuels me plaisent assez pour en parler, ne serait-ce que\npour me relire dans quelques mois et constater à quel point cette prise\nde position vieillit mal. De cette vision découle mon approche actuelle\n: Agent Kit Manager (akm).\nLes LLM Skills, au sens de la spécification ouverte pour un\nformat de prompt réutilisable, c’est MALIN. Tout le monde bidouillait du\nprompt engineering et réutilisait des bouts qui marchaient dans des\nprompts de plus en plus longs, à coups de copier-coller et de renvois\nvers des documents longs comme le bras. Les skills répondent à tout : le\nprogressive disclosure permet de garder du contexte pour l’essentiel\navant d’atterrir dans la dumb zone,\nl’auto-activation fait qu’on ne gaspille ni tours ni tokens à invoquer\nexplicitement le skill, et l’arborescence de dossiers permet d’aller\nencore plus loin dans le progressive disclosure, avec des fichiers lus\nuniquement dans certaines situations, des scripts utilisés par le\nskill… ...  \n  Lire la suite →\n\n\n  Deux mois dans une voiture de course\n  15 fev., 2026\n  \nDepuis fin décembre 2025, je passe 10 à 12 heures par jour à écrire\ndu logiciel avec des agents LLM et des outils en ligne de commande.\nJ’ai pris des notes depuis le premier jour où j’ai essayé Opus 4.5,\nsur mon téléphone. Ce billet raconte ce que ça fait vraiment : passer du\nvélo électrique à la voiture de course.\nPendant les 3 premiers trimestres de 2025, les LLM m’étaient aussi\nutiles qu’ils l’avaient été depuis qu’OpenAI a lâché ChatGPT sur nous\ntous. J’avais l’impression que personne n’avait trouvé de workflow\ndurable. Beaucoup de copier-coller depuis l’interface web. Des démos\nimpressionnantes et quelques tentatives d’autonomie, mais aussi beaucoup\nd’histoires d’horreur (adieu la base de prod). Les modèles hallucinaient\ntout autant qu’avant, trop pour qu’on leur fasse confiance en\nproduction. Dans la plupart des cas, le résultat n’était pas assez en\navance sur ce qu’un humain compétent pouvait produire.\nDeux choses ont changé, presque en même temps.\n\nLes modèles se sont nettement améliorés. Pas de manière\nincrémentale. Avec la sortie de Claude Opus 4.5 d’Anthropic, on a\nsoudain obtenu de meilleurs résultats du premier coup. Une meilleure\ncohérence sur des plans longs. Moins de moments où le modèle dérive de\nce qu’on lui a demandé.\nLes agents en\nligne de commande comme Claude Code (ou Copilot CLI, Mistral Vibe,\nOpencode…) ont donné aux modèles accès à la machine, de la bonne\nmanière. grep, find, git, CI/CD :\nbash, c’est tout ce qu’il faut apparemment ! Le modèle peut explorer du\ncode sans gaspiller de tokens. Il peut participer au versionnage de son\npropre travail et à la documentation. Il peut lancer des tests, lire les\nerreurs, réessayer. Il peut faire tout ça en parallèle sur plusieurs\nbranches, ou des git-worktrees.\n  \n  Lire la suite →\n\n\n  Bonjour le Monde\n  2 fev., 2026\n  \nBienvenue sur mon blog ! C’est ici que je partagerai mes divagations,\nsur à peu près tout : de la médecine et la santé publique à l’ingénierie\nlogicielle, la science des données, et les problèmes intéressants qui\némergent à leurs intersections.\nJ’essaie de tenir un blog depuis mes 11 ans, ça fait plus de 20 ans\nmaintenant. Qu’est-ce qui a changé ? Aucune idée. J’imagine que j’ai\nassez vieilli pour comprendre à quel point écrire est important ? Ou\nalors c’est juste une lubie qui durera deux semaines.\nQui sait ?  \n  Lire la suite →\n\nVoir tous les articles →"
   },
   {
     "objectID": "fr/index.html#sélection",
     "href": "fr/index.html#sélection",
     "title": "Raphaël Simon",
     "section": "Sélection",
-    "text": "Sélection\n\nArticles en vedette\n\nDeux mois dans une voiture de course\n\n\n\nProjets\n\nAutoPMSI\nHADVISOR"
+    "text": "Sélection\n\nArticles en vedette\n\nLes skills comme des packages\nDeux mois dans une voiture de course\n\n\n\nProjets\n\nAgent Kit Manager\nAutoPMSI\nHADVISOR"
   },
   {
-    "objectID": "fr/about.html",
-    "href": "fr/about.html",
-    "title": "À propos",
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html",
+    "title": "Les skills sont des packages",
     "section": "",
-    "text": "Médecin devenu ingénieur. J’ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l’informatique médicale, et finalement le logiciel. Aujourd’hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).\nJe suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l’intersection est floue, plus c’est intéressant.\nBasé en France. Plusieurs langues parlées couramment, d’autres en cours d’apprentissage."
+    "text": "Note\n\n\n\nCet article a été traduit de la version anglaise par un LLM, avec relecture humaine."
   },
   {
-    "objectID": "fr/about.html#biographie",
-    "href": "fr/about.html#biographie",
-    "title": "À propos",
-    "section": "",
-    "text": "Médecin devenu ingénieur. J’ai été formé en médecine, raté la porte de la radiologie, et franchi une autre — vers la santé publique, l’informatique médicale, et finalement le logiciel. Aujourd’hui je construis des choses et réfléchis à la façon dont la technologie façonne les politiques (et vice versa).\nJe suis attiré par les problèmes qui ne rentrent pas proprement dans un seul domaine. Plus l’intersection est floue, plus c’est intéressant.\nBasé en France. Plusieurs langues parlées couramment, d’autres en cours d’apprentissage."
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#les-skills-sont-aux-llm-ce-que-les-packages-sont-aux-langages-de-programmation",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#les-skills-sont-aux-llm-ce-que-les-packages-sont-aux-langages-de-programmation",
+    "title": "Les skills sont des packages",
+    "section": "Les skills sont aux LLM ce que les packages sont aux langages de programmation",
+    "text": "Les skills sont aux LLM ce que les packages sont aux langages de programmation\nPlus j’utilise des outils LLM en CLI comme Claude Code et Opencode, plus je réalise que :\n\nle principe des skills est l’une des meilleures idées que j’ai vues et utilisées jusqu’ici dans l’exercice de travailler avec des LLMs\nça fait exactement ce que les packages font avec mes langages préférés : factoriser des trucs complexes et utiles en briques réutilisables qu’on peut appeler en quelques mots\nc’est encore immature et ça devrait clairement évoluer pour se comporter comme des packages\n\nJe bidouille autour de cette approximation skills~=packages et les résultats actuels me plaisent assez pour en parler, ne serait-ce que pour me relire dans quelques mois et constater à quel point cette prise de position vieillit mal. De cette vision découle mon approche actuelle : Agent Kit Manager (akm)."
   },
   {
-    "objectID": "fr/about.html#expertise",
-    "href": "fr/about.html#expertise",
-    "title": "À propos",
-    "section": "Expertise",
-    "text": "Expertise\n\nMédecine et Santé Publique\nIngénierie Logicielle\nScience des Données\nSystèmes Complexes"
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#les-skills-une-super-idée",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#les-skills-une-super-idée",
+    "title": "Les skills sont des packages",
+    "section": "Les skills, une super idée",
+    "text": "Les skills, une super idée\nLes LLM Skills, au sens de la spécification ouverte pour un format de prompt réutilisable, c’est MALIN. Tout le monde bidouillait du prompt engineering et réutilisait des bouts qui marchaient dans des prompts de plus en plus longs, à coups de copier-coller et de renvois vers des documents longs comme le bras. Les skills répondent à tout : le progressive disclosure permet de garder du contexte pour l’essentiel avant d’atterrir dans la dumb zone, l’auto-activation fait qu’on ne gaspille ni tours ni tokens à invoquer explicitement le skill, et l’arborescence de dossiers permet d’aller encore plus loin dans le progressive disclosure, avec des fichiers lus uniquement dans certaines situations, des scripts utilisés par le skill…\nJuste après la formalisation des actions, les skills sont la meilleure option pour la reproductibilité d’un bon output (ou du moins, de l’output qu’on attend d’une tâche).\nAu quotidien j’utilise 2 outils : Claude Code et Copilot CLI, et j’essaie de reproduire tout ce que j’apprends dans Mistral Vibe et OpenCode aussi. Ils supportent tous les skills. Au moins 30 autres aussi : Cursor, Kimi Code CLI, Antigravity, Cline, Codex, Gemini CLI et tous les autres que je ne peux pas nommer mais qui existent. Si ça c’est pas un consensus, je ne sais pas ce que c’est.\nÀ ce jour, j’ai probablement essayé une centaine de skills. Je dirais environ 80 trouvés en ligne et 10 à 20 construits sur mesure pour un repo ou une situation. Ils orientent l’agent vers des méthodologies de travail comme le lean, le TDD, comment écrire des ADRs, comment faire de la code review, comment utiliser un package R ou JS spécifique… Ça marche !"
   },
   {
-    "objectID": "fr/about.html#conseil",
-    "href": "fr/about.html#conseil",
-    "title": "À propos",
-    "section": "Conseil",
-    "text": "Conseil\nJ’aide les organisations à résoudre des problèmes interdisciplinaires complexes et de niche. Si vous avez un projet difficile qui ne rentre pas dans les catégories traditionnelles, discutons-en."
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#la-gestion-des-skills-doit-mûrir",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#la-gestion-des-skills-doit-mûrir",
+    "title": "Les skills sont des packages",
+    "section": "La gestion des skills doit mûrir",
+    "text": "La gestion des skills doit mûrir\nLe premier truc qui m’a gêné, ça vient du fait que je suis un accumulateur : je téléchargeais des skills à tout va, et je demandais à Opus d’en fabriquer plein à partir de livres/blogs et de la documentation de mes packages préférés, “au cas où”. Et puis je tombe sur un agrégateur de skills qui annonce avoir trouvé plus de 200 000 skills ! Même avec le progressive disclosure, à un ratio ridiculement impossible d’1 token/skill, ça fait toujours plus de tokens que la context window d’Opus, le double de sa “smart window” ! Même si j’étais LOIN d’inonder le contexte du LLM avec mes &lt; 100 skills, j’avais maintenant l’impression de faire un truc pas tenable.\nUn autre problème est apparu encore plus vite : l’obsolescence. Entre superpowers1 qui grossissait sans cesse, mais ne se mettait à jour automatiquement que dans Claude Code (grâce à l’installation via le marketplace), mes propres skills qui évoluaient à chaque session, mes repos se sont vite retrouvés avec des versions différentes des mêmes skills, et je ne pouvais plus suivre ce qui était où ni ce qui marchait ou pas.\nEn plus, tous ces skills devaient être copiés-collés aux bons endroits : .claude, .github, ah non c’est .agents, attends je le veux en global, ah non ça crée de la confusion dans ce repo, ATTENDS cette machine n’a aucun de mes skills globaux !! La frustration de gérer tout ça à la main a vraiment déclenché mon réflexe de nerd d’essayer d’automatiser le truc.\nDernier point, et peut-être pas le moindre : j’ai des sentiments contradictoires sur les skills au niveau du repo. Je comprends l’intérêt d’avoir les skills dans le repo, pour montrer aux autres comment on a utilisé les LLM pour générer du code ou de la documentation. Mais je trouve aussi assez pénible à quel point c’est différent et bruyant par rapport au reste du codebase. Je n’ai pas besoin d’avoir la spec complète commitée dans 4 dossiers différents de mon repo juste parce que je teste 4 outils CLI. Je devrais pouvoir déclarer les skills que j’utilise dans un format compact et standardisé."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#attendez-cest-pas-exactement-le-rôle-des-gestionnaires-de-packages",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#attendez-cest-pas-exactement-le-rôle-des-gestionnaires-de-packages",
+    "title": "Les skills sont des packages",
+    "section": "Attendez : c’est pas exactement le rôle des gestionnaires de packages ?",
+    "text": "Attendez : c’est pas exactement le rôle des gestionnaires de packages ?\nLes skills sont des packages pour LLM, et je pense qu’il faut appliquer les mêmes standards. Tous les langages open source populaires ont des packages et un gestionnaire de packages. Des bouts de code que quelqu’un a empaquetés pour que le programme fasse un truc cool, et qu’on invoque en quelques mots. Factoriser le comportement. On décrit les dépendances dans des fichiers manifeste, on s’appuie sur le versioning, et un ou plusieurs registres pour héberger les dernières versions. C’est le cœur de l’open source : centraliser les efforts, imposer des standards de documentation, et en retour gagner en reproductibilité, en distribution, en commandes d’install / update. Python a PyPi, Node a npm, R a CRAN, Rust a Cargo… Évidemment l’analogie s’effondre parce que les skills ne sont pas du vrai code, mais c’est largement suffisant pour justifier un traitement similaire.\nÇa fait bizarre de construire un truc que, à ma connaissance, personne n’avait encore construit et open-sourcé, alors que je peux pas être le seul à y penser. C’est parce que le coding par LLM atomise tout au lieu de rassembler les idées ? Est-ce que tout le monde développe les trucs cool dans sa cave ? Est-ce que tout le monde a peur de se faire piquer ses idées maintenant que le coût d’écriture du code est en pleine déflation ? Franchement aucune idée, mais je ne rentre dans aucune de ces catégories et j’ai mon propre objectif d’écrire plus : alors me voilà !\nBref, le seul truc que j’ai trouvé quand j’ai commencé à bidouiller la gestion automatisée des skills vers mi-janvier (le repo dit 13/01 pour le premier commit) c’était… rien. Le système de marketplace dans Claude Code était sympa, mais je parle d’une solution open-source et agnostique. Il y a environ 2 semaines j’ai enfin remarqué (grâce à SkillsMP) que npx skills existait, et celui-là est vraiment cool ! Il résolvait pas mal de mes problèmes, surtout la distribution sur de nombreux outils CLI (ils en supportent ~40 !!!), la mise à jour et le suivi depuis la source, la gestion globale/locale.\nMais il restait le problème de la collection grandissante de skills, et de la pollution du repo."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#ma-vision-akm-lagent-kit-manager",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#ma-vision-akm-lagent-kit-manager",
+    "title": "Les skills sont des packages",
+    "section": "Ma vision : akm, l’agent kit manager",
+    "text": "Ma vision : akm, l’agent kit manager\nC’est quoi akm ? Un outil CLI, pour l’instant vraiment juste un patchwork de scripts bash et de rêves.\nIl assemble : - Un stockage à froid pour les skills - Un système de distribution vers les outils CLI LLM - Un système de gestion du scope des skills - Un système de promotion de skills - Un système de centralisation des artifacts (plans etc), hors du repo mais dans le scope du LLM (encore une fois, c’est vraiment juste un add-dir et un wrapper autour du point d’entrée de l’outil CLI) - Un gestionnaire centralisé d’instructions : éditer une fois, distribuer sur tous les outils et repos\nDonc, commençons par le commencement : la nouveauté que j’ai construite pour moi-même, c’est un stockage à froid pour les skills. C’est assez simple : les skills sont rangés dans .local/share/llm-skills sur chaque machine, copie unique, invisibles pour les outils CLI.\nJe génère ensuite un fichier library.json à partir de l’ensemble des dossiers, et je peux ajouter des variables à chaque skill : est-il destiné au dossier global (core: true) ? Quels sont ses tags (pour la recherche) ? Ensuite c’est que des scripts bash et 3 couches d’activation des skills :\n\nCouche 1\nUn autre script crée des symlinks des skills core vers les dossiers de skills globaux de mes 4 outils.\nMa collection grandissante est gérée dans un repo git, que j’utilise comme source de vérité centrale entre machines (library.json inclus), de sorte que sur chaque machine il me suffit de lancer un script bash “sync” pour mettre à jour depuis le remote et reconstruire les symlinks.\n\n\nCouche 2\nAu niveau du repo, je suis assez fier de l’itération actuelle :\nJ’ai un wrapper autour du point d’entrée de chaque outil CLI (claude() etc) qui crée un répertoire temporaire et le passe à l’argument --add-dir, puis lit un fichier manifeste dans le repo qui déclare les skills à activer dans ce repo et les symlinke vers le répertoire temporaire. Quand je quitte la session, le répertoire temporaire est supprimé. Je peux ajouter/retirer des skills au manifeste du repo via une commande CLI, qui modifie le manifeste dans .agents/ et c’est tout. J’aime bien ça, ça correspond à mon modèle mental d’ajouter des packages au DESCRIPTION en R, ou requirements.txt ou cargo.toml ou package.json.\n\n\nCouche 3\nEt puis il y a ce truc auquel je tiens beaucoup, mais que je ne peux pas justifier aussi bien que le reste. akm a load et unload. Ce que ça fait : charger à chaud un skill dans le répertoire temporaire, sans l’ajouter au manifeste.\nQu’est-ce que j’essaie d’accomplir avec ça ?\nD’abord, je veux que des agents dans des sessions séparées puissent utiliser des skills nécessaires uniquement pour leur session, sans modifier le manifeste du repo. Une tâche spécifique a besoin d’un skill très niche ? Mon graal, c’est d’arriver à des skills “juste à temps” (JIT), peut-être même en construire un à la volée avec une équipe d’agents imbriqués qui itèrent dessus. C’est clairement la partie la plus spéculative pour l’instant, il faudra que je l’utilise un moment pour voir ce que ça donne.\nVoici quelques exemples d’akm status et akm add/remove :"
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#le-gestionnaire-dartifacts",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#le-gestionnaire-dartifacts",
+    "title": "Les skills sont des packages",
+    "section": "Le gestionnaire d’artifacts",
+    "text": "Le gestionnaire d’artifacts\nDernier truc dont je veux parler : le gestionnaire d’artifacts. C’est vraiment juste un répertoire ajouté au contexte du LLM, où je peux stocker des trucs comme des plans, des notes, des ADRs, ou tout ce que je veux garder entre les sessions mais que je ne veux pas commiter dans le repo. C’est vraiment juste un --add-dir ~/.akm/artifacts/&lt;repo&gt;/ ajouté automatiquement au lancement d’une session, avec auto commit / push / pull pour la synchronisation entre machines. C’est déjà bien utile, et c’est d’ailleurs ça qui m’a poussé à transformer mon projet initial (qui contenait aussi gitconfig et d’autres fichiers perso) en akm : un ami a voulu utiliser mon astuce d’artifacts et ça m’a donné la confiance d’open-sourcer le tout :-)"
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#le-gestionnaire-dinstructions",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#le-gestionnaire-dinstructions",
+    "title": "Les skills sont des packages",
+    "section": "Le gestionnaire d’instructions",
+    "text": "Le gestionnaire d’instructions\nEncore plus simple : akm crée global-instructions.md dans ~/.akm/ et le symlinke vers les instructions globales de chaque outil CLI. Comme ça je peux éditer une seule fois et distribuer à tous les outils. J’ai même ajouté en dernière minute une commande config pour imiter git config –edit."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#ce-quil-me-reste-à-résoudre",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#ce-quil-me-reste-à-résoudre",
+    "title": "Les skills sont des packages",
+    "section": "Ce qu’il me reste à résoudre",
+    "text": "Ce qu’il me reste à résoudre\nJe prends vraiment plaisir à ce que je fais ici, j’adore ce nouveau workflow avec les skills. Mais il me manque encore beaucoup de choses :\n\nUn vrai registre : au lieu d’un repo personnel privé, je préférerais m’appuyer sur un registre en bonne et due forme avec des snapshots et tout le tralala, et un moyen d’y publier.\nLe versioning : si les skills sont des packages, j’aimerais définir une sémantique de version pour les skills. Ça permettrait de déclarer / récupérer des dépendances exactes pour chaque projet depuis le manifeste.\nLes dépendances : si des skills reposent sur d’autres skills, j’aimerais trouver comment suivre les dépendances entre skills.\nLa découverte et la distribution : le flux actuel repose sur un repo, j’aimerais apprendre à mettre en place un vrai registre pour push/pull.\nComment lutter contre l’empoisonnement : les attaques supply-chain ont fait parler d’elles cette année, et les skills y sont très vulnérables, tout comme leurs utilisateurs accros à la vitesse comme moi qui sacrifient la relecture pour un tour de plus dans la session…\nUne interface CLI pour la recherche / les métadonnées / la gestion des skills."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#de-moi-à-mon-moi-du-futur",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#de-moi-à-mon-moi-du-futur",
+    "title": "Les skills sont des packages",
+    "section": "De moi à mon moi du futur",
+    "text": "De moi à mon moi du futur\nMoi du futur, si tu n’as pas supprimé ce site par honte de ce que tu as écrit, j’espère que le concept de skills-packages est devenu une évidence, et si tu as laissé tomber l’agent kit manager pour un super gestionnaire de skills open source fait par des gens formidables, je te pardonne."
+  },
+  {
+    "objectID": "fr/blog/posts/2026-02-24-cold-skills/index.html#footnotes",
+    "href": "fr/blog/posts/2026-02-24-cold-skills/index.html#footnotes",
+    "title": "Les skills sont des packages",
+    "section": "Notes de bas de page",
+    "text": "Notes de bas de page\n\n\nSi vous ne connaissez pas celui-là, il vous manque quelque chose de crucial. Le skill de brainstorming est probablement le skill qui m’a apporté le plus de valeur jusqu’ici.↩︎"
   },
   {
     "objectID": "fr/blog/posts/2026-02-15-bike-to-racecar/index.html",
