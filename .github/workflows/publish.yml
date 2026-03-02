@@ -43,7 +43,7 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: "1.7.23"
+          version: "1.8.27"
 
       # ── 4. Build & Deploy ─────────────────────────────────────────────
       # `quarto publish gh-pages` runs the pre-render script, renders the
