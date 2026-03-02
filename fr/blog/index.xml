@@ -9,8 +9,8 @@
 <link>https://raphaelsimon.fr/fr/blog/</link>
 <atom:link href="https://raphaelsimon.fr/fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website - Medicine, Public Health, Software Engineering, Data Science</description>
-<generator>quarto-1.7.23</generator>
-<lastBuildDate>Tue, 24 Feb 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Mon, 23 Feb 2026 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Les skills sont des packages</title>
   <dc:creator>Raphaël Simon</dc:creator>
@@ -129,7 +129,7 @@ Note
   <category>llm</category>
   <category>afk</category>
   <guid>https://raphaelsimon.fr/fr/blog/posts/2026-02-24-cold-skills/</guid>
-  <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 23 Feb 2026 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deux mois dans une voiture de course</title>
@@ -239,7 +239,7 @@ Note
   <category>ingenierie-logicielle</category>
   <category>personnel</category>
   <guid>https://raphaelsimon.fr/fr/blog/posts/2026-02-15-bike-to-racecar/</guid>
-  <pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate>
+  <pubDate>Sat, 14 Feb 2026 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Bonjour le Monde</title>
@@ -264,7 +264,7 @@ Note
   <category>meta</category>
   <category>bienvenue</category>
   <guid>https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/</guid>
-  <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 01 Feb 2026 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
