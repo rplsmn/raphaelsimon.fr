@@ -412,3 +412,16 @@ a:hover {
   content: "🇩🇪 ";
   margin-right: 0.25rem;
 }
+
+/* ── Blog post comments (Cusdis) ──────────────────────────────────────── */
+.post-comments {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(238, 195, 94, 0.35); /* gold #eec35e */
+}
+
+.post-comments .comments-heading {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #eec35e; /* gold */
+}

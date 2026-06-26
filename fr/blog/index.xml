@@ -10,7 +10,7 @@
 <atom:link href="https://raphaelsimon.fr/fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website - Medicine, Public Health, Software Engineering, Data Science</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Mon, 23 Feb 2026 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 24 Feb 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Les skills sont des packages</title>
   <dc:creator>Raphaël Simon</dc:creator>
@@ -115,6 +115,11 @@ Note
 <p>Moi du futur, si tu n’as pas supprimé ce site par honte de ce que tu as écrit, j’espère que le concept de skills-packages est devenu une évidence, et si tu as laissé tomber l’agent kit manager pour un super gestionnaire de skills open source fait par des gens formidables, je te pardonne.</p>
 
 
+<section class="post-comments">
+  <h2 class="comments-heading anchored">Commentaires</h2>
+  <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="d23653e2-fa50-4faf-990d-3fcdb62e73a6" data-page-id="/fr/blog/posts/2026-02-24-cold-skills/" data-page-url="https://raphaelsimon.fr/fr/blog/posts/2026-02-24-cold-skills/" data-page-title="Les skills sont des packages" data-theme="dark"></div>
+  <script async="" defer="" src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
 </section>
 
 
@@ -129,7 +134,7 @@ Note
   <category>llm</category>
   <category>afk</category>
   <guid>https://raphaelsimon.fr/fr/blog/posts/2026-02-24-cold-skills/</guid>
-  <pubDate>Mon, 23 Feb 2026 23:00:00 GMT</pubDate>
+  <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Deux mois dans une voiture de course</title>
@@ -226,6 +231,11 @@ Note
 <p><em>J’ai écrit ce billet avec l’aide de Claude Code (principalement pour synthétiser la longue liste de références que j’avais accumulées en deux mois, et pour suggérer un plan à partir des notes brutes et non ordonnées). Ça a pris une fraction du temps que ça aurait pris autrement. Je suis aussi plus fatigué que je ne devrais l’être un dimanche soir. Faites-en ce que vous voulez.</em></p>
 
 
+<section class="post-comments">
+  <h2 class="comments-heading anchored">Commentaires</h2>
+  <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="d23653e2-fa50-4faf-990d-3fcdb62e73a6" data-page-id="/fr/blog/posts/2026-02-15-bike-to-racecar/" data-page-url="https://raphaelsimon.fr/fr/blog/posts/2026-02-15-bike-to-racecar/" data-page-title="Deux mois dans une voiture de course" data-theme="dark"></div>
+  <script async="" defer="" src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
 </section>
 
 
@@ -239,7 +249,7 @@ Note
   <category>ingenierie-logicielle</category>
   <category>personnel</category>
   <guid>https://raphaelsimon.fr/fr/blog/posts/2026-02-15-bike-to-racecar/</guid>
-  <pubDate>Sat, 14 Feb 2026 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Bonjour le Monde</title>
@@ -258,13 +268,18 @@ Note
 <p>Qui sait ?</p>
 
 
+<section class="post-comments">
+  <h2 class="comments-heading anchored">Commentaires</h2>
+  <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="d23653e2-fa50-4faf-990d-3fcdb62e73a6" data-page-id="/fr/blog/posts/2026-02-02-hello-world/" data-page-url="https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/" data-page-title="Bonjour le Monde" data-theme="dark"></div>
+  <script async="" defer="" src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a> ]]></description>
   <category>meta</category>
   <category>bienvenue</category>
   <guid>https://raphaelsimon.fr/fr/blog/posts/2026-02-02-hello-world/</guid>
-  <pubDate>Sun, 01 Feb 2026 23:00:00 GMT</pubDate>
+  <pubDate>Mon, 02 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

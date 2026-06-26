@@ -10,7 +10,7 @@
 <atom:link href="https://raphaelsimon.fr/en/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Personal website - Medicine, Public Health, Software Engineering, Data Science</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Mon, 23 Feb 2026 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 24 Feb 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Skills as packages</title>
   <dc:creator>Raphaël Simon</dc:creator>
@@ -97,6 +97,11 @@
 <p>Future me, if you haven’t deleted this site out of shame for what you wrote, I hope that skills-as-packages is evident by now, and if you’ve dropped the skill kit for some really cool open source skill manager made by awesome people, I forgive you.</p>
 
 
+<section class="post-comments">
+  <h2 class="comments-heading anchored">Comments</h2>
+  <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="d23653e2-fa50-4faf-990d-3fcdb62e73a6" data-page-id="/en/blog/posts/2026-02-24-cold-skills/" data-page-url="https://raphaelsimon.fr/en/blog/posts/2026-02-24-cold-skills/" data-page-title="Skills as packages" data-theme="dark"></div>
+  <script async="" defer="" src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
 </section>
 
 
@@ -111,7 +116,7 @@
   <category>llm</category>
   <category>afk</category>
   <guid>https://raphaelsimon.fr/en/blog/posts/2026-02-24-cold-skills/</guid>
-  <pubDate>Mon, 23 Feb 2026 23:00:00 GMT</pubDate>
+  <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Two months in a race car</title>
@@ -195,6 +200,11 @@
 <p><em>I wrote this post with the help of Claude Code (mainly to summarise the long list of references I’d accumulated in two months, and to suggest a plan for this post from the raw and un-ordered notes). It took a fraction of the time it would have taken otherwise. I am also more tired than I should be on a Sunday night. Make of that what you will.</em></p>
 
 
+<section class="post-comments">
+  <h2 class="comments-heading anchored">Comments</h2>
+  <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="d23653e2-fa50-4faf-990d-3fcdb62e73a6" data-page-id="/en/blog/posts/2026-02-15-bike-to-racecar/" data-page-url="https://raphaelsimon.fr/en/blog/posts/2026-02-15-bike-to-racecar/" data-page-title="Two months in a race car" data-theme="dark"></div>
+  <script async="" defer="" src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
 </section>
 
 
@@ -208,7 +218,7 @@
   <category>software-engineering</category>
   <category>personal</category>
   <guid>https://raphaelsimon.fr/en/blog/posts/2026-02-15-bike-to-racecar/</guid>
-  <pubDate>Sat, 14 Feb 2026 23:00:00 GMT</pubDate>
+  <pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Here we go again</title>
@@ -227,13 +237,18 @@
 <p>Who knows ?</p>
 
 
+<section class="post-comments">
+  <h2 class="comments-heading anchored">Comments</h2>
+  <div id="cusdis_thread" data-host="https://cusdis.com" data-app-id="d23653e2-fa50-4faf-990d-3fcdb62e73a6" data-page-id="/en/blog/posts/2026-02-02-hello-world/" data-page-url="https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/" data-page-title="Here we go again" data-theme="dark"></div>
+  <script async="" defer="" src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>meta</category>
   <category>welcome</category>
   <guid>https://raphaelsimon.fr/en/blog/posts/2026-02-02-hello-world/</guid>
-  <pubDate>Thu, 12 Feb 2026 23:00:00 GMT</pubDate>
+  <pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
