@@ -82,6 +82,7 @@ format:
     filters:
       - _extensions/multilang/hreflang.lua
       - _extensions/multilang/blog-excerpts.lua
+      - _extensions/multilang/cusdis.lua
     include-after-body:
       - _includes/navbar-lang-switch.html
 
