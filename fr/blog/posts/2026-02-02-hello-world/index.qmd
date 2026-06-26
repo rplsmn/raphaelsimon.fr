@@ -8,8 +8,8 @@ categories:
 - bienvenue
 draft: false
 hreflang:
-  en: /en/blog/posts/hello-world/
-  fr: /fr/blog/posts/hello-world/
+  en: /en/blog/posts/2026-02-02-hello-world/
+  fr: /fr/blog/posts/2026-02-02-hello-world/
 ---
 
 Bienvenue sur mon blog ! C'est ici que je partagerai mes divagations, sur à peu près tout : de la médecine et la santé publique à l'ingénierie logicielle, la science des données, et les problèmes intéressants qui émergent à leurs intersections.

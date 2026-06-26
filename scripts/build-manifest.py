@@ -145,9 +145,14 @@ def generate_hreflang_metadata(manifest):
     
     for slug, data in manifest.items():
         hreflang_map[slug] = {}
-        for lang_code in data.keys():
-            hreflang_map[slug][lang_code] = f"/{lang_code}/blog/posts/{slug}/"
-    
+        for lang_code, info in data.items():
+            # Use the real (date-prefixed) output path captured in the manifest,
+            # NOT a slug-reconstructed path. Post URLs are date-prefixed
+            # (/en/blog/posts/2026-02-02-hello-world/), so the slug form
+            # (/en/blog/posts/hello-world/) 404s and pointed every hreflang
+            # alternate-language tag at a dead URL.
+            hreflang_map[slug][lang_code] = info["path"]
+
     return hreflang_map
 
 

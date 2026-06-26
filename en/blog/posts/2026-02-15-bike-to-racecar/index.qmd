@@ -10,8 +10,8 @@ categories:
 - personal
 draft: false
 hreflang:
-  en: /en/blog/posts/bike-to-racecar/
-  fr: /fr/blog/posts/bike-to-racecar/
+  en: /en/blog/posts/2026-02-15-bike-to-racecar/
+  fr: /fr/blog/posts/2026-02-15-bike-to-racecar/
 ---
 
 Since the end of December 2025, I've spent 10-12 hours a day writing software with LLM coding agents and CLI-tools.
