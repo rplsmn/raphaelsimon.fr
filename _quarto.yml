@@ -36,6 +36,13 @@ website:
         href: en/about.qmd
       - text: Contact
         href: en/contact.qmd
+      # Hub maillage: links to the satellite subdomains (external, absolute).
+      # Different-origin URLs are skipped by navbar-lang-switch.html, so these
+      # are language-agnostic and render identically on /en/ and /fr/.
+      - text: Kiosk
+        href: https://kiosk.raphaelsimon.fr/
+      - text: Gadgets
+        href: https://gadgets.raphaelsimon.fr/
     right:
       - icon: github
         href: https://github.com/rplsmn
