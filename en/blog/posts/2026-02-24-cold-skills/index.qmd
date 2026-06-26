@@ -10,8 +10,8 @@ categories:
 - afk
 draft: false
 hreflang:
-  en: /en/blog/posts/cold-skills/
-  fr: /fr/blog/posts/cold-skills/
+  en: /en/blog/posts/2026-02-24-cold-skills/
+  fr: /fr/blog/posts/2026-02-24-cold-skills/
 ---
 
 ## Skills are to LLMs what packages are to programming languages

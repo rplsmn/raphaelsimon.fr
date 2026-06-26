@@ -8,8 +8,8 @@ categories:
 - welcome
 draft: false
 hreflang:
-  en: /en/blog/posts/hello-world/
-  fr: /fr/blog/posts/hello-world/
+  en: /en/blog/posts/2026-02-02-hello-world/
+  fr: /fr/blog/posts/2026-02-02-hello-world/
 ---
 
 Welcome to my blog! This is where I'll share my ramblings, on anything ranging from medicine and public health to software engineering, data science, and the interesting problems that emerge at their intersections.
